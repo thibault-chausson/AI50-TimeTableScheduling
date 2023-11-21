@@ -1,0 +1,11 @@
+ID,Nom,Domaine,ID Professeur,Durée CM,Durée TD,Durée TP
+1,VS87,Physique,Price,1,2,3
+2,YG29,Biologie,None,1,2,2
+3,RN27,Espagnol,Flores,2,0,0
+4,UR37,Espagnol,Flores,2,2,3
+5,KE15,Anglais,Dufour,2,2,3
+6,XE11,Français,None,2,2,3
+7,IM30,Physique,Price,1,1,1
+8,YR22,Anglais,Leroux,2,1,1
+9,RD61,Anglais,Leroux,1,2,2
+10,TA49,Informatique,Martinez,1,1,3
