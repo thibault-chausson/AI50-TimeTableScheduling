@@ -1,7 +1,6 @@
 def fitness(schedule):
     fitnessScore = strongFitness(schedule)
-    if(fitnessScore > 0):
-        return fitnessScore
+    if(fitnessScore > 0): return fitnessScore
     return weakFitness(schedule)
 
 def strongFitness(schedule):
@@ -17,12 +16,42 @@ def weakFitness(schedule):
     return fitnessScore
 
 def studentStrongFitness(schedule):
-    pass
+    return 0
 
 def teacherStrongFitness(schedule):
-    pass
+     for i in range(len(schedule)):
+        classroom = schedule[i]['Teacher']
+
+        #Evaluate schedule conflicts with other classrooms
+        
+        fitnessImpact = 0
+        for j in range(i,len(schedule)):
+            new_classroom = schedule[j]['Classroom']
+            if(classroomScheduleConflict(classroom,new_classroom)):
+                fitnessImpact +=1
+                fitness += fitnessImpact
 
 def classroomStrongFitness(schedule):
+    fitness = 0
+    for i in range(len(schedule)):
+
+        #Evaluate student capacity
+        if(studentCapacityOverload(schedule[i])): fitness+=1
+
+
+        #Evaluate schedule conflicts with other classrooms
+        
+        fitnessImpact = 0
+        for j in range(i,len(schedule)):
+            if(schedule[i]['Classroom'] != schedule[j]['Classroom']): continue
+            if(classroomScheduleConflict(schedule[i],schedule[j])):
+                fitnessImpact +=1
+                fitness += fitnessImpact
+
+def studentCapacityOverload(classroom):
+    pass
+
+def classroomScheduleConflict(schedule1,schedule2):
     pass
 
 def studentWeakFitness(schedule):
