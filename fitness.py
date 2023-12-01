@@ -1,18 +1,18 @@
-def fitness(schedule):
-    fitnessScore = strongFitness(schedule)
-    if(fitnessScore > 0): return fitnessScore
+def fitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
+    fitnessScore = strongFitness(schedule, studentWeight, classroomWeight, teacherWeight)
+    if(fitnessScore > 0): return fitnessScore + 1000 #Adding 1000 to all strong fitness so they get less prioritized than weakOnes
     return weakFitness(schedule)
 
-def strongFitness(schedule):
-    fitnessScore = studentStrongFitness(schedule)
-    fitnessScore += teacherStrongFitness(schedule)
-    fitnessScore += classroomStrongFitness(schedule)
+def strongFitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
+    fitnessScore = studentWeight * studentStrongFitness(schedule)
+    fitnessScore += teacherWeight * teacherStrongFitness(schedule)
+    fitnessScore += classroomWeight * classroomStrongFitness(schedule)
     return fitnessScore
 
-def weakFitness(schedule):
-    fitnessScore = studentWeakFitness(schedule)
-    fitnessScore += teacherWeakFitness(schedule)
-    fitnessScore += classroomWeakFitness(schedule)
+def weakFitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
+    fitnessScore = studentWeight * studentWeakFitness(schedule)
+    fitnessScore += teacherWeight * teacherWeakFitness(schedule)
+    fitnessScore += classroomWeight * classroomWeakFitness(schedule)
     return fitnessScore
 
 def studentStrongFitness(schedule):
@@ -48,7 +48,7 @@ def classroomStrongFitness(schedule):
                 fitness += fitnessImpact
 
 def studentCapacityOverload(timeslot):
-    return False
+    if timeslot['Classroom'].capacity < timeslot['Course'].UV.capacity:return False
 
 def timeslotOverlap(timeslot1,timeslot2):
     return timeslot1.start < timeslot2.end and timeslot2.start < timeslot1.end
