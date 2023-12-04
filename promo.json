@@ -1,0 +1,1202 @@
+[
+    {
+        "student_id": "2e147b49-3b16-4f20-9081-6e23aefee7b1",
+        "name": "Studentbb6f8f1e-79a0-4ad7-9e5a-96912292f8c7",
+        "uvs": [
+            "EV04",
+            "LG05",
+            "VA51",
+            "EC1F",
+            "EI05",
+            "GE06"
+        ]
+    },
+    {
+        "student_id": "787ee7b4-b61a-4a8a-b1d4-c656acd8c0d4",
+        "name": "Student70858b97-b112-4af8-b114-c4cb553b458d",
+        "uvs": [
+            "LJ00",
+            "HT08",
+            "GE08",
+            "RN40",
+            "LJ01",
+            "EC1E"
+        ]
+    },
+    {
+        "student_id": "d7a1b851-d88a-4c7a-9978-fc4d37b9b87f",
+        "name": "Student8c82fc7a-8cf7-4b7d-be68-c10c4e13003d",
+        "uvs": [
+            "RN40",
+            "HE05",
+            "RE4E",
+            "HN01",
+            "DS52",
+            "LF70"
+        ]
+    },
+    {
+        "student_id": "08ffd640-c9b5-4e31-8a1e-11236d225565",
+        "name": "Student44ae8c00-47c9-4412-9ca1-e84ae8347abd",
+        "uvs": [
+            "GE07",
+            "IT4D",
+            "LI00",
+            "GE08",
+            "MV51",
+            "SC01"
+        ]
+    },
+    {
+        "student_id": "7f0e4e41-e688-452a-8841-45420f054bc1",
+        "name": "Student8532fc9a-98f8-4b6b-aca0-9f8bf65ca47f",
+        "uvs": [
+            "SO03",
+            "LE07",
+            "LF70",
+            "HT07",
+            "RI51",
+            "LE05"
+        ]
+    },
+    {
+        "student_id": "fce2f3ae-101a-4921-b767-7501328daed5",
+        "name": "Student8deb6772-943f-46e1-8127-6293728ee293",
+        "uvs": [
+            "EC1E",
+            "LE08",
+            "TI02",
+            "HE05",
+            "LF74",
+            "DA50"
+        ]
+    },
+    {
+        "student_id": "251e6e47-d521-462e-91be-6c9ee20c9f5c",
+        "name": "Studentd4ff3d54-0ba3-48a0-b7ca-35ea61e739c6",
+        "uvs": [
+            "WE4A",
+            "LF70",
+            "LC08",
+            "LE09",
+            "HE09",
+            "SC01"
+        ]
+    },
+    {
+        "student_id": "f1073a3c-6826-4b01-8857-a587441243dc",
+        "name": "Student3ed66d9f-b52e-4111-807c-bf15b6991b7c",
+        "uvs": [
+            "DA50",
+            "EI02",
+            "GE03",
+            "SV50",
+            "RN41",
+            "TA72"
+        ]
+    },
+    {
+        "student_id": "61bb132b-e441-495b-80b3-8dab5e65604c",
+        "name": "Studente7fbf9c4-520e-4404-8c00-78e7b795e74f",
+        "uvs": [
+            "LE50",
+            "GE01",
+            "SY41",
+            "EE01",
+            "LS00",
+            "EV01"
+        ]
+    },
+    {
+        "student_id": "a3e171c3-9335-4f99-a896-0c6f9c7dc4be",
+        "name": "Student4fd5b62e-f3f6-4138-83ee-5cfb8d0dd1ef",
+        "uvs": [
+            "EC1E",
+            "DA53",
+            "MG6P",
+            "SY41",
+            "PH02",
+            "AP4A"
+        ]
+    },
+    {
+        "student_id": "5c3a4914-7d8c-4ffc-839b-0a7689b19b96",
+        "name": "Student1ae8519f-5ad2-4d73-9521-8b6a1bd1dad5",
+        "uvs": [
+            "LS02",
+            "MG07",
+            "LF70",
+            "EI04",
+            "RN41",
+            "HT01"
+        ]
+    },
+    {
+        "student_id": "17137288-994e-4afe-b67e-524103ca5643",
+        "name": "Student849e5970-6634-4b36-bbdb-465af216b2b7",
+        "uvs": [
+            "LC00",
+            "LJ00",
+            "EC1F",
+            "AM02",
+            "EI12",
+            "HN01"
+        ]
+    },
+    {
+        "student_id": "fd7713ee-414f-4ed6-bc41-950f07e2f91d",
+        "name": "Studentb0236d24-af56-48f7-8cdf-c2c517575217",
+        "uvs": [
+            "AR03",
+            "GE08",
+            "TI09",
+            "SI02",
+            "RO53",
+            "LK01"
+        ]
+    },
+    {
+        "student_id": "1cefa522-eb4a-46b6-ab6d-1c6fda47d80f",
+        "name": "Student4834aeb5-2846-4f76-8b7f-d49f37d290fa",
+        "uvs": [
+            "TI09",
+            "SY40",
+            "HE08",
+            "LE02",
+            "PC40",
+            "LJ01"
+        ]
+    },
+    {
+        "student_id": "e03ea2cd-e898-42b3-a11a-412e4fac3843",
+        "name": "Student479bf311-6e2c-4321-a226-57f1366cce31",
+        "uvs": [
+            "LC08",
+            "SV50",
+            "SV52",
+            "PH03",
+            "LS02",
+            "AP4B"
+        ]
+    },
+    {
+        "student_id": "6ff3d2ac-38e0-4e01-af19-a77a22332080",
+        "name": "Student74a4fd58-b262-4f53-899a-e1f0f48878a7",
+        "uvs": [
+            "TA72",
+            "IW52",
+            "LG01",
+            "IT4A",
+            "IT41",
+            "SV53"
+        ]
+    },
+    {
+        "student_id": "fa998296-8c1b-49de-a361-d23f5fa91dfa",
+        "name": "Student35e09a39-4fbf-4a93-be0e-6c803036ec99",
+        "uvs": [
+            "RI53",
+            "RI52",
+            "DS50",
+            "MG6T",
+            "MV53",
+            "IT44"
+        ]
+    },
+    {
+        "student_id": "b3e98dd6-e809-4882-8d68-e74d07d88f5f",
+        "name": "Studentac648ce3-d03e-4d2b-ae9e-cc6727a513d0",
+        "uvs": [
+            "HT12",
+            "AP4B",
+            "LJ08",
+            "HT08",
+            "MG07",
+            "TW52"
+        ]
+    },
+    {
+        "student_id": "c57ebdb2-67f9-4c4d-9673-cfb2ec35874c",
+        "name": "Student8e3b21ef-5403-4ddb-b40e-245efa6d6ce8",
+        "uvs": [
+            "DA50",
+            "TI01",
+            "LJ08",
+            "GE03",
+            "TW52",
+            "MO52"
+        ]
+    },
+    {
+        "student_id": "e9d11541-b585-42fa-920c-b44ce0c5276e",
+        "name": "Student040b639c-8f45-4014-a2fc-2fc30b666b5e",
+        "uvs": [
+            "MO52",
+            "VA52",
+            "PH02",
+            "CC02",
+            "CC01",
+            "CI02"
+        ]
+    },
+    {
+        "student_id": "a8f7dfae-ea33-4158-bfdf-f4b4b644abc8",
+        "name": "Studentbe41bdd4-cd58-4562-8cec-17eb3765e26a",
+        "uvs": [
+            "EI03",
+            "SC01",
+            "DS52",
+            "MG6P",
+            "RI50",
+            "RI52"
+        ]
+    },
+    {
+        "student_id": "6431d297-06db-4552-a428-8ff9e9021e11",
+        "name": "Studenta4a43a73-95fa-4958-ba9e-b31295d0d931",
+        "uvs": [
+            "DA50",
+            "PH04",
+            "VA51",
+            "SP08",
+            "EI05",
+            "SY41"
+        ]
+    },
+    {
+        "student_id": "08cb6df7-2655-481f-a359-3d3439bd6fb5",
+        "name": "Studenta7f05140-0b3f-49a9-8888-7b8ff608b0c4",
+        "uvs": [
+            "LG00",
+            "AI52",
+            "DS52",
+            "EC02",
+            "LE50",
+            "SO07"
+        ]
+    },
+    {
+        "student_id": "0d992f31-7d2e-42e6-8557-87c718eb78be",
+        "name": "Student780f6514-8b21-4289-b235-37f8ccbc4e66",
+        "uvs": [
+            "MV53",
+            "AM02",
+            "MO52",
+            "EV00",
+            "SY40",
+            "IT45"
+        ]
+    },
+    {
+        "student_id": "89f3c7e5-9826-4044-8af0-d94d1d8528c1",
+        "name": "Student7701bb28-b6b6-4212-9f42-b0ed66292254",
+        "uvs": [
+            "SO03",
+            "IT4B",
+            "EV01",
+            "MO52",
+            "DS51",
+            "IT4D"
+        ]
+    },
+    {
+        "student_id": "c5c8526c-1358-4829-ad60-6359b7602491",
+        "name": "Student206cd3be-5487-45ff-b0ea-b5493052cb51",
+        "uvs": [
+            "MV51",
+            "VA54",
+            "RO53",
+            "PH03",
+            "CC02",
+            "DR02"
+        ]
+    },
+    {
+        "student_id": "cd71ac8e-e0a1-4737-bf33-03a6c96ef8e1",
+        "name": "Studentbb82eaa0-d15a-4ab6-b4a3-562b4598891d",
+        "uvs": [
+            "HM40",
+            "DS50",
+            "DA53",
+            "IT4C",
+            "IR5A",
+            "EV05"
+        ]
+    },
+    {
+        "student_id": "a06cad34-15b5-4052-95fd-ffeebcf0e328",
+        "name": "Studentc15e31a6-a1f1-44c3-9d35-c85fefe4d876",
+        "uvs": [
+            "RI52",
+            "PA05",
+            "SI40",
+            "AI50",
+            "TO52",
+            "MV51"
+        ]
+    },
+    {
+        "student_id": "d7c1545e-aa5f-4ac4-a441-becf5326a9d9",
+        "name": "Student79b3d457-2b62-4d9f-9095-34c6c6816e5a",
+        "uvs": [
+            "LF73",
+            "AP4A",
+            "RN40",
+            "MV52",
+            "WE4B",
+            "HN01"
+        ]
+    },
+    {
+        "student_id": "19128050-0490-43b1-9450-e3e056f39451",
+        "name": "Student37e737a0-f2a8-4953-9361-f519968c7ec0",
+        "uvs": [
+            "LR01",
+            "LK08",
+            "MG6P",
+            "SV52",
+            "CC04",
+            "LG02"
+        ]
+    },
+    {
+        "student_id": "bb0d1496-d177-4624-81ff-90be3fc74d5e",
+        "name": "Student39c47941-45f8-4ffd-8cd5-e221e62c0a41",
+        "uvs": [
+            "MV53",
+            "DR04",
+            "SO02",
+            "SI40",
+            "SI02",
+            "HT12"
+        ]
+    },
+    {
+        "student_id": "f8a99fd9-fe5c-4034-80b9-a60a236671e2",
+        "name": "Student5f5a255d-1b8e-4a7c-8215-6f24fa3443bf",
+        "uvs": [
+            "AI51",
+            "GE02",
+            "GE06",
+            "DS53",
+            "IT4A",
+            "GE09"
+        ]
+    },
+    {
+        "student_id": "77f9e6f0-0266-4a41-9d37-011442a44b0e",
+        "name": "Student377704b5-52ed-4790-b274-ec566d0b803a",
+        "uvs": [
+            "LE01",
+            "RO50",
+            "DS52",
+            "SV51",
+            "SO07",
+            "SY41"
+        ]
+    },
+    {
+        "student_id": "6a6db47a-7ae5-45d7-babc-16d00eb07625",
+        "name": "Student5f02cce0-b297-4e5f-b2c8-08c0f1f665a2",
+        "uvs": [
+            "HT08",
+            "HE08",
+            "GE37",
+            "AM01",
+            "PH03",
+            "LE02"
+        ]
+    },
+    {
+        "student_id": "5d465395-e016-43ad-b95a-faf8c94dfba7",
+        "name": "Student423d045c-61d0-4a85-8ceb-56de93b68db1",
+        "uvs": [
+            "LG02",
+            "SO01",
+            "RO52",
+            "EC1F",
+            "EP00",
+            "SV53"
+        ]
+    },
+    {
+        "student_id": "e90433d6-2462-4e95-b4c9-7a0c51444d99",
+        "name": "Student639acde8-edfe-4e2f-9f95-4f1631af8043",
+        "uvs": [
+            "AI51",
+            "EC05",
+            "LF74",
+            "MG6T",
+            "LS05",
+            "VA54"
+        ]
+    },
+    {
+        "student_id": "5ccf3341-60f5-48b6-824d-f150b7c84a8f",
+        "name": "Student57d8f006-8def-4aad-a538-e2d2ed3fc139",
+        "uvs": [
+            "MV53",
+            "HE09",
+            "MV51",
+            "CC03",
+            "LS01",
+            "GE06"
+        ]
+    },
+    {
+        "student_id": "fb143ba4-9b2f-45c2-9dcc-0312112952cf",
+        "name": "Studentdd9605d4-3071-4c6c-9131-1f70c2df769f",
+        "uvs": [
+            "LR01",
+            "MG04",
+            "GE02",
+            "EE01",
+            "PA05",
+            "MV52"
+        ]
+    },
+    {
+        "student_id": "b0a13157-59a8-47a8-930d-246ba8b70f31",
+        "name": "Student519e78ff-2bb6-4936-8dcb-677d69d35a31",
+        "uvs": [
+            "MG04",
+            "MV53",
+            "HM40",
+            "SO09",
+            "LE07",
+            "CC01"
+        ]
+    },
+    {
+        "student_id": "4f2d87eb-2ceb-4e59-b9b5-6a51cba8b8f9",
+        "name": "Student66bfae15-e181-4b81-a89b-1e357aabd694",
+        "uvs": [
+            "MO53",
+            "RN40",
+            "EV03",
+            "VA53",
+            "GS01",
+            "GE08"
+        ]
+    },
+    {
+        "student_id": "abdb71ab-f017-427f-9a30-518c3e1c28bc",
+        "name": "Studentdcf92ee5-a240-4a0f-a672-587f9f3e0b85",
+        "uvs": [
+            "GE08",
+            "SV53",
+            "DA50",
+            "LG03",
+            "IT4A",
+            "LJ08"
+        ]
+    },
+    {
+        "student_id": "636bf133-b00f-412c-a50e-c33c232c57e0",
+        "name": "Student5048735b-b708-429f-9303-698047755bca",
+        "uvs": [
+            "MO54",
+            "AR03",
+            "EI12",
+            "SP07",
+            "PC40",
+            "GE03"
+        ]
+    },
+    {
+        "student_id": "6093813f-805f-4b3f-917d-462715f34e72",
+        "name": "Studentef49b858-a72f-4af1-b307-28ec45d90f84",
+        "uvs": [
+            "SC01",
+            "DS52",
+            "RI52",
+            "SO01",
+            "GE02",
+            "AI53"
+        ]
+    },
+    {
+        "student_id": "278a61d6-5374-4c6f-87f9-fc3829da33f6",
+        "name": "Student2a9401c0-eeb6-426a-be78-19c69d987a4c",
+        "uvs": [
+            "PH02",
+            "EI03",
+            "AI53",
+            "RO52",
+            "MV50",
+            "AI50"
+        ]
+    },
+    {
+        "student_id": "a392147c-964f-4e5e-9e94-16b1aa4eb106",
+        "name": "Student14e2ac02-1b88-4a73-a221-1a804c9a1b68",
+        "uvs": [
+            "RI53",
+            "LF71",
+            "AP4A",
+            "GE02",
+            "CC04",
+            "GE07"
+        ]
+    },
+    {
+        "student_id": "ef496567-92f9-4ca4-9a90-f1c488dec2ec",
+        "name": "Student5820abb6-503e-44a2-80f9-9a43180dd196",
+        "uvs": [
+            "LE09",
+            "IW52",
+            "VA53",
+            "LE50",
+            "CC04",
+            "LS00"
+        ]
+    },
+    {
+        "student_id": "0e8ef9ee-fc44-4ab3-a7db-0577f0ad2673",
+        "name": "Student653946c1-7b0a-4c9f-bfa2-b09311e1f6da",
+        "uvs": [
+            "AM02",
+            "LE02",
+            "DA53",
+            "MG03",
+            "SI02",
+            "WE4A"
+        ]
+    },
+    {
+        "student_id": "16de415c-1eda-442b-a3d5-15e61f33666d",
+        "name": "Student129d07bc-6563-42ae-9c19-f8148dc73672",
+        "uvs": [
+            "TI01",
+            "LE03",
+            "SV53",
+            "SY40",
+            "LS02",
+            "MG05"
+        ]
+    },
+    {
+        "student_id": "b2d3b7d4-0eea-47eb-80a4-5bccfa342515",
+        "name": "Studentd04869c1-f039-404b-878e-2002e8019f40",
+        "uvs": [
+            "EI10",
+            "LE09",
+            "PC40",
+            "EV03",
+            "DS53",
+            "LG00"
+        ]
+    },
+    {
+        "student_id": "060ef90d-7051-40de-a2e4-e3619a7f40a2",
+        "name": "Student8b3cb2cf-0673-4f1f-a49c-d5606a4e71b1",
+        "uvs": [
+            "SO01",
+            "MG05",
+            "RN40",
+            "DS52",
+            "LC00",
+            "LR01"
+        ]
+    },
+    {
+        "student_id": "11907fc8-3bc3-45ef-a4c1-9059744c4d38",
+        "name": "Student310b842c-702b-4eec-b5ab-73d942d76133",
+        "uvs": [
+            "MG6T",
+            "EC05",
+            "EV01",
+            "MG6P",
+            "LG03",
+            "MG07"
+        ]
+    },
+    {
+        "student_id": "704ee2da-1ddb-49ae-8573-9cfdd8f68f0b",
+        "name": "Studentf6b36f88-9d2d-4f8f-a23e-bba1b11b9cb2",
+        "uvs": [
+            "IT41",
+            "SV52",
+            "IT45",
+            "AI51",
+            "SP03",
+            "VA52"
+        ]
+    },
+    {
+        "student_id": "60158447-e0ec-4079-a953-1158258705b8",
+        "name": "Studentbf2cb287-2f91-4500-9aa1-1044892167f9",
+        "uvs": [
+            "EV03",
+            "SY40",
+            "DS52",
+            "RO51",
+            "DR01",
+            "RI51"
+        ]
+    },
+    {
+        "student_id": "2d03700d-8749-4a50-9df6-906796b82393",
+        "name": "Studentc56f2360-3e28-422b-a71d-76b7f73c7eed",
+        "uvs": [
+            "HE08",
+            "LE07",
+            "MV50",
+            "LR00",
+            "LC08",
+            "RI50"
+        ]
+    },
+    {
+        "student_id": "70e30548-c9ad-4bfb-8772-e02baace86a5",
+        "name": "Student3ffbea96-3af1-4a4e-965c-7fb18ed28d90",
+        "uvs": [
+            "RE4E",
+            "EC06",
+            "EI04",
+            "GE03",
+            "AR05",
+            "LE02"
+        ]
+    },
+    {
+        "student_id": "0f168f3a-12bf-4c1c-990a-4b9cd3999e57",
+        "name": "Student7fd7ad05-595d-40cb-ab5c-cffe7578a9e3",
+        "uvs": [
+            "GE08",
+            "EP00",
+            "EC02",
+            "SA01",
+            "TI09",
+            "LJ08"
+        ]
+    },
+    {
+        "student_id": "2b8b581f-2373-4b8c-94e1-b07c76f00661",
+        "name": "Studente58402b3-8825-478f-a121-bdaeef7b3001",
+        "uvs": [
+            "TX52",
+            "PC40",
+            "MG05",
+            "MG6T",
+            "LC00",
+            "SV52"
+        ]
+    },
+    {
+        "student_id": "d9f38c6b-0b5c-45b3-8681-f38a4f4e96ef",
+        "name": "Studentb6a961fe-5742-44ad-b0be-889bc112eb27",
+        "uvs": [
+            "EV00",
+            "WE4B",
+            "HT08",
+            "GE01",
+            "AI53",
+            "LK00"
+        ]
+    },
+    {
+        "student_id": "59922c0c-09af-474e-9f6d-da7454342f98",
+        "name": "Studente0ba0997-6a59-4aa8-a140-76ba7073f062",
+        "uvs": [
+            "EE01",
+            "IT4C",
+            "PH01",
+            "SY40",
+            "RN40",
+            "IT4B"
+        ]
+    },
+    {
+        "student_id": "f6ea829b-a91a-4131-87bd-f3bdc9f92456",
+        "name": "Studentf0739fe9-ca5a-4c96-871b-42da38d24188",
+        "uvs": [
+            "PH03",
+            "EV01",
+            "AR05",
+            "MG04",
+            "SO02",
+            "MG03"
+        ]
+    },
+    {
+        "student_id": "630b9cfb-7ac7-4bed-b13d-17894c6446a2",
+        "name": "Student1b7054fd-e17a-4af4-8384-9a46e787d087",
+        "uvs": [
+            "SY40",
+            "LF70",
+            "SV50",
+            "SP03",
+            "LK00",
+            "AM01"
+        ]
+    },
+    {
+        "student_id": "1ffce539-691d-453d-97fb-cac90d3f7626",
+        "name": "Studente7538230-5f31-46fb-8476-db662b0a3808",
+        "uvs": [
+            "VA53",
+            "GE07",
+            "EC05",
+            "AP4A",
+            "IT45",
+            "LS01"
+        ]
+    },
+    {
+        "student_id": "ce9ffe9e-31bc-4f0f-80eb-a7014c60eecf",
+        "name": "Student3ed29240-0b27-40eb-8e5f-36b36d5f9281",
+        "uvs": [
+            "LI01",
+            "CC01",
+            "LG00",
+            "RN40",
+            "DA53",
+            "SP08"
+        ]
+    },
+    {
+        "student_id": "378d6acd-d9a8-4aab-848d-35e25bd8abb6",
+        "name": "Student74dcdfdc-715c-4ea4-83e6-55456bcbfd59",
+        "uvs": [
+            "RE4E",
+            "VA51",
+            "IT4B",
+            "LE03",
+            "DA51",
+            "IT4A"
+        ]
+    },
+    {
+        "student_id": "4dd8eb9a-2cdb-450c-b158-d6c3c1ea9c47",
+        "name": "Student9c44428d-5459-4c9a-996f-a81336424780",
+        "uvs": [
+            "RE4E",
+            "IT4A",
+            "SV51",
+            "HN01",
+            "SO09",
+            "DA53"
+        ]
+    },
+    {
+        "student_id": "a319a47a-34d6-4624-9684-19b8d89f14d6",
+        "name": "Student85befbd7-f472-4e39-88ab-4303be467168",
+        "uvs": [
+            "TW52",
+            "MV52",
+            "SA01",
+            "LE03",
+            "RO53",
+            "HE08"
+        ]
+    },
+    {
+        "student_id": "4b0d4710-0f26-4147-9cbf-d4ebfa5a4a1e",
+        "name": "Student60be2024-ad21-4d8f-ba96-89e78c28f4c8",
+        "uvs": [
+            "LJ08",
+            "RI52",
+            "EV00",
+            "LG01",
+            "PH04",
+            "RN40"
+        ]
+    },
+    {
+        "student_id": "c39b7635-ce28-4e29-82f7-52ba3091f083",
+        "name": "Student16e75299-deb0-4838-8a28-0b93fcdecb66",
+        "uvs": [
+            "TA72",
+            "HE08",
+            "SO09",
+            "EV01",
+            "SV50",
+            "RI51"
+        ]
+    },
+    {
+        "student_id": "f9eea9b8-7d57-449f-91fd-fc12407f2c95",
+        "name": "Studentd8127c43-a42e-4009-abcc-632834f6bd0a",
+        "uvs": [
+            "HT12",
+            "EI04",
+            "EE01",
+            "LK01",
+            "CC05",
+            "VA54"
+        ]
+    },
+    {
+        "student_id": "c4c177ab-a19c-4c64-9b09-ac66ab62dc03",
+        "name": "Studente377ce7a-739f-4e3d-8ca1-8a6f6aeb7b91",
+        "uvs": [
+            "EI04",
+            "GE03",
+            "RO51",
+            "LE05",
+            "SO01",
+            "EC07"
+        ]
+    },
+    {
+        "student_id": "2d620a18-ae1a-4e10-a9b1-23762d45baf0",
+        "name": "Studentdf51d852-47da-486a-abae-6ed07a01759a",
+        "uvs": [
+            "SY42",
+            "LK01",
+            "PH02",
+            "RI53",
+            "EC1F",
+            "LG00"
+        ]
+    },
+    {
+        "student_id": "384dc459-e910-439a-8a32-e9c7366e8cfc",
+        "name": "Student20b2140d-92e5-4674-9a7f-7f409bd61ff0",
+        "uvs": [
+            "SO01",
+            "LS02",
+            "SY40",
+            "RI52",
+            "HT08",
+            "HT01"
+        ]
+    },
+    {
+        "student_id": "fb5c10a3-fc57-4eb1-acf4-6796c51062a8",
+        "name": "Student85f1f896-0efb-4378-9c58-fe6596391144",
+        "uvs": [
+            "HM40",
+            "EI05",
+            "IT4D",
+            "LE09",
+            "SC01",
+            "LI00"
+        ]
+    },
+    {
+        "student_id": "ed3ec46d-f62f-4b93-a8a1-4784cf335c59",
+        "name": "Student3fb4136a-5bc6-48d5-b9d8-2d57150aa241",
+        "uvs": [
+            "HT07",
+            "GE02",
+            "HN01",
+            "CC03",
+            "LC02",
+            "MV51"
+        ]
+    },
+    {
+        "student_id": "d4b36dc3-a345-49fa-a24f-82c192eec05a",
+        "name": "Student26759591-13fe-4804-96f8-294154e8fee9",
+        "uvs": [
+            "LG05",
+            "LS00",
+            "LG01",
+            "EI10",
+            "EV03",
+            "CI02"
+        ]
+    },
+    {
+        "student_id": "b3856436-923c-437b-bd5a-b248a84730b0",
+        "name": "Student2c64c2bd-e325-441f-8ceb-03be1e879df9",
+        "uvs": [
+            "IT41",
+            "DR02",
+            "MO54",
+            "SO01",
+            "LE03",
+            "GE03"
+        ]
+    },
+    {
+        "student_id": "c8b92a72-4aad-4b5c-8a93-dacd1ca1158d",
+        "name": "Student102aa061-5809-4d77-8df3-2a624ea551ae",
+        "uvs": [
+            "RO52",
+            "SO09",
+            "LK08",
+            "EI10",
+            "AM01",
+            "PC40"
+        ]
+    },
+    {
+        "student_id": "091461b0-ae88-4fa0-9035-d453041507dd",
+        "name": "Student5d4f6962-d839-4178-86f8-43a7dce90477",
+        "uvs": [
+            "TA72",
+            "TI02",
+            "SV51",
+            "LE03",
+            "GE07",
+            "GE06"
+        ]
+    },
+    {
+        "student_id": "95f8532a-f042-4954-a184-d4489436d105",
+        "name": "Studenta98d8043-e02e-415e-866d-a1390ba8222f",
+        "uvs": [
+            "AI51",
+            "LG05",
+            "LG03",
+            "LK01",
+            "SV53",
+            "SO09"
+        ]
+    },
+    {
+        "student_id": "9799f8e6-da63-4d9f-8253-5e4e0d672c0a",
+        "name": "Student96b87db9-aa6b-4b6d-9d0c-f461d1b015c9",
+        "uvs": [
+            "LF74",
+            "LJ01",
+            "RN41",
+            "PH01",
+            "MV52",
+            "TI01"
+        ]
+    },
+    {
+        "student_id": "9fe4d891-a26e-4b15-93ef-831400a1554a",
+        "name": "Studentc0077423-d0cf-47eb-b472-e14637676f53",
+        "uvs": [
+            "LJ08",
+            "RE4E",
+            "DR01",
+            "HN01",
+            "EV03",
+            "EC02"
+        ]
+    },
+    {
+        "student_id": "7168d847-f6d4-4697-a121-a94ded7ccee6",
+        "name": "Studentebbda0e5-948e-4483-bc0b-1e4be0210db2",
+        "uvs": [
+            "GE08",
+            "EC05",
+            "LJ08",
+            "AM02",
+            "HE05",
+            "SP08"
+        ]
+    },
+    {
+        "student_id": "f77bf47e-55a9-442d-922a-23187a3de7d2",
+        "name": "Student788ccca2-7575-4119-90ee-4a9023897369",
+        "uvs": [
+            "SV51",
+            "MV54",
+            "IR5A",
+            "PH04",
+            "EV03",
+            "SP08"
+        ]
+    },
+    {
+        "student_id": "7f6e1b8d-9478-41e7-8c5e-ca64075c224a",
+        "name": "Studentb663d4f0-7150-4edb-bcd1-c468e8e7c7fa",
+        "uvs": [
+            "LG00",
+            "HT01",
+            "DS51",
+            "PC40",
+            "PH02",
+            "AI52"
+        ]
+    },
+    {
+        "student_id": "71d714c3-ac69-42e0-b221-d08294dcbb68",
+        "name": "Studentdcee2f03-3535-466c-9dd0-186590454998",
+        "uvs": [
+            "AR05",
+            "HE09",
+            "LJ08",
+            "LG05",
+            "DS51",
+            "LC02"
+        ]
+    },
+    {
+        "student_id": "12d07722-048a-4ece-a577-2da19afcdb20",
+        "name": "Student0e4fe684-8457-445c-92b7-15119762960d",
+        "uvs": [
+            "IT4B",
+            "AM02",
+            "LF70",
+            "DA53",
+            "EV03",
+            "MG6T"
+        ]
+    },
+    {
+        "student_id": "6e1c1abe-7473-400d-9096-2ee36623d29a",
+        "name": "Student7ab65701-2bfc-442c-936c-81e327591bd5",
+        "uvs": [
+            "EI12",
+            "LJ01",
+            "LS03",
+            "RE4E",
+            "AM02",
+            "LE02"
+        ]
+    },
+    {
+        "student_id": "f4e3737d-77d4-41c6-8a82-e210f18398a3",
+        "name": "Studentbc3a4c65-e6f9-4209-9690-547ddb7427e3",
+        "uvs": [
+            "GE01",
+            "CC02",
+            "LJ08",
+            "AI50",
+            "RI53",
+            "RE4E"
+        ]
+    },
+    {
+        "student_id": "8f35542c-4242-4aac-9c34-16a38f9d90c4",
+        "name": "Studentb622c346-b770-4438-9d40-ecd51bd91863",
+        "uvs": [
+            "MO50",
+            "LS05",
+            "LG00",
+            "CC02",
+            "GE06",
+            "MV52"
+        ]
+    },
+    {
+        "student_id": "8ec39811-3786-4dcb-86d6-0fdcfcebd9d0",
+        "name": "Student0ac230cc-7e88-47ee-a755-10ce5b464714",
+        "uvs": [
+            "EV04",
+            "RO53",
+            "MV54",
+            "CC01",
+            "HT08",
+            "TO52"
+        ]
+    },
+    {
+        "student_id": "cf382f92-2bb0-4432-8176-8927ab8ac576",
+        "name": "Student0d6990b4-1429-418c-a35d-910d513bc481",
+        "uvs": [
+            "IT44",
+            "SO07",
+            "MO54",
+            "SP07",
+            "RN40",
+            "LJ02"
+        ]
+    },
+    {
+        "student_id": "1cb92f9d-fd9a-43a9-a6bf-ca89a5e4921c",
+        "name": "Studenta3fe04e9-26e1-4eb3-856e-1653943ed034",
+        "uvs": [
+            "LE50",
+            "LE09",
+            "EV00",
+            "DS50",
+            "DA53",
+            "RI51"
+        ]
+    },
+    {
+        "student_id": "73692a0f-360a-42bb-b729-095c57f909ca",
+        "name": "Student6f7af3b3-40e2-4d30-a20b-1f8977da28b5",
+        "uvs": [
+            "MO52",
+            "MV54",
+            "HE05",
+            "SY43",
+            "RI53",
+            "EC05"
+        ]
+    },
+    {
+        "student_id": "fa798feb-ab81-4d36-9d23-2b57cc7b970b",
+        "name": "Student0b087448-d4cd-4ec1-93a5-3624aaf6faf1",
+        "uvs": [
+            "LG03",
+            "LJ01",
+            "SO01",
+            "MV52",
+            "SY43",
+            "LE05"
+        ]
+    },
+    {
+        "student_id": "f10e6452-1877-421a-8231-dca7b747ddb5",
+        "name": "Student5a36ec67-c03b-480d-8ff0-610af6473a00",
+        "uvs": [
+            "RI52",
+            "LS03",
+            "EI02",
+            "HM40",
+            "RE4E",
+            "SO01"
+        ]
+    },
+    {
+        "student_id": "775687c2-a958-4b5f-bbd8-8e68feb8a2c3",
+        "name": "Student0406abec-266e-4ac7-9674-895491160638",
+        "uvs": [
+            "VA51",
+            "MO54",
+            "MG07",
+            "RO52",
+            "EC05",
+            "VA54"
+        ]
+    },
+    {
+        "student_id": "c4a826e8-c977-4806-a169-94393c96707c",
+        "name": "Student6a162b45-1237-4f44-bf26-f6c720aebb49",
+        "uvs": [
+            "EC1E",
+            "LK01",
+            "PH03",
+            "LE05",
+            "MV50",
+            "PH01"
+        ]
+    },
+    {
+        "student_id": "262b4f72-05d8-43f0-8ee9-146b68c48a21",
+        "name": "Student9de248c1-470f-4bbf-8e49-9e4aab461515",
+        "uvs": [
+            "SC01",
+            "TI01",
+            "AP4B",
+            "PH03",
+            "MO50",
+            "RN40"
+        ]
+    },
+    {
+        "student_id": "ff7a9831-04d1-453d-9183-f6c1ade617fe",
+        "name": "Student4ab7d89c-3bd0-4ad1-8d15-bb2fdbc71469",
+        "uvs": [
+            "DA51",
+            "EI03",
+            "TO52",
+            "TI01",
+            "EV05",
+            "LG01"
+        ]
+    },
+    {
+        "student_id": "c4cc0a46-4e4e-4895-ba31-796df252610a",
+        "name": "Student7dd5f3f9-cadd-4dfa-bfd0-aa9a358b3715",
+        "uvs": [
+            "LG01",
+            "AI52",
+            "CC03",
+            "LE07",
+            "SV53",
+            "EI04"
+        ]
+    }
+]
