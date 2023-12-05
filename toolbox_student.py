@@ -67,7 +67,7 @@ def get_all_uvs_chromosome(chromosome):
 def create_student(list_uv, nb_uv=6):
     # ID is UUID, name is random, uvs is list of six UV form list_us
     ID = uuid.uuid4()
-    name = "Student" + str(uuid.uuid4())
+    name = "Student" + str(ID)
     # Pick six UV randomly from list_uv
     uvs = []
     index = rd.sample(range(len(list_uv) - 1), nb_uv)
@@ -83,12 +83,12 @@ def create_promo(list_uv, promo_size):
     return promo_fct
 
 
-def export_promo(promo, filename="./promo.json"):
+def export_promo(promo_fct, filename="./promo.json"):
     """
     Exports a promo into a json file.
     """
     with open(filename, "w") as f:
-        json.dump([student.export() for student in promo.students_list], f, indent=4)
+        json.dump([student.export() for student in promo_fct.students_list], f, indent=4)
 
 
 def import_promo(filename="./promo.json"):
