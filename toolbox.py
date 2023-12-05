@@ -1,12 +1,13 @@
 import numpy as np
 import json
+import random as rd
 
+WEEKS = 15  # Number of weeks in a semester
+DAYS = 5  # Number of days there is class in a week
+MINUTES_PER_CELL = 30  # one cell of the matrix equals 30 minutes
+START_TIME = 8 * 60  # Start of the day at 8am
+END_TIME = 20 * 60  # End of the day at 8pm
 
-WEEKS = 15 # Number of weeks in a semester
-DAYS = 5 # Number of days there is class in a week
-MINUTES_PER_CELL = 30 # one cell of the matrix equals 30 minutes
-START_TIME = 8 * 60 # Start of the day at 8am
-END_TIME = 20 * 60 # End of the day at 8pm
 
 class Room:
     def __init__(self, room, capacity, type, description, site):
@@ -15,13 +16,13 @@ class Room:
         self.type = type
         self.description = description
         self.site = site
-    
+
     def __repr__(self):
         return f"Room({self.room}, {self.capacity}, {self.type}, {self.description}, {self.site})"
 
 
 class UV:
-    def __init__(self, code, name, credits, semester, rooms, teachers, cm=0, td=0, tp=0):
+    def __init__(self, code, name, credits, semester, rooms, teachers, cm=0, td=0, tp=0, capacity=0):
         self.code = code
         self.name = name
         self.credits = credits
@@ -32,9 +33,24 @@ class UV:
         self.cm = cm
         self.td = td
         self.tp = tp
-    
+        self.capacity = capacity
+
+    def export(self):
+        return {
+            "code": self.code,
+            "name": self.name,
+            "credits": self.credits,
+            "semester": self.semester,
+            "rooms": self.rooms,
+            "teachers": self.teachers,
+            "cm": self.cm,
+            "td": self.td,
+            "tp": self.tp,
+            "capacity": self.capacity
+        }
+
     def __repr__(self):
-        return f"UV({self.code}, {self.name}, {self.credits}, {self.semester}, {self.rooms}, {self.teachers}, total_min: {self.cm + self.td + self.tp})"
+        return f"UV({self.code}, {self.name}, {self.credits}, {self.semester}, {self.rooms}, {self.teachers}, total_min: {self.cm + self.td + self.tp}, {self.capacity})"
 
 
 class Gene:
@@ -46,7 +62,7 @@ class Gene:
         self.teacher = teacher
         self.code = code
         self.type = course_type
-    
+
     def export(self):
         return {
             "room": self.room,
@@ -57,7 +73,7 @@ class Gene:
             "code": self.code,
             "type": self.type
         }
-    
+
     def __repr__(self):
         return f"Gene({self.room}, {self.start_time}, {self.duration}, {self.teacher}, {self.code}, {self.type})"
 
@@ -72,7 +88,7 @@ def planning_teacher(chr, teacher=None):
     if teacher is not None:
         for gene in chr:
             if teacher == gene.teacher:
-                start = gene.start_time // step - START_TIME // step # 480 means the start of the matrix is at 8AM
+                start = gene.start_time // step - START_TIME // step  # 480 means the start of the matrix is at 8AM
                 mat[start:start + gene.duration // step, gene.start_day] += 1
         return mat
     else:
@@ -92,7 +108,7 @@ def planning_room(chr, room=None):
     if room is not None:
         for gene in chr:
             if room == gene.room:
-                start = gene.start_time // step - START_TIME // step # 480 means the start of the matrix is at 8AM
+                start = gene.start_time // step - START_TIME // step  # 480 means the start of the matrix is at 8AM
                 mat[start:start + gene.duration // step, gene.start_day] += 1
         return mat
     else:
@@ -112,7 +128,7 @@ def planning_uv(chr, uv=None):
     if uv is not None:
         for gene in chr:
             if uv == gene.code:
-                start = gene.start_time // step - START_TIME // step # 480 means the start of the matrix is at 8AM
+                start = gene.start_time // step - START_TIME // step  # 480 means the start of the matrix is at 8AM
                 mat[start:start + gene.duration // step, gene.start_day] += 1
         return mat
     else:
@@ -150,7 +166,7 @@ def get_rooms(site=None):
     for salle, desc in rooms.items():
         if desc["site"] == site or site is None:
             salles.append(Room(salle, desc["capacity"], desc["type"], desc["description"], desc["site"]))
-    
+
     return salles
 
 
@@ -174,6 +190,7 @@ def get_uvs(category=None):
                 o += "P"
                 teachers.append(uv["printemps"]["responsable"])
             cm, td, tp = 0, 0, 0
+            capacity = rd.randint(20, 75)
 
             for acti in uv["activites"]:
                 if acti["code"] == "CM":
@@ -182,9 +199,38 @@ def get_uvs(category=None):
                     td = acti["nbh"]
                 elif acti["code"] == "TP":
                     tp = acti["nbh"]
-            uv_info.append(UV(uv["code"], uv["libelle"], float(uv["creditsEcts"]), o, [], list(set(teachers)), cm, td, tp))
-    
+            uv_info.append(
+                UV(uv["code"], uv["libelle"], float(uv["creditsEcts"]), o, [], list(set(teachers)), cm, td, tp,
+                   capacity))
+
     return uv_info
+
+
+def export_uvs(uvs_fct, filename="./uvs.json"):
+    """
+    Exports a list of UVs into a json file.
+    :param uvs_fct:
+    :param filename:
+    :return:
+    """
+    with open(filename, "w") as f:
+        json.dump([uv.export() for uv in uvs_fct], f, indent=4)
+
+
+def import_uvs(filename="./uvs.json"):
+    """
+    Imports a list of UVs from a json file.
+    :param filename:
+    :return:
+    """
+    with open(filename, "r") as f:
+        uvs_load = json.load(f)
+    uvs_fct = []
+    for uv in uvs_load:
+        uvs_fct.append(
+            UV(uv["code"], uv["name"], uv["credits"], uv["semester"], uv["rooms"], uv["teachers"], uv["cm"], uv["td"],
+               uv["tp"], uv["capacity"]))
+    return uvs_fct
 
 
 def export_population(population, filename="./chromosome.json"):
@@ -205,7 +251,16 @@ def import_population(filename):
     for chromosome in data:
         chr = []
         for gene in chromosome:
-            chr.append(Gene(gene["room"], gene["start_time"], gene["start_day"], gene["duration"], gene["teacher"], gene["code"], gene["type"]))
+            chr.append(Gene(gene["room"], gene["start_time"], gene["start_day"], gene["duration"], gene["teacher"],
+                            gene["code"], gene["type"]))
         population.append(chr)
-    
+
     return population
+
+
+if __name__ == "__main__":
+    uvs = get_uvs("FISE-INFO")
+    export_uvs(uvs, "uvs.json")
+    uvs = import_uvs("uvs.json")
+    print(uvs)
+    print("Done.")
