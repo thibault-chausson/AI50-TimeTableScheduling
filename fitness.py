@@ -1,24 +1,24 @@
-def fitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
-    fitnessScore = strongFitness(schedule, studentWeight, classroomWeight, teacherWeight)
+def fitness(dataStrcuture, schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
+    fitnessScore = strongFitness(dataStrcuture, schedule, studentWeight, classroomWeight, teacherWeight)
     if(fitnessScore > 0): return fitnessScore + 1000 #Adding 1000 to all strong fitness so they get less prioritized than weakOnes
-    return weakFitness(schedule)
+    return weakFitness(dataStrcuture, schedule)
 
-def strongFitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
-    fitnessScore = studentWeight * studentStrongFitness(schedule)
-    fitnessScore += teacherWeight * teacherStrongFitness(schedule)
-    fitnessScore += classroomWeight * classroomStrongFitness(schedule)
+def strongFitness(dataStrcuture, schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
+    fitnessScore = studentWeight * studentStrongFitness(dataStrcuture, schedule)
+    fitnessScore += teacherWeight * teacherStrongFitness(dataStrcuture, schedule)
+    fitnessScore += classroomWeight * classroomStrongFitness(dataStrcuture, schedule)
     return fitnessScore
 
-def weakFitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
-    fitnessScore = studentWeight * studentWeakFitness(schedule)
-    fitnessScore += teacherWeight * teacherWeakFitness(schedule)
-    fitnessScore += classroomWeight * classroomWeakFitness(schedule)
+def weakFitness(dataStrcuture, schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
+    fitnessScore = studentWeight * studentWeakFitness(dataStrcuture, schedule)
+    fitnessScore += teacherWeight * teacherWeakFitness(dataStrcuture, schedule)
+    fitnessScore += classroomWeight * classroomWeakFitness(dataStrcuture, schedule)
     return fitnessScore
 
-def studentStrongFitness(schedule):
+def studentStrongFitness(dataStrcuture, schedule):
     return 0
 
-def teacherStrongFitness(schedule):
+def teacherStrongFitness(dataStrcuture, schedule):
      for i in range(len(schedule)):
 
         #Evaluate schedule conflicts with other timeslots
@@ -30,7 +30,7 @@ def teacherStrongFitness(schedule):
                 fitnessImpact +=1
                 fitness += fitnessImpact
 
-def classroomStrongFitness(schedule):
+def classroomStrongFitness(dataStrcuture, schedule):
     fitness = 0
     for i in range(len(schedule)):
 
@@ -47,18 +47,33 @@ def classroomStrongFitness(schedule):
                 fitnessImpact +=1
                 fitness += fitnessImpact
 
-def studentCapacityOverload(timeslot):
+def studentCapacityOverload(dataStrcuture, timeslot):
     if timeslot['Classroom'].capacity < timeslot['Course'].UV.capacity:return False
 
-def timeslotOverlap(timeslot1,timeslot2):
+def timeslotOverlap(dataStrcuture, timeslot1,timeslot2):
     return timeslot1.start < timeslot2.end and timeslot2.start < timeslot1.end
     
+#Can be re-written by building a list of conflicting UVs
+def studentWeakFitness(dataStrcuture, schedule):
+    fitness = 0
+    for student in dataStrcuture.students:
+        heat = 1
+        i = 1
+        for UV in student.UVs:
+            for j in range(i,len(student.UVs)):
+                if UVScheduleConflict(dataStrcuture, schedule, UV, student.UVs[j]):
+                    fitness += heat
+                    heat += 1
+    return fitness
 
-def studentWeakFitness(schedule):
+def UVScheduleConflict(dataStrcuture, schedule, UV1, UV2):
+    for cours1 in UV1.cours:
+        for cours2 in UV2.cours:
+            if cours1.start < cours2.end and cours2.start < cours1.end : return True
+    return False
+
+def teacherWeakFitness(dataStrcuture, schedule):
     pass
 
-def teacherWeakFitness(schedule):
-    pass
-
-def classroomWeakFitness(schedule):
+def classroomWeakFitness(dataStrcuture, schedule):
     pass
