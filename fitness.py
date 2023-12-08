@@ -22,10 +22,10 @@ def studentStrongFitness(schedule):
     return 0
 
 def teacherStrongFitness(schedule):
+     fitness = 0
      for i in range(len(schedule)):
 
         #Evaluate schedule conflicts with other timeslots
-        
         fitnessImpact = 0
         for j in range(i,len(schedule)):
             if(schedule[i]['Teacher'] != schedule[j]['Teacher']): continue
@@ -39,7 +39,6 @@ def classroomStrongFitness(schedule):
 
         #Evaluate student capacity
         if(studentCapacityOverload(schedule[i])): fitness+=1
-
 
         #Evaluate schedule conflicts with other timeslots
         fitnessImpact = 0
