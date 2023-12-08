@@ -52,6 +52,25 @@ class UV:
         self.tp = tp
         self.capacity = capacity
 
+    def codeToUV(UVCode):
+        with open('uvs.json') as f_in:
+            uvs = json.load(f_in)
+        targetUV = next((item for item in uvs if item["code"] == UVCode), None)
+        if targetUV == None : return None
+        newUV = UV(
+            UVCode,
+            targetUV["name"],
+            targetUV["credits"],
+            targetUV["semester"],
+            targetUV["rooms"],
+            targetUV["teachers"],
+            targetUV["cm"],
+            targetUV["td"],
+            targetUV["tp"],
+            targetUV["capacity"]
+        )
+        return newUV
+
     def export(self):
         return {
             "code": self.code,
