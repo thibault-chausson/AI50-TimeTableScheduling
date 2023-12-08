@@ -53,12 +53,13 @@ def studentCapacityOverload(timeslot):
     if timeslot['Classroom'].capacity < timeslot['Course'].UV.capacity:return False
 
 def timeslotOverlap(timeslot1,timeslot2):
-    return timeslot1.start < timeslot2.end and timeslot2.start < timeslot1.end
-    
+    if timeslot1.start_day != timeslot2.start_day : return False
+    return timeslot1.start_time < timeslot2.start_time + timeslot2.duration and timeslot2.start_time < timeslot1.start_time + timeslot1.duration
+
 #Can be re-written by building a list of conflicting UVs
 def studentWeakFitness(schedule):
     fitness = 0
-    for student in tudents:
+    for student in students:
         heat = 1
         i = 1
         for UV in student.UVs:
