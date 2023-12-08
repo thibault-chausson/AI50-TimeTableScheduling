@@ -17,6 +17,23 @@ class Room:
         self.description = description
         self.site = site
 
+    def codeToRoom(roomCode):
+        
+        with open('salles.json') as f_in:
+            rooms = json.load(f_in)
+        if roomCode not in rooms:
+            print("Non existing room "+roomCode)
+            return None
+        targetRoom = rooms[roomCode]
+        newRoom = Room(
+            roomCode,
+            targetRoom["capacity"],
+            targetRoom["type"],
+            targetRoom["description"],
+            targetRoom["site"]
+        )
+        return newRoom
+
     def __repr__(self):
         return f"Room({self.room}, {self.capacity}, {self.type}, {self.description}, {self.site})"
 

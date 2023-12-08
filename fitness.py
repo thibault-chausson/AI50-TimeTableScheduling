@@ -1,6 +1,9 @@
+import toolbox
+import toolbox_student
+
 def fitness(dataStrcuture, schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
     fitnessScore = strongFitness(dataStrcuture, schedule, studentWeight, classroomWeight, teacherWeight)
-    if(fitnessScore > 0): return fitnessScore + 1000 #Adding 1000 to all strong fitness so they get less prioritized than weakOnes
+    if(fitnessScore > 0): return 0 - fitnessScore
     return weakFitness(dataStrcuture, schedule)
 
 def strongFitness(dataStrcuture, schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
@@ -39,7 +42,6 @@ def classroomStrongFitness(dataStrcuture, schedule):
 
 
         #Evaluate schedule conflicts with other timeslots
-        
         fitnessImpact = 0
         for j in range(i,len(schedule)):
             if(schedule[i]['Classroom'] != schedule[j]['Classroom']): continue
