@@ -1,0 +1,3159 @@
+[
+    {
+        "code": "SP01",
+        "name": "Gestion de la vie physique",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            null
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 26
+    },
+    {
+        "code": "SP03",
+        "name": "Entra\u00eenement et performances",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Boris CUENOT"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 40
+    },
+    {
+        "code": "SP07",
+        "name": "Education physique et sportive option entretien physique",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Boris CUENOT"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 1680,
+        "capacity": 65
+    },
+    {
+        "code": "SP08",
+        "name": "Education physique et sportive option gestion d'un groupe, animation d'une s\u00e9ance",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Boris CUENOT"
+        ],
+        "cm": 0,
+        "td": 3360,
+        "tp": 0,
+        "capacity": 67
+    },
+    {
+        "code": "TI01",
+        "name": "Communication \u00e9crite",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Corinne MIRABEL-GRAFF"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 56
+    },
+    {
+        "code": "TI02",
+        "name": "Expression orale ",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Corinne MIRABEL-GRAFF"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 1680,
+        "capacity": 44
+    },
+    {
+        "code": "TI05",
+        "name": "Communication globale du manager",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Michael FESTA"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 46
+    },
+    {
+        "code": "TI09",
+        "name": "Communication orale en groupe",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Corinne MIRABEL-GRAFF"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 1680,
+        "capacity": 74
+    },
+    {
+        "code": "EC1E",
+        "name": "Fundamentals of economics for the engineer",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Mariyana AMOVA"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 70
+    },
+    {
+        "code": "MR02",
+        "name": "M\u00e9thodologie de recherche : caf\u00e9 litt\u00e9raire et cin\u00e9phile",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 39
+    },
+    {
+        "code": "IW52",
+        "name": "Projet International : Smart Cities",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Franck GECHTER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 2400,
+        "capacity": 24
+    },
+    {
+        "code": "SV50",
+        "name": "Projet S\u00e9curit\u00e9 virtualisation de l'infrastructure r\u00e9seau",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Frederic LASSABE"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 1800,
+        "capacity": 58
+    },
+    {
+        "code": "TX52",
+        "name": "Projet de recherche",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Franck GECHTER"
+        ],
+        "cm": 120,
+        "td": 0,
+        "tp": 0,
+        "capacity": 22
+    },
+    {
+        "code": "VA50",
+        "name": "Projet Vision artificielle",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Nathan CROMBEZ"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 1800,
+        "capacity": 22
+    },
+    {
+        "code": "VA51",
+        "name": "Traitement de l'image",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Nathan CROMBEZ"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 1080,
+        "capacity": 62
+    },
+    {
+        "code": "VA52",
+        "name": "Reconnaissance des formes",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Yassine RUICHEK"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 1080,
+        "capacity": 61
+    },
+    {
+        "code": "EC1F",
+        "name": "Fondements de l'\u00e9conomie pour l'ing\u00e9nieur",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Mariyana AMOVA"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 73
+    },
+    {
+        "code": "AI52",
+        "name": "Optimisation et recherche op\u00e9rationnelle avanc\u00e9e",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Mahjoub DRIDI"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 1080,
+        "capacity": 21
+    },
+    {
+        "code": "DA50",
+        "name": "Projet D\u00e9veloppement informatique avanc\u00e9e",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Stephane GALLAND"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 1800,
+        "capacity": 75
+    },
+    {
+        "code": "DA53",
+        "name": "Compiler & language theorie",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Stephane GALLAND"
+        ],
+        "cm": 1440,
+        "td": 1200,
+        "tp": 1080,
+        "capacity": 44
+    },
+    {
+        "code": "VA53",
+        "name": "Mod\u00e8les probabilistes et stochastiques pour la vision artificielle",
+        "credits": 3.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Franck GECHTER"
+        ],
+        "cm": 840,
+        "td": 840,
+        "tp": 0,
+        "capacity": 57
+    },
+    {
+        "code": "VA54",
+        "name": "G\u00e9om\u00e9trie et analyse d'images multivues",
+        "credits": 3.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Nathan CROMBEZ"
+        ],
+        "cm": 840,
+        "td": 840,
+        "tp": 540,
+        "capacity": 20
+    },
+    {
+        "code": "AM01",
+        "name": "Improvisation et interpr\u00e9tation musicale",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Murielle THANNEUR"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 24
+    },
+    {
+        "code": "AM02",
+        "name": "Pratique et cr\u00e9ation artistique",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 25
+    },
+    {
+        "code": "AR03",
+        "name": "Initiation au design industriel",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marjorie BARCELLA"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 31
+    },
+    {
+        "code": "AR05",
+        "name": "Outils et moyens d'expression du design",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marjorie BARCELLA"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 63
+    },
+    {
+        "code": "AV00",
+        "name": "R\u00e9alisation audiovisuelle",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Corinne MIRABEL-GRAFF"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 59
+    },
+    {
+        "code": "CC01",
+        "name": "Comportement culturel et relations humaines au niveau international",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Jung Sook BAE"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 68
+    },
+    {
+        "code": "CC02",
+        "name": "Culture et soci\u00e9t\u00e9 asiatique",
+        "credits": 5.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Nathalie SEMENTERY"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 24
+    },
+    {
+        "code": "CC03",
+        "name": "American studies",
+        "credits": 5.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Lotfi BENNOUR"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 36
+    },
+    {
+        "code": "CC04",
+        "name": "British studies",
+        "credits": 5.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Lotfi BENNOUR"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 57
+    },
+    {
+        "code": "CC05",
+        "name": "Intercultural awareness:How to become a global citizen ?",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Miriam TAYLOR-PONCET"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 58
+    },
+    {
+        "code": "CI02",
+        "name": "Ma\u00eetriser son identit\u00e9 scientifique",
+        "credits": 1.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marine GUILHAMOULAT"
+        ],
+        "cm": 0,
+        "td": 120,
+        "tp": 0,
+        "capacity": 59
+    },
+    {
+        "code": "DR01",
+        "name": "Introduction \u00e0 l'\u00e9tude du droit",
+        "credits": 5.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Dominique LANDBECK"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 48
+    },
+    {
+        "code": "DR02",
+        "name": "Cadre juridique des soci\u00e9t\u00e9s",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Dominique LANDBECK"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 33
+    },
+    {
+        "code": "DR04",
+        "name": "Connaissances juridiques de l'ing\u00e9nieur",
+        "credits": 5.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Dominique LANDBECK"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 64
+    },
+    {
+        "code": "EC02",
+        "name": "Mondialisation de l'\u00e9conomie",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Nathalie KROICHVILI"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 41
+    },
+    {
+        "code": "EC05",
+        "name": "Actualit\u00e9s sociales. Questions de soci\u00e9t\u00e9s",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Benedicte REY"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 46
+    },
+    {
+        "code": "EC06",
+        "name": "Th\u00e9orie des risques",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Ylenia CURCI"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 48
+    },
+    {
+        "code": "EC07",
+        "name": "Nudges",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Ylenia CURCI"
+        ],
+        "cm": 0,
+        "td": 3300,
+        "tp": 0,
+        "capacity": 28
+    },
+    {
+        "code": "EE01",
+        "name": "Europe",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Nathalie KROICHVILI"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 48
+    },
+    {
+        "code": "EI02",
+        "name": "The Rest of the English-Speaking World",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Michel OLINGA"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 24
+    },
+    {
+        "code": "EI03",
+        "name": "International Security and Global Challenges",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Lotfi BENNOUR"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 25
+    },
+    {
+        "code": "EI04",
+        "name": "Industrial Buying, Selling and Negotiation",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Michael MCKINNEY"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 38
+    },
+    {
+        "code": "EI05",
+        "name": "An Introduction to Innovation Studies",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Ylenia CURCI"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 47
+    },
+    {
+        "code": "EI10",
+        "name": "Regards sur le Japon",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Keiko JIMBO"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 73
+    },
+    {
+        "code": "EI12",
+        "name": "G\u00e9opolitique et organisations internationales",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Michel OLINGA"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 29
+    },
+    {
+        "code": "EP00",
+        "name": "Ecolologie personnelle",
+        "credits": 1.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER"
+        ],
+        "cm": 0,
+        "td": 240,
+        "tp": 840,
+        "capacity": 36
+    },
+    {
+        "code": "EV00",
+        "name": "Initiation \u00e0 l'environnement et \u00e0 ses probl\u00e8matiques",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Didier KLEIN"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 32
+    },
+    {
+        "code": "EV01",
+        "name": "Imaginer et concevoir les nouvelles mobilit\u00e9s",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Benedicte REY"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 68
+    },
+    {
+        "code": "EV02",
+        "name": "Energy and Environment",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "John PHILLIPS"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 59
+    },
+    {
+        "code": "EV03",
+        "name": "Sustainable Development",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "John PHILLIPS"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 33
+    },
+    {
+        "code": "EV04",
+        "name": "Environmental and energy economics",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Ylenia CURCI"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 58
+    },
+    {
+        "code": "EV05",
+        "name": "La ville en transition",
+        "credits": 5.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Nicolas SIMONCINI"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 71
+    },
+    {
+        "code": "GE01",
+        "name": "Fondements de la gestion",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Christian GIRARDOT"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 57
+    },
+    {
+        "code": "ESP3",
+        "name": "Tutored project",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Haylee COFIELD-ILHE"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 63
+    },
+    {
+        "code": "ESP4",
+        "name": "Tutored project",
+        "credits": 12.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Haylee COFIELD-ILHE"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 63
+    },
+    {
+        "code": "ESP5",
+        "name": "Tutored Project",
+        "credits": 18.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Haylee COFIELD-ILHE"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 73
+    },
+    {
+        "code": "SV52",
+        "name": "Administration syst\u00e8mes et r\u00e9seaux",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Frederic LASSABE"
+        ],
+        "cm": 1200,
+        "td": 1200,
+        "tp": 1440,
+        "capacity": 63
+    },
+    {
+        "code": "TO52",
+        "name": "Projet de d\u00e9veloppement",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Yassine RUICHEK"
+        ],
+        "cm": 120,
+        "td": 0,
+        "tp": 0,
+        "capacity": 53
+    },
+    {
+        "code": "GE02",
+        "name": "Evaluation de la performance",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER",
+            "Fabienne PICARD"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 57
+    },
+    {
+        "code": "GE03",
+        "name": "Gestion des ressources humaines",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Michael FESTA"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 23
+    },
+    {
+        "code": "GE06",
+        "name": "Fondements du marketing",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Christian GIRARDOT"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 37
+    },
+    {
+        "code": "GE07",
+        "name": "Gestion financi\u00e8re et investissement",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Christian GIRARDOT"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 62
+    },
+    {
+        "code": "GE08",
+        "name": "Contr\u00f4le de gestion",
+        "credits": 5.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Christian GIRARDOT"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 38
+    },
+    {
+        "code": "GE09",
+        "name": "Marketing connect\u00e9 et marketing BtoB",
+        "credits": 5.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Michael MCKINNEY"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 72
+    },
+    {
+        "code": "GE37",
+        "name": "Management de l'innovation INNOV-UT",
+        "credits": 4.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "J\u00e9r\u00e9mie BEAUDET"
+        ],
+        "cm": 900,
+        "td": 1800,
+        "tp": 0,
+        "capacity": 32
+    },
+    {
+        "code": "GE38",
+        "name": "Management et outils d'aide \u00e0 la cr\u00e9ativit\u00e9 industrielle et \u00e0 l'innovation INNOV-UT",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            null
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 56
+    },
+    {
+        "code": "GE41",
+        "name": "Technologie et management INNOV-UT",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "J\u00e9r\u00e9mie BEAUDET"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 49
+    },
+    {
+        "code": "GS01",
+        "name": "Etudes de genre",
+        "credits": 5.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Laurent HEYBERGER"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 35
+    },
+    {
+        "code": "HE05",
+        "name": "Les ing\u00e9nieurs et les techniciens dans le temps",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Laurent HEYBERGER"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 24
+    },
+    {
+        "code": "HE08",
+        "name": "L'industrie contemporaine : mise en perspective historique et \u00e9conomique",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Cyril LACHEZE"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 69
+    },
+    {
+        "code": "HE09",
+        "name": "Histoire des sciences et du monde scientifique",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Laurent HEYBERGER"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 36
+    },
+    {
+        "code": "HN01",
+        "name": "Techn'hom Time Machine : outils et m\u00e9thodes",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER"
+        ],
+        "cm": 0,
+        "td": 2520,
+        "tp": 0,
+        "capacity": 67
+    },
+    {
+        "code": "HN03",
+        "name": "Ing\u00e9nierie des connaissances INNOV-UT",
+        "credits": 4.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            null
+        ],
+        "cm": 1800,
+        "td": 1800,
+        "tp": 0,
+        "capacity": 55
+    },
+    {
+        "code": "HN2A",
+        "name": "Techn'hom Time Machine : projet (QC)",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 73
+    },
+    {
+        "code": "HN2B",
+        "name": "Techn'hom Time Machine : projet (OM)",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 37
+    },
+    {
+        "code": "HT01",
+        "name": "Initiation \u00e0 l'histoire des techniques",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 31
+    },
+    {
+        "code": "HT07",
+        "name": "Patrimoine industriel et enjeux contemporains",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 46
+    },
+    {
+        "code": "IT4B",
+        "name": "Traitement de l'information",
+        "credits": 3.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Rachid BOUYEKHF"
+        ],
+        "cm": 840,
+        "td": 840,
+        "tp": 0,
+        "capacity": 66
+    },
+    {
+        "code": "IT4C",
+        "name": "Traitement du signal",
+        "credits": 3.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Mahjoub DRIDI"
+        ],
+        "cm": 840,
+        "td": 840,
+        "tp": 1080,
+        "capacity": 57
+    },
+    {
+        "code": "HT08",
+        "name": "Techniques, \u00e9conomie et soci\u00e9t\u00e9",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 38
+    },
+    {
+        "code": "HT12",
+        "name": "Histoire de l'Afrique : du colonial au postcolonial",
+        "credits": 5.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Laurent HEYBERGER"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 32
+    },
+    {
+        "code": "ID01",
+        "name": "Innovation Crunch Time - Cat\u00e9gorie Projet Industriel",
+        "credits": 1.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Marjorie BARCELLA"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 40
+    },
+    {
+        "code": "ID02",
+        "name": "Innovation Crunch Time - Cat\u00e9gorie Startupper",
+        "credits": 1.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Katy CABARET"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 36
+    },
+    {
+        "code": "ID03",
+        "name": "Innovation Crunch Time - Cat\u00e9gorie Assistant Fabmanager",
+        "credits": 1.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Marjorie BARCELLA"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 69
+    },
+    {
+        "code": "IR5A",
+        "name": "Interdisciplinary research - niveau TM",
+        "credits": 3.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Franck GECHTER"
+        ],
+        "cm": 180,
+        "td": 0,
+        "tp": 0,
+        "capacity": 59
+    },
+    {
+        "code": "IR5B",
+        "name": "Interdiciplinary research - niveau SHS",
+        "credits": 3.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Mathieu TRICLOT"
+        ],
+        "cm": 180,
+        "td": 0,
+        "tp": 0,
+        "capacity": 20
+    },
+    {
+        "code": "LC00",
+        "name": "Chinois vrai d\u00e9butant",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Nathalie SEMENTERY"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 41
+    },
+    {
+        "code": "LC01",
+        "name": "Chinois niveau I",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Niu NIU DUPLAIN"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 42
+    },
+    {
+        "code": "LC02",
+        "name": "Chinois niveau II",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Niu NIU DUPLAIN"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 25
+    },
+    {
+        "code": "LC08",
+        "name": "Pr\u00e9paration \u00e0 l'examen international HSK",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Niu NIU DUPLAIN"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 840,
+        "capacity": 28
+    },
+    {
+        "code": "LE01",
+        "name": "Anglais niveau I",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rachel VERNA"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 62
+    },
+    {
+        "code": "LE02",
+        "name": "Anglais niveau II",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Murielle THANNEUR",
+            "Brigitte DURIEZ"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 46
+    },
+    {
+        "code": "LE03",
+        "name": "Anglais pratique et examen international",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Joanne SMITH",
+            "Nathalie ZAVADA"
+        ],
+        "cm": 840,
+        "td": 1680,
+        "tp": 1260,
+        "capacity": 65
+    },
+    {
+        "code": "LE05",
+        "name": "Business English",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Raphaelle PRITZY"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 20
+    },
+    {
+        "code": "LE07",
+        "name": "Anglais de la technologie et de l'industrie",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Heather COOPER"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 21
+    },
+    {
+        "code": "LE08",
+        "name": "Communication \u00e9crite en anglais",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Laurent TOURRETTE"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 48
+    },
+    {
+        "code": "LE09",
+        "name": "Communication orale en anglais",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Michael MCKINNEY"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 74
+    },
+    {
+        "code": "IT4A",
+        "name": "Math\u00e9matiques discr\u00e8tes",
+        "credits": 3.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Serge IOVLEFF"
+        ],
+        "cm": 840,
+        "td": 840,
+        "tp": 0,
+        "capacity": 72
+    },
+    {
+        "code": "LE50",
+        "name": "R\u00e9ussir au Linguaskill : soutien et rem\u00e9diation",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Brigitte DURIEZ"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 52
+    },
+    {
+        "code": "LF70",
+        "name": "Fran\u00e7ais langue \u00e9trang\u00e8re vrai d\u00e9butant A.1.1 A1.2",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rossana Carmela BRUNDO"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 70
+    },
+    {
+        "code": "LF71",
+        "name": "Fran\u00e7ais langue \u00e9trang\u00e8re A2",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rossana Carmela BRUNDO"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 50
+    },
+    {
+        "code": "LF72",
+        "name": "Fran\u00e7ais pour \u00e9l\u00e8ves-ing\u00e9nieurs A2.2-B1.1",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rossana Carmela BRUNDO"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 36
+    },
+    {
+        "code": "LF73",
+        "name": "Fran\u00e7ais pour ing\u00e9nieurs niveau B1.2",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rossana Carmela BRUNDO"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 31
+    },
+    {
+        "code": "LF74",
+        "name": "Fran\u00e7ais pour ing\u00e9nieurs niveau B2 et entra\u00eenement TCF",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rossana Carmela BRUNDO"
+        ],
+        "cm": 0,
+        "td": 2520,
+        "tp": 1260,
+        "capacity": 63
+    },
+    {
+        "code": "LG00",
+        "name": "Allemand vrai d\u00e9butant",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marianne BONNARD"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 55
+    },
+    {
+        "code": "LG01",
+        "name": "Allemand niveau I",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marianne BONNARD"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 59
+    },
+    {
+        "code": "LG02",
+        "name": "Allemand niveau II",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Celine MOUILLET"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 43
+    },
+    {
+        "code": "LG03",
+        "name": "Allemand pratique et examen international",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Celine MOUILLET"
+        ],
+        "cm": 0,
+        "td": 2520,
+        "tp": 1260,
+        "capacity": 38
+    },
+    {
+        "code": "LG05",
+        "name": "Allemand des affaires",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Celine MOUILLET"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 62
+    },
+    {
+        "code": "LI00",
+        "name": "Italien vrai d\u00e9butant",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rossana Carmela BRUNDO"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 31
+    },
+    {
+        "code": "LI01",
+        "name": "Italien niveau I",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rossana Carmela BRUNDO"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 31
+    },
+    {
+        "code": "LJ00",
+        "name": "Japonais vrai d\u00e9butant",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Keiko JIMBO"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 60
+    },
+    {
+        "code": "LJ01",
+        "name": "Japonais niveau I",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Keiko JIMBO"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 55
+    },
+    {
+        "code": "LJ02",
+        "name": "Japonais niveau II",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Keiko JIMBO"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 40
+    },
+    {
+        "code": "LJ08",
+        "name": "Pr\u00e9paration \u00e0 l'examen international de Japonais (JLPT niveau 5)",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Keiko JIMBO"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 840,
+        "capacity": 56
+    },
+    {
+        "code": "AI50",
+        "name": "Intelligence artificielle: le projet complet sur 6 mois",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Nicolas GAUD"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 1800,
+        "capacity": 34
+    },
+    {
+        "code": "LK00",
+        "name": "Cor\u00e9en vrai d\u00e9butant",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Jung Sook BAE"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 45
+    },
+    {
+        "code": "LK01",
+        "name": "Cor\u00e9en niveau I",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Jung Sook BAE"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 72
+    },
+    {
+        "code": "LK08",
+        "name": "Cor\u00e9en pratique et examen international",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Jung Sook BAE"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 840,
+        "capacity": 74
+    },
+    {
+        "code": "LR00",
+        "name": "Russe vrai d\u00e9butant",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Murielle THANNEUR"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 49
+    },
+    {
+        "code": "LR01",
+        "name": "Russe niveau I",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Murielle THANNEUR"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 67
+    },
+    {
+        "code": "LS00",
+        "name": "Espagnol vrai d\u00e9butant",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Elizabeth BOUTROUX"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 43
+    },
+    {
+        "code": "LS01",
+        "name": "Espagnol niveau I",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Elizabeth BOUTROUX"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 49
+    },
+    {
+        "code": "LS02",
+        "name": "Espagnol niveau II",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Uxio LOPEZ RODRIGUEZ"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 22
+    },
+    {
+        "code": "LS03",
+        "name": "Espagnol pratique et examen international",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Uxio LOPEZ RODRIGUEZ"
+        ],
+        "cm": 0,
+        "td": 2520,
+        "tp": 1260,
+        "capacity": 74
+    },
+    {
+        "code": "LS04",
+        "name": "Culture et civilisation hispanophone",
+        "credits": 4.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            null
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 62
+    },
+    {
+        "code": "LS05",
+        "name": "Espagnol des affaires",
+        "credits": 4.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Elizabeth BOUTROUX"
+        ],
+        "cm": 0,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 67
+    },
+    {
+        "code": "LZ00",
+        "name": "Langue non enseign\u00e9e \u00e0 l'UTBM",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rossana Carmela BRUNDO"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 75
+    },
+    {
+        "code": "MG01",
+        "name": "Management de l'innovation et entrepreneuriat",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Katy CABARET"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 27
+    },
+    {
+        "code": "MG03",
+        "name": "Jeux d'entreprise : application des m\u00e9thodes de gestion comptables et \u00e9conomiques",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Katy CABARET"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 54
+    },
+    {
+        "code": "MG04",
+        "name": "Management de l'environnement",
+        "credits": 5.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Dominique LANDBECK"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 25
+    },
+    {
+        "code": "MG05",
+        "name": "Management de l'information et intelligence \u00e9conomique",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER",
+            "Fabienne PICARD"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 53
+    },
+    {
+        "code": "MG07",
+        "name": "Management par la proximit\u00e9",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER",
+            "Fabienne PICARD"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 55
+    },
+    {
+        "code": "RO52",
+        "name": "Algorithmique, robotique et syst\u00e8mes temps r\u00e9el",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Abdeljalil ABBAS-TURKI"
+        ],
+        "cm": 1440,
+        "td": 0,
+        "tp": 2160,
+        "capacity": 67
+    },
+    {
+        "code": "MG6P",
+        "name": "Les brevets au service de l'ing\u00e9nieur - Projet",
+        "credits": 2.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Mariyana AMOVA"
+        ],
+        "cm": 0,
+        "td": 600,
+        "tp": 0,
+        "capacity": 55
+    },
+    {
+        "code": "MG6T",
+        "name": "Les brevets au service de l'ing\u00e9nieur - Th\u00e9orie",
+        "credits": 3.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Mariyana AMOVA"
+        ],
+        "cm": 840,
+        "td": 1080,
+        "tp": 0,
+        "capacity": 47
+    },
+    {
+        "code": "MR01",
+        "name": "M\u00e9thodologie de recherche (\u00e0 distance)",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Mariyana AMOVA"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 30
+    },
+    {
+        "code": "MR52",
+        "name": "M\u00e9thodologie de recherche (Informatique)",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marina GASNIER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 25
+    },
+    {
+        "code": "PA0A",
+        "name": "S'engager au service d'une communaut\u00e9, d'individus",
+        "credits": 3.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Nicolas SIMONCINI"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 20
+    },
+    {
+        "code": "PA0B",
+        "name": "S'engager au service d'une communaut\u00e9, d'individus",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Nicolas SIMONCINI"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 25
+    },
+    {
+        "code": "PA05",
+        "name": "R\u00e9diger son portfolio",
+        "credits": 2.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marjorie BARCELLA"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 900,
+        "capacity": 56
+    },
+    {
+        "code": "PA3A",
+        "name": "Actions en faveur de personnes en situation de handicap",
+        "credits": 3.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Murielle THANNEUR"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 72
+    },
+    {
+        "code": "PA3B",
+        "name": " Actions en faveur de personnes en situation de handicap ",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Murielle THANNEUR"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 24
+    },
+    {
+        "code": "PA4A",
+        "name": "Pratique et m\u00e9diation culturelle",
+        "credits": 3.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Marjorie BARCELLA"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 54
+    },
+    {
+        "code": "PE01",
+        "name": "Projet entrepreneurial",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Katy CABARET"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 38
+    },
+    {
+        "code": "PH01",
+        "name": "D\u00e9couverte de la philosophie",
+        "credits": 5.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Mathieu TRICLOT"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 65
+    },
+    {
+        "code": "PH02",
+        "name": "Science, technique et politique",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Mathieu TRICLOT"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 43
+    },
+    {
+        "code": "PH03",
+        "name": "Th\u00e9ories du cin\u00e9ma, th\u00e9ories des jeux vid\u00e9o",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Mathieu TRICLOT"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 64
+    },
+    {
+        "code": "PH04",
+        "name": "Philosophie et informatique",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Mathieu TRICLOT"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 70
+    },
+    {
+        "code": "SA01",
+        "name": "Atelier th\u00e9\u00e2tre",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Murielle THANNEUR"
+        ],
+        "cm": 1680,
+        "td": 840,
+        "tp": 0,
+        "capacity": 72
+    },
+    {
+        "code": "SC01",
+        "name": "De la psychologie cognitive \u00e0 l'ergonomie cognitive",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Florence BAZZARO"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 66
+    },
+    {
+        "code": "SI02",
+        "name": "S\u00e9miologie de l'image et du son",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Jung Sook BAE"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 40
+    },
+    {
+        "code": "SL00",
+        "name": "Suivi linguistique en Anglais",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Raphaelle PRITZY"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 45
+    },
+    {
+        "code": "SL01",
+        "name": "Suivi linguistique en Allemand",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Celine MOUILLET"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 25
+    },
+    {
+        "code": "SL02",
+        "name": "Suivi linguistique en Espagnol",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Elizabeth BOUTROUX"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 60
+    },
+    {
+        "code": "SL03",
+        "name": "Suivi linguistique en Russe",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Murielle THANNEUR"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 32
+    },
+    {
+        "code": "SL05",
+        "name": "Suivi linguistique en Italien",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rossana Carmela BRUNDO"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 43
+    },
+    {
+        "code": "SL06",
+        "name": "Suivi linguistique en Fran\u00e7ais langue \u00e9trang\u00e8re",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Rossana Carmela BRUNDO"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 62
+    },
+    {
+        "code": "SL08",
+        "name": "Suivi linguistique en Japonais",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Keiko JIMBO"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 62
+    },
+    {
+        "code": "SO01",
+        "name": "Sociologie du travail",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Olivier DEMBINSKI"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 22
+    },
+    {
+        "code": "SO02",
+        "name": "Usages et innovation (sociologie)",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Benedicte REY"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 65
+    },
+    {
+        "code": "SO03",
+        "name": "La transition par les sciences sociales",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Nicolas SIMONCINI"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 22
+    },
+    {
+        "code": "SO04",
+        "name": "Sciences humaines et sociales pour la conception en recherche technologique",
+        "credits": 5.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Nicolas SIMONCINI"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 61
+    },
+    {
+        "code": "SO07",
+        "name": "Sociologie des organisations",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Olivier DEMBINSKI"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 51
+    },
+    {
+        "code": "SO09",
+        "name": "Sant\u00e9 et s\u00e9curit\u00e9 au travail",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Michael FESTA"
+        ],
+        "cm": 1260,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 23
+    },
+    {
+        "code": "UE1B",
+        "name": "Universit\u00e9 d'\u00e9t\u00e9 (2-3 jours)",
+        "credits": 1.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Heather COOPER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 66
+    },
+    {
+        "code": "UE2B",
+        "name": "Universit\u00e9 d'\u00e9t\u00e9 (5 jours)",
+        "credits": 2.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Heather COOPER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 55
+    },
+    {
+        "code": "UE3B",
+        "name": "Universit\u00e9 d'\u00e9t\u00e9 (7-8 jours)",
+        "credits": 3.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Heather COOPER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 68
+    },
+    {
+        "code": "UE4B",
+        "name": "Universit\u00e9 d'\u00e9t\u00e9 (10 jours)",
+        "credits": 4.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Heather COOPER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 35
+    },
+    {
+        "code": "UE5B",
+        "name": "Universit\u00e9 d'\u00e9t\u00e9 (12-13 jours)",
+        "credits": 5.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Heather COOPER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 36
+    },
+    {
+        "code": "UE6B",
+        "name": "Universit\u00e9 d'\u00e9t\u00e9 (15 jours)",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Heather COOPER"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 20
+    },
+    {
+        "code": "AI51",
+        "name": "Syst\u00e8mes multiagents et simulation",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Nicolas GAUD"
+        ],
+        "cm": 1440,
+        "td": 1200,
+        "tp": 1080,
+        "capacity": 74
+    },
+    {
+        "code": "TA72",
+        "name": "Projet tutor\u00e9 troisi\u00e8me ann\u00e9e",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Amir HAJJAM EL HASSANI"
+        ],
+        "cm": 240,
+        "td": 0,
+        "tp": 0,
+        "capacity": 54
+    },
+    {
+        "code": "AI53",
+        "name": "Machine learning by practice",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Fabrice LAURI"
+        ],
+        "cm": 1440,
+        "td": 1680,
+        "tp": 1260,
+        "capacity": 26
+    },
+    {
+        "code": "AP4A",
+        "name": "Programmation Orient\u00e9e Objet: Concepts fondamentaux et mise en pratique avec le langage C++",
+        "credits": 3.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Franck GECHTER",
+            "Jean-Charles CREPUT"
+        ],
+        "cm": 840,
+        "td": 840,
+        "tp": 540,
+        "capacity": 74
+    },
+    {
+        "code": "AP4B",
+        "name": "Programmation Orient\u00e9e Objet: Mod\u00e9lisation UML et mise en pratique avec le langage Java",
+        "credits": 3.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Franck GECHTER",
+            "Jean-Charles CREPUT"
+        ],
+        "cm": 840,
+        "td": 840,
+        "tp": 540,
+        "capacity": 70
+    },
+    {
+        "code": "DA51",
+        "name": "Blockchain and distributed systems",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Jaafar GABER"
+        ],
+        "cm": 1440,
+        "td": 0,
+        "tp": 2880,
+        "capacity": 63
+    },
+    {
+        "code": "DA52",
+        "name": "Java entreprise",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Stephane GALLAND"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 0,
+        "capacity": 72
+    },
+    {
+        "code": "DS50",
+        "name": "Projet Data science",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Serge IOVLEFF"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 1800,
+        "capacity": 57
+    },
+    {
+        "code": "DS51",
+        "name": "Analyse intelligente et gestion des donn\u00e9es",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Jaafar GABER"
+        ],
+        "cm": 1440,
+        "td": 0,
+        "tp": 2880,
+        "capacity": 51
+    },
+    {
+        "code": "DS52",
+        "name": "Fondements de la science des donn\u00e9es",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Serge IOVLEFF"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 55
+    },
+    {
+        "code": "DS53",
+        "name": "Business intelligence big data",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Sid Ahmed LAMROUS"
+        ],
+        "cm": 1440,
+        "td": 0,
+        "tp": 2160,
+        "capacity": 66
+    },
+    {
+        "code": "HM40",
+        "name": "Interface Homme Machine",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Jean-Charles CREPUT"
+        ],
+        "cm": 1680,
+        "td": 1200,
+        "tp": 1080,
+        "capacity": 30
+    },
+    {
+        "code": "IA41",
+        "name": "Intelligence artificielle : concepts fondamentaux et langages d\u00e9di\u00e9s",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Fabrice LAURI"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 53
+    },
+    {
+        "code": "IT41",
+        "name": "Classical and Quantum Algorithms",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Frederic HOLWECK"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 28
+    },
+    {
+        "code": "IT44",
+        "name": "Analyse num\u00e9rique",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Frederic HOLWECK"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 1080,
+        "capacity": 67
+    },
+    {
+        "code": "IT45",
+        "name": "Optimisation et recherche op\u00e9rationnelle",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Olivier GRUNDER"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 1080,
+        "capacity": 65
+    },
+    {
+        "code": "MO50",
+        "name": "Projet M\u00e9thodes et outils de d\u00e9ploiement logiciel",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Yazan MUALLA"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 1800,
+        "capacity": 38
+    },
+    {
+        "code": "MO51",
+        "name": "Ing\u00e9nierie dirig\u00e9e par les mod\u00e8les et qualit\u00e9 du logiciel",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Vincent HILAIRE"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 31
+    },
+    {
+        "code": "MO52",
+        "name": "G\u00e9nie logiciel",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Yazan MUALLA"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 44
+    },
+    {
+        "code": "MO53",
+        "name": "Ing\u00e9nieur cloud associ\u00e9",
+        "credits": 4.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Yazan MUALLA"
+        ],
+        "cm": 1440,
+        "td": 1440,
+        "tp": 840,
+        "capacity": 27
+    },
+    {
+        "code": "MO54",
+        "name": "Management de projets informatiques",
+        "credits": 2.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Sid Ahmed LAMROUS"
+        ],
+        "cm": 600,
+        "td": 600,
+        "tp": 0,
+        "capacity": 59
+    },
+    {
+        "code": "MV50",
+        "name": "Projet Mondes virtuels UX/UI",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Mahjoub DRIDI"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 1800,
+        "capacity": 58
+    },
+    {
+        "code": "MV51",
+        "name": "G\u00e9om\u00e9trie pour l'image",
+        "credits": 4.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Mahjoub DRIDI"
+        ],
+        "cm": 1440,
+        "td": 1440,
+        "tp": 840,
+        "capacity": 37
+    },
+    {
+        "code": "MV52",
+        "name": "Synth\u00e8se d'image",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Fabrice LAURI"
+        ],
+        "cm": 1680,
+        "td": 1200,
+        "tp": 1080,
+        "capacity": 75
+    },
+    {
+        "code": "MV53",
+        "name": "Interface utilisateur",
+        "credits": 2.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Florence BAZZARO"
+        ],
+        "cm": 720,
+        "td": 0,
+        "tp": 540,
+        "capacity": 50
+    },
+    {
+        "code": "MV54",
+        "name": "R\u00e9alit\u00e9 virtuelle et augment\u00e9e",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Franck GECHTER"
+        ],
+        "cm": 1440,
+        "td": 0,
+        "tp": 2160,
+        "capacity": 71
+    },
+    {
+        "code": "PC40",
+        "name": "Parallel Computing and Multicore Architec",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Jaafar GABER"
+        ],
+        "cm": 1440,
+        "td": 0,
+        "tp": 2160,
+        "capacity": 49
+    },
+    {
+        "code": "RE4E",
+        "name": " Introduction to networks",
+        "credits": 3.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Nicolas LACAILLE"
+        ],
+        "cm": 420,
+        "td": 840,
+        "tp": 720,
+        "capacity": 27
+    },
+    {
+        "code": "RE4F",
+        "name": "Routing and switching essentials",
+        "credits": 3.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Nicolas LACAILLE"
+        ],
+        "cm": 420,
+        "td": 840,
+        "tp": 720,
+        "capacity": 36
+    },
+    {
+        "code": "RI50",
+        "name": "Projet Conception et d\u00e9ploiement infrastructure r\u00e9seaux",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Oumaya BAALA CANALDA"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 1800,
+        "capacity": 40
+    },
+    {
+        "code": "RI51",
+        "name": "R\u00e9seaux locaux",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Oumaya BAALA CANALDA"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 1080,
+        "capacity": 70
+    },
+    {
+        "code": "RI52",
+        "name": "R\u00e9seaux \u00e9tendus",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Oumaya BAALA CANALDA"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 1080,
+        "capacity": 61
+    },
+    {
+        "code": "RI53",
+        "name": "Radio networks",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Oumaya BAALA CANALDA"
+        ],
+        "cm": 1680,
+        "td": 1200,
+        "tp": 1080,
+        "capacity": 29
+    },
+    {
+        "code": "RN40",
+        "name": "Fondamentaux d'Algorithmique et de Programmation",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Abderrafiaa KOUKAM"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 49
+    },
+    {
+        "code": "RN41",
+        "name": "Fondements en alg\u00e8bre et analyse",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Rachid BOUYEKHF"
+        ],
+        "cm": 1680,
+        "td": 2520,
+        "tp": 0,
+        "capacity": 57
+    },
+    {
+        "code": "RO50",
+        "name": "Projet Robotique et syst\u00e8mes embarqu\u00e9s",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Abdeljalil ABBAS-TURKI"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 1800,
+        "capacity": 45
+    },
+    {
+        "code": "RO51",
+        "name": "Introduction to mobile robotics",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Zhi YAN"
+        ],
+        "cm": 1440,
+        "td": 1200,
+        "tp": 1080,
+        "capacity": 64
+    },
+    {
+        "code": "RO53",
+        "name": "Technologie syst\u00e8mes embarqu\u00e9s",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Alexandre RAVEY"
+        ],
+        "cm": 1680,
+        "td": 0,
+        "tp": 2160,
+        "capacity": 30
+    },
+    {
+        "code": "RS40",
+        "name": "R\u00e9seaux et Cybers\u00e9curit\u00e9 niveau 1",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Abdeljalil ABBAS-TURKI"
+        ],
+        "cm": 1440,
+        "td": 1680,
+        "tp": 840,
+        "capacity": 40
+    },
+    {
+        "code": "SI40",
+        "name": "Syst\u00e8mes d'information",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Christine LAHOUD"
+        ],
+        "cm": 1440,
+        "td": 0,
+        "tp": 2160,
+        "capacity": 29
+    },
+    {
+        "code": "ST42",
+        "name": "Stage professionnel de longue dur\u00e9e",
+        "credits": 30.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Damien PAIRE"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 50
+    },
+    {
+        "code": "ST52",
+        "name": "Projet de fin d'\u00e9tudes",
+        "credits": 30.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Damien PAIRE"
+        ],
+        "cm": 0,
+        "td": 0,
+        "tp": 0,
+        "capacity": 42
+    },
+    {
+        "code": "SV51",
+        "name": "Cloud Infrastructure and Virtualization",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Frederic LASSABE"
+        ],
+        "cm": 1200,
+        "td": 1200,
+        "tp": 1440,
+        "capacity": 58
+    },
+    {
+        "code": "SV53",
+        "name": "S\u00e9curit\u00e9 syst\u00e8me et r\u00e9seaux",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Oumaya BAALA CANALDA"
+        ],
+        "cm": 1440,
+        "td": 1440,
+        "tp": 1080,
+        "capacity": 22
+    },
+    {
+        "code": "SY40",
+        "name": "Architecture des syst\u00e8mes d'exploitation",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Mahjoub DRIDI"
+        ],
+        "cm": 1440,
+        "td": 1680,
+        "tp": 1260,
+        "capacity": 39
+    },
+    {
+        "code": "SY41",
+        "name": "Informatique embarqu\u00e9e et robotique: Microprocesseurs et microcontrolleurs",
+        "credits": 6.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Nicolas LACAILLE"
+        ],
+        "cm": 1440,
+        "td": 1680,
+        "tp": 1260,
+        "capacity": 64
+    },
+    {
+        "code": "SY42",
+        "name": "Robotique interm\u00e9diaire",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Nicolas LACAILLE"
+        ],
+        "cm": 1440,
+        "td": 0,
+        "tp": 2160,
+        "capacity": 29
+    },
+    {
+        "code": "TW52",
+        "name": "Projet industriel",
+        "credits": 6.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Abderrafiaa KOUKAM"
+        ],
+        "cm": 120,
+        "td": 0,
+        "tp": 0,
+        "capacity": 62
+    },
+    {
+        "code": "WE4A",
+        "name": "Technologies et programmation WEB",
+        "credits": 3.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Alexandre LOMBARD"
+        ],
+        "cm": 840,
+        "td": 840,
+        "tp": 420,
+        "capacity": 56
+    },
+    {
+        "code": "WE4B",
+        "name": "Technologies WEB avanc\u00e9es",
+        "credits": 3.0,
+        "semester": "AP",
+        "rooms": [],
+        "teachers": [
+            "Mohamed KAS"
+        ],
+        "cm": 840,
+        "td": 840,
+        "tp": 420,
+        "capacity": 40
+    },
+    {
+        "code": "IT4D",
+        "name": "Statistiques pour l'ing\u00e9nieur",
+        "credits": 3.0,
+        "semester": "A",
+        "rooms": [],
+        "teachers": [
+            "Serge IOVLEFF"
+        ],
+        "cm": 840,
+        "td": 840,
+        "tp": 0,
+        "capacity": 24
+    },
+    {
+        "code": "SY43",
+        "name": "Android development",
+        "credits": 6.0,
+        "semester": "P",
+        "rooms": [],
+        "teachers": [
+            "Pierre ROMET"
+        ],
+        "cm": 1680,
+        "td": 1680,
+        "tp": 1260,
+        "capacity": 38
+    }
+]
