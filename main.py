@@ -1,11 +1,20 @@
 import genetique as gen
 import toolbox as tb
 import toolbox_student as tbs
+import time as t
 
-if __name__ == "main":
+if __name__ == "__main__":
+    start_data = t.time()
     uvs = tb.import_uvs("datas/uvs.json")
     promo = tbs.import_promo("datas/promo.json")
     population = tb.import_population("datas/population.json")
-    res = gen.genetic_algorithm_single_point_elite(uvs, promo, population, 100, 10, 0.01)
+    sorted_fitness, sorted_population = gen.set_dataset(population)
+    print("Best fitness before: ", sorted_fitness)
+    end_data = t.time()
+    print("Data loading time: ", end_data - start_data)
+    start_algo = t.time()
+    chromosome, fitness = gen.genetic_algorithm_single_point_elite(uvs, promo, population, sorted_fitness, 1000, 0.01, 1)
+    end_algo = t.time()
+    print("Algorithm execution time: ", end_algo - start_algo)
 
-    print(res)
+    print(chromosome, fitness)
