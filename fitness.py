@@ -28,7 +28,7 @@ def teacherStrongFitness(schedule):
         #Evaluate schedule conflicts with other timeslots
         fitnessImpact = 0
         for j in range(i,len(schedule)):
-            if(schedule[i]['Teacher'] != schedule[j]['Teacher']): continue
+            if(schedule[i]['teacher'] != schedule[j]['teacher']): continue
             if(timeslotOverlap(schedule[i],schedule[j])):
                 fitnessImpact +=1
                 fitness += fitnessImpact
@@ -43,13 +43,13 @@ def classroomStrongFitness(schedule):
         #Evaluate schedule conflicts with other timeslots
         fitnessImpact = 0
         for j in range(i,len(schedule)):
-            if(schedule[i]['Classroom'] != schedule[j]['Classroom']): continue
+            if(schedule[i]['room'] != schedule[j]['room']): continue
             if(timeslotOverlap(schedule[i],schedule[j])):
                 fitnessImpact +=1
                 fitness += fitnessImpact
 
 def studentCapacityOverload(timeslot):
-    if timeslot['Classroom'].capacity < timeslot['Course'].UV.capacity:return False
+    if timeslot['room'].capacity < UV.codeToUV(timeslot['code']).capacity:return False
 
 def timeslotOverlap(timeslot1,timeslot2):
     if timeslot1.start_day != timeslot2.start_day : return False
