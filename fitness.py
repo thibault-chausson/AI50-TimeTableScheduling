@@ -11,7 +11,7 @@ def strongFitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeigh
     fitnessScore = studentWeight * studentStrongFitness(schedule)
     fitnessScore += teacherWeight * teacherStrongFitness(schedule)
     fitnessScore += classroomWeight * classroomStrongFitness(schedule)
-    return fitnessScore
+    return fitnessScore 
 
 def weakFitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
     fitnessScore = studentWeight * studentWeakFitness(schedule)
@@ -23,16 +23,16 @@ def studentStrongFitness(schedule):
     return 0
 
 def teacherStrongFitness(schedule):
-     fitness = 0
-     for i in range(len(schedule)):
-
+    fitness = 0
+    for i in range(len(schedule)):
         #Evaluate schedule conflicts with other timeslots
         fitnessImpact = 0
-        for j in range(i,len(schedule)):
+        for j in range(i+1,len(schedule)):
             if(schedule[i]['teacher'] != schedule[j]['teacher']): continue
             if(timeslotOverlap(schedule[i],schedule[j])):
                 fitnessImpact +=1
                 fitness += fitnessImpact
+    return fitness
 
 def classroomStrongFitness(schedule):
     fitness = 0
@@ -43,18 +43,20 @@ def classroomStrongFitness(schedule):
 
         #Evaluate schedule conflicts with other timeslots
         fitnessImpact = 0
-        for j in range(i,len(schedule)):
+        for j in range(i+1,len(schedule)):
             if(schedule[i]['room'] != schedule[j]['room']): continue
             if(timeslotOverlap(schedule[i],schedule[j])):
                 fitnessImpact +=1
                 fitness += fitnessImpact
+    return fitness
 
 def studentCapacityOverload(timeslot):
-    if timeslot['room'].capacity < UV.codeToUV(timeslot['code']).capacity:return False
+    if Room.codeToRoom(timeslot['room']).capacity < UV.codeToUV(timeslot['code']).capacity:return True
+    return False
 
 def timeslotOverlap(timeslot1,timeslot2):
-    if timeslot1.start_day != timeslot2.start_day : return False
-    return timeslot1.start_time < timeslot2.start_time + timeslot2.duration and timeslot2.start_time < timeslot1.start_time + timeslot1.duration
+    if timeslot1["start_day"] != timeslot2["start_day"] : return False
+    return timeslot1["start_time"] < timeslot2["start_time"] + timeslot2["duration"] and timeslot2["start_time"] < timeslot1["start_time"] + timeslot1["duration"]
 
 #Can be re-written by building a list of conflicting UVs
 def studentWeakFitness(schedule):
@@ -63,7 +65,7 @@ def studentWeakFitness(schedule):
         heat = 1
         i = 1
         for UV in student.UVs:
-            for j in range(i,len(student.UVs)):
+            for j in range(i+1,len(student.UVs)):
                 if UVScheduleConflict(schedule, UV, student.UVs[j]):
                     fitness += heat
                     heat += 1
