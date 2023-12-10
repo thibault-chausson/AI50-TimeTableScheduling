@@ -1,84 +1,87 @@
 from toolbox import UV,Room
 import toolbox_student
 
-def fitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
-    fitnessScore = strongFitness(schedule, studentWeight, classroomWeight, teacherWeight)
+def fitness(chromosome, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
+    fitnessScore = strongFitness(chromosome, studentWeight, classroomWeight, teacherWeight)
     if(fitnessScore > 0): return 0 - fitnessScore
     return 0 # No weak fitness for now
-    # return weakFitness(schedule)
+    # return weakFitness(chromosome)  
 
-def strongFitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
-    fitnessScore = studentWeight * studentStrongFitness(schedule)
-    fitnessScore += teacherWeight * teacherStrongFitness(schedule)
-    fitnessScore += classroomWeight * classroomStrongFitness(schedule)
+def strongFitness(chromosome, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
+    fitnessScore = studentWeight * studentStrongFitness(chromosome)
+    fitnessScore += teacherWeight * teacherStrongFitness(chromosome)
+    fitnessScore += classroomWeight * classroomStrongFitness(chromosome)
     return fitnessScore 
 
-def weakFitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
-    fitnessScore = studentWeight * studentWeakFitness(schedule)
-    fitnessScore += teacherWeight * teacherWeakFitness(schedule)
-    fitnessScore += classroomWeight * classroomWeakFitness(schedule)
+def weakFitness(chromosome, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
+    fitnessScore = studentWeight * studentWeakFitness(chromosome)
+    fitnessScore += teacherWeight * teacherWeakFitness(chromosome)
+    fitnessScore += classroomWeight * classroomWeakFitness(chromosome)
     return fitnessScore
 
-def studentStrongFitness(schedule):
+def studentStrongFitness(chromosome):
     return 0
 
-def teacherStrongFitness(schedule):
+def teacherStrongFitness(chromosome):
     fitness = 0
-    for i in range(len(schedule)):
+    index = 0
+    for gene1 in chromosome:
+        index+=1
         #Evaluate schedule conflicts with other timeslots
         fitnessImpact = 0
-        for j in range(i+1,len(schedule)):
-            if(schedule[i]['teacher'] != schedule[j]['teacher']): continue
-            if(timeslotOverlap(schedule[i],schedule[j])):
+        for gene2 in chromosome[index:]:
+            if(gene1.teacher != gene2.teacher): continue
+            if(timeslotOverlap(gene1,gene2)):
                 fitnessImpact +=1
                 fitness += fitnessImpact
     return fitness
 
-def classroomStrongFitness(schedule):
+def classroomStrongFitness(chromosome):
     fitness = 0
-    for i in range(len(schedule)):
-
+    index = 0
+    for gene1 in chromosome:
+        index += 1
         #Evaluate student capacity
-        if(studentCapacityOverload(schedule[i])): fitness+=1
+        if(studentCapacityOverload(gene1)): fitness+=1
 
         #Evaluate schedule conflicts with other timeslots
         fitnessImpact = 0
-        for j in range(i+1,len(schedule)):
-            if(schedule[i]['room'] != schedule[j]['room']): continue
-            if(timeslotOverlap(schedule[i],schedule[j])):
+        for gene2 in chromosome[index:]:
+            if(gene1.room != gene2.room): continue
+            if(timeslotOverlap(gene1,gene2)):
                 fitnessImpact +=1
                 fitness += fitnessImpact
     return fitness
 
-def studentCapacityOverload(timeslot):
-    if Room.codeToRoom(timeslot['room']).capacity < UV.codeToUV(timeslot['code']).capacity:return True
+def studentCapacityOverload(gene):
+    if Room.codeToRoom(gene.room).capacity < UV.codeToUV(gene.code).capacity:return True
     return False
 
-def timeslotOverlap(timeslot1,timeslot2):
-    if timeslot1["start_day"] != timeslot2["start_day"] : return False
-    return timeslot1["start_time"] < timeslot2["start_time"] + timeslot2["duration"] and timeslot2["start_time"] < timeslot1["start_time"] + timeslot1["duration"]
+def timeslotOverlap(gene1,gene2):
+    if gene1.start_day != gene2.start_day : return False
+    return gene1.start_time < gene2.start_time + gene2.duration and gene2.start_time < gene1.start_time + gene1.duration
 
 #Can be re-written by building a list of conflicting UVs
-def studentWeakFitness(schedule):
+def studentWeakFitness(chromosome):
     fitness = 0
     for student in students:
         heat = 1
         i = 1
         for UV in student.UVs:
             for j in range(i+1,len(student.UVs)):
-                if UVScheduleConflict(schedule, UV, student.UVs[j]):
+                if UVScheduleConflict(chromosome, UV, student.UVs[j]):
                     fitness += heat
                     heat += 1
     return fitness
 
-def UVScheduleConflict(schedule, UV1, UV2):
+def UVScheduleConflict(chromosome, UV1, UV2):
     for cours1 in UV1.cours:
         for cours2 in UV2.cours:
             if cours1.start < cours2.end and cours2.start < cours1.end : return True
     return False
 
-def teacherWeakFitness(schedule):
+def teacherWeakFitness(chromosome):
     pass
 
-def classroomWeakFitness(schedule):
+def classroomWeakFitness(chromosome):
     pass
