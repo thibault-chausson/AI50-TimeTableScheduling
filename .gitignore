@@ -1,2 +1,8 @@
 /.idea
 /exemplesEDT
+
+#datas/*
+/testScript.py
+__pycache__/*
+*.pyc
+datas/test_chrom.json
