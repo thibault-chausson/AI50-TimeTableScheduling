@@ -5,3 +5,4 @@
 /testScript.py
 __pycache__/toolbox.cpython-311.pyc
 *.pyc
+datas/test_chrom.json

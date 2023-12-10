@@ -27,7 +27,7 @@ def teacherStrongFitness(schedule):
     for i in range(len(schedule)):
         #Evaluate schedule conflicts with other timeslots
         fitnessImpact = 0
-        for j in range(i,len(schedule)):
+        for j in range(i+1,len(schedule)):
             if(schedule[i]['teacher'] != schedule[j]['teacher']): continue
             if(timeslotOverlap(schedule[i],schedule[j])):
                 fitnessImpact +=1
@@ -43,7 +43,7 @@ def classroomStrongFitness(schedule):
 
         #Evaluate schedule conflicts with other timeslots
         fitnessImpact = 0
-        for j in range(i,len(schedule)):
+        for j in range(i+1,len(schedule)):
             if(schedule[i]['room'] != schedule[j]['room']): continue
             if(timeslotOverlap(schedule[i],schedule[j])):
                 fitnessImpact +=1
@@ -64,7 +64,7 @@ def studentWeakFitness(schedule):
         heat = 1
         i = 1
         for UV in student.UVs:
-            for j in range(i,len(student.UVs)):
+            for j in range(i+1,len(student.UVs)):
                 if UVScheduleConflict(schedule, UV, student.UVs[j]):
                     fitness += heat
                     heat += 1
