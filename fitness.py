@@ -4,7 +4,8 @@ import toolbox_student
 def fitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
     fitnessScore = strongFitness(schedule, studentWeight, classroomWeight, teacherWeight)
     if(fitnessScore > 0): return 0 - fitnessScore
-    return weakFitness(schedule)
+    return 0 # No weak fitness for now
+    # return weakFitness(schedule)
 
 def strongFitness(schedule, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
     fitnessScore = studentWeight * studentStrongFitness(schedule)
