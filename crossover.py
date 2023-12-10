@@ -1,8 +1,8 @@
 import toolbox as tb
 import random as rd
 
-CHROMOSOME_1 = tb.import_population("chromosome_1.json")[0]
-CHROMOSOME_2 = tb.import_population("./chromosome_2.json")[0]
+CHROMOSOME_1 = tb.import_population("datas/chromosome_1.json")[0]
+CHROMOSOME_2 = tb.import_population("datas/chromosome_2.json")[0]
 
 
 # Midpoint crossover

@@ -83,7 +83,7 @@ def create_promo(list_uv, promo_size):
     return promo_fct
 
 
-def export_promo(promo_fct, filename="./promo.json"):
+def export_promo(promo_fct, filename="./datas/promo.json"):
     """
     Exports a promo into a json file.
     """
@@ -91,7 +91,7 @@ def export_promo(promo_fct, filename="./promo.json"):
         json.dump([student.export() for student in promo_fct.students_list], f, indent=4)
 
 
-def import_promo(filename="./promo.json"):
+def import_promo(filename="./datas/promo.json"):
     """
     Imports a promo from a json file.
     """
@@ -104,11 +104,11 @@ def import_promo(filename="./promo.json"):
 
 
 if __name__ == '__main__':
-    chromosome_1 = tb.import_population("./chromosome_1.json")[0]
+    chromosome_1 = tb.import_population("datas/chromosome_1.json")[0]
     les_uvs = get_all_uvs_chromosome(chromosome_1)
     promo = create_promo(les_uvs, 100)
     print(promo)
-    export_promo(promo, "./promo.json")
-    promo_import = import_promo("./promo.json")
+    export_promo(promo, "datas/promo.json")
+    promo_import = import_promo("datas/promo.json")
     print(promo_import)
     print("Done.")

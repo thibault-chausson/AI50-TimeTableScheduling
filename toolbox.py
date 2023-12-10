@@ -19,7 +19,7 @@ class Room:
 
     def codeToRoom(roomCode):
         
-        with open('salles.json') as f_in:
+        with open('datas/salles.json') as f_in:
             rooms = json.load(f_in)
         if roomCode not in rooms:
             print("Non existing room "+roomCode)
@@ -53,7 +53,7 @@ class UV:
         self.capacity = capacity
 
     def codeToUV(UVCode):
-        with open('uvs.json') as f_in:
+        with open('datas/uvs.json') as f_in:
             uvs = json.load(f_in)
         targetUV = next((item for item in uvs if item["code"] == UVCode), None)
         if targetUV == None : return None
@@ -196,7 +196,7 @@ def get_rooms(site=None):
     Returns a list of Room objects.
     """
     salles = []
-    with open("salles.json", "r") as f:
+    with open("datas/salles.json", "r") as f:
         rooms = json.load(f)
 
     for salle, desc in rooms.items():
@@ -211,7 +211,7 @@ def get_uvs(category=None):
     Returns a list of UV objects, from a certain category ('FISE-INFO', 'FISA-INFO', ...).
     """
 
-    with open("desc_uv.json", "r") as f:
+    with open("datas/desc_uv.json", "r") as f:
         desc_uv = json.load(f)
 
     uv_info = []
@@ -242,7 +242,7 @@ def get_uvs(category=None):
     return uv_info
 
 
-def export_uvs(uvs_fct, filename="./uvs.json"):
+def export_uvs(uvs_fct, filename="./datas/uvs.json"):
     """
     Exports a list of UVs into a json file.
     :param uvs_fct:
@@ -253,7 +253,7 @@ def export_uvs(uvs_fct, filename="./uvs.json"):
         json.dump([uv.export() for uv in uvs_fct], f, indent=4)
 
 
-def import_uvs(filename="./uvs.json"):
+def import_uvs(filename="./datas/uvs.json"):
     """
     Imports a list of UVs from a json file.
     :param filename:
@@ -269,7 +269,7 @@ def import_uvs(filename="./uvs.json"):
     return uvs_fct
 
 
-def export_population(population, filename="./chromosome.json"):
+def export_population(population, filename="./datas/chromosome.json"):
     """
     Exports a population into a json file.
     """
@@ -296,7 +296,7 @@ def import_population(filename):
 
 if __name__ == "__main__":
     uvs = get_uvs("FISE-INFO")
-    export_uvs(uvs, "uvs.json")
-    uvs = import_uvs("uvs.json")
+    export_uvs(uvs, "datas/uvs.json")
+    uvs = import_uvs("datas/uvs.json")
     print(uvs)
     print("Done.")
