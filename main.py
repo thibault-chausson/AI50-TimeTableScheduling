@@ -9,10 +9,11 @@ if __name__ == "__main__":
     promo = tbs.import_promo("datas/promo.json")
     population = tb.import_population("datas/population.json")
     sorted_fitness, sorted_population = gen.set_dataset(population)
+    print("Best fitness before: ", sorted_fitness)
     end_data = t.time()
     print("Data loading time: ", end_data - start_data)
     start_algo = t.time()
-    chromosome, fitness = gen.genetic_algorithm_single_point_elite(uvs, promo, population, sorted_fitness, 10, 0.01, 1)
+    chromosome, fitness = gen.genetic_algorithm_single_point_elite(uvs, promo, population, sorted_fitness, 1000, 0.01, 1)
     end_algo = t.time()
     print("Algorithm execution time: ", end_algo - start_algo)
 

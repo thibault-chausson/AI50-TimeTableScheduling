@@ -36,11 +36,13 @@ def genetic_algorithm_single_point_elite(uvs_fct, promo_fct, arg_population, arg
 
         # Remplacement des pires chromosomes par les meilleurs enfants
         for i in range(len(tableau_enfants)):
-            sorted_list_fitness, sorted_population = rp.replace(arg_fitness, arg_population,
-                                                                sl.fitness(tableau_enfants[i]), tableau_enfants[i])
+            arg_fitness, arg_population = rp.replace(arg_fitness, arg_population,
+                                                     sl.fitness(tableau_enfants[i]), tableau_enfants[i])
 
     # Selection du meilleur chromosome
     best_chromosome = arg_population[0]
     best_fitness = arg_fitness[0]
+
+    print(arg_fitness)
 
     return best_chromosome, best_fitness
