@@ -29,14 +29,16 @@ def sorting_fitness(list_fitness, initial_population):
     return sorted_list_fitness, classement
 
 
-def tournament_selection(population, t_size, nb_couple):
-    tournoi = rd.sample(population, t_size)
-    fitness_tournoi = np.array([fitness(schedule) for schedule in tournoi])
-    indices = np.flip(np.argsort(fitness_tournoi))
-    # indice des individus selectionnés
-    parents = [ind for ind, chrom in enumerate(population) for i in indices if tournoi[i] == chrom]
+def tournament_selection(sorted_list_fitness, sorted_index_population, t_size, nb_couple):  # t_size >= nb_couple * 2
+    tournoi = rd.sample(range(len(sorted_list_fitness)),
+                        t_size)  # On choisit t_size individus au hasard à savoir que l'indice 0 est la meilleure fitness
+    tournoi.sort()  # On trie les indices du tournoi dans l'ordre croissant
+    print(f"Tournoi : {tournoi} \n")
+    list_index_parents = []
+    for i in range(0, t_size):
+        list_index_parents.append(sorted_index_population[tournoi[i]])
 
-    return create_couples(parents, nb_couple)
+    return create_couples(list_index_parents, nb_couple)
 
 
 def roulette_wheel_selection(index_population, list_fitness, nb_couple):
@@ -93,12 +95,14 @@ if __name__ == "__main__":
     print(f"Fitness : {list_fitness} \n")
 
     sorted_list_fitness, sorted_index_population = sorting_fitness(list_fitness, initial_population)
+    print(f"Sorted fitness : {sorted_list_fitness} \n")
+    print(f"Sorted index population : {sorted_index_population} \n")
 
     print(f"Roulette wheel : {roulette_wheel_selection(sorted_index_population, sorted_list_fitness, 3)} \n")
     print(f"Elites : {selection_elitiste(sorted_index_population, 2)} \n")
     print(f"Selection proba : {selection_probabiliste(sorted_index_population, sorted_list_fitness, 2)} \n")
 
-    sorted_initial_population = [initial_population[i] for i in sorted_index_population]
-    print(f"Tournoi : {tournament_selection(sorted_initial_population, 8, 2)} \n")
+    # sorted_initial_population = [initial_population[i] for i in sorted_index_population]
+    print(f"Tournoi : {tournament_selection(sorted_list_fitness, sorted_index_population, 5, 2)} \n")
 
     print("Done.")
