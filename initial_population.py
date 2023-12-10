@@ -80,4 +80,4 @@ if __name__ == '__main__':
     # export_population([chromosome], "chromosome.json")
 
     population = generate_population(10, uvs, rooms)
-    export_population(population, "population.json")
+    export_population(population, "datas/population.json")

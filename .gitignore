@@ -1,6 +1,6 @@
 /.idea
 /exemplesEDT
 
-./population.json
+datas/*
 /testScript.py
 __pycache__/toolbox.cpython-311.pyc
