@@ -17,6 +17,23 @@ class Room:
         self.description = description
         self.site = site
 
+    def codeToRoom(roomCode):
+        
+        with open('salles.json') as f_in:
+            rooms = json.load(f_in)
+        if roomCode not in rooms:
+            print("Non existing room "+roomCode)
+            return None
+        targetRoom = rooms[roomCode]
+        newRoom = Room(
+            roomCode,
+            targetRoom["capacity"],
+            targetRoom["type"],
+            targetRoom["description"],
+            targetRoom["site"]
+        )
+        return newRoom
+
     def __repr__(self):
         return f"Room({self.room}, {self.capacity}, {self.type}, {self.description}, {self.site})"
 
@@ -34,6 +51,25 @@ class UV:
         self.td = td
         self.tp = tp
         self.capacity = capacity
+
+    def codeToUV(UVCode):
+        with open('uvs.json') as f_in:
+            uvs = json.load(f_in)
+        targetUV = next((item for item in uvs if item["code"] == UVCode), None)
+        if targetUV == None : return None
+        newUV = UV(
+            UVCode,
+            targetUV["name"],
+            targetUV["credits"],
+            targetUV["semester"],
+            targetUV["rooms"],
+            targetUV["teachers"],
+            targetUV["cm"],
+            targetUV["td"],
+            targetUV["tp"],
+            targetUV["capacity"]
+        )
+        return newUV
 
     def export(self):
         return {
