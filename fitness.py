@@ -51,7 +51,8 @@ def classroomStrongFitness(schedule):
     return fitness
 
 def studentCapacityOverload(timeslot):
-    if Room.codeToRoom(timeslot['room']).capacity < UV.codeToUV(timeslot['code']).capacity:return False
+    if Room.codeToRoom(timeslot['room']).capacity < UV.codeToUV(timeslot['code']).capacity:return True
+    return False
 
 def timeslotOverlap(timeslot1,timeslot2):
     if timeslot1["start_day"] != timeslot2["start_day"] : return False
