@@ -13,7 +13,7 @@ if __name__ == "__main__":
     end_data = t.time()
     print("Data loading time: ", end_data - start_data)
     start_algo = t.time()
-    chromosome, fitness = gen.genetic_algorithm_single_point_elite(uvs, promo, population, sorted_fitness, 1000, 0.01, 1)
+    chromosome, fitness = gen.genetic_algorithm_single_point_elite(uvs, promo, population, sorted_fitness, 1000, 0.2, 1)
     end_algo = t.time()
     print("Algorithm execution time: ", end_algo - start_algo)
 

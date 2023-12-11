@@ -25,14 +25,14 @@ def genetic_algorithm_single_point_elite(uvs_fct, promo_fct, arg_population, arg
             tableau_enfants.append(cr.single_point_crossover(arg_population[index_parents[k][0]],
                                                              arg_population[index_parents[k][1]]))
 
-        # Correction
+            # Correction
 
         # Mutation
         for i in range(len(tableau_enfants)):
             if rd.random() < mutation_rate:
-                tableau_enfants[i] = mt.mutation_test(tableau_enfants[i])
+                tableau_enfants[i] = mt.random_mutation(tableau_enfants[i])
 
-        # Correction
+            # Correction
 
         # Remplacement des pires chromosomes par les meilleurs enfants
         for i in range(len(tableau_enfants)):
