@@ -4,6 +4,10 @@ import random as rd
 CHROMOSOME_1 = tb.import_population("./datas/chromosome_1.json")[0]
 
 
+def mutation_test(chr):
+    return chr
+
+
 # Swap 2 random timeslot
 
 def swap_timeslot(chr):
@@ -11,7 +15,7 @@ def swap_timeslot(chr):
     Returns a chromosome with two mutated genes
     """
     # Select two random rows
-    indices = rd.sample(range(len(chr)), 2)
+    indices = rd.sample(range(len(chr) - 1), 2)
 
     # Swap values between the selected rows for "Start_Time" and "Start_day "
     temp_start_time = chr[indices[0]].start_time
@@ -31,7 +35,7 @@ def change_timeslot(chr):
     """
     Returns a chromosome with one mutated gene
     """
-    indice = rd.randint(0, len(chr))
+    indice = rd.randint(0, len(chr) - 1)
 
     # Change the value of "Start_Time" and "Start_day " of a random gene
     chr[indice].start_time = rd.randrange(
@@ -48,7 +52,7 @@ def swap_room(chr):
     Returns a chromosome with two mutated genes
     """
     # Select two random rows
-    indices = rd.sample(range(len(chr)), 2)
+    indices = rd.sample(range(len(chr) - 1), 2)
 
     # Swap values between the selected rows for "room"
     temp_start_room = chr[indices[0]].room
@@ -64,8 +68,8 @@ def change_room(chr):
     """
     Returns a chromosome with one mutated gene
     """
-    indice = rd.randint(0, len(chr))
-    indice_room = rd.randint(0, len(tb.get_rooms()))
+    indice = rd.randint(0, len(chr) - 1)
+    indice_room = rd.randint(0, len(tb.get_rooms()) - 1)
 
     # Change the value of "Start_Time" and "Start_day " of a random gene
     chr[indice].room = tb.get_rooms()[indice_room].room
@@ -90,7 +94,7 @@ def random_mutation(chr):
 if __name__ == '__main__':
     print("Mutation...")
     print(CHROMOSOME_1)
-    """
+
     print("Swap_room:")
     print(swap_room(CHROMOSOME_1))
     print("Change_room")
@@ -99,6 +103,6 @@ if __name__ == '__main__':
     print(swap_room(CHROMOSOME_1))
     print("Change_timeslot")
     print(change_timeslot(CHROMOSOME_1))
-    """
+
     print("Random_mutation")
     print(random_mutation(CHROMOSOME_1))
