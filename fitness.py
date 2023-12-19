@@ -64,12 +64,13 @@ def timeslotOverlap(gene1,gene2):
 #Can be re-written by building a list of conflicting UVs
 def studentWeakFitness(chromosome):
     fitness = 0
+    students = toolbox_student.promo_import().students_list
     for student in students:
         heat = 1
         i = 1
-        for UV in student.UVs:
-            for j in range(i+1,len(student.UVs)):
-                if UVScheduleConflict(chromosome, UV, student.UVs[j]):
+        for uv in student.uvs:
+            for j in range(i+1,len(student.uvs)):
+                if UVScheduleConflict(chromosome, uv, student.uvs[j]):
                     fitness += heat
                     heat += 1
     return fitness
@@ -81,7 +82,7 @@ def UVScheduleConflict(chromosome, UV1, UV2):
     return False
 
 def teacherWeakFitness(chromosome):
-    pass
+    return 0
 
 def classroomWeakFitness(chromosome):
-    pass
+    return 0
