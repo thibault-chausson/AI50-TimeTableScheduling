@@ -4,8 +4,7 @@ import toolbox_student
 def fitness(chromosome, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
     fitnessScore = strongFitness(chromosome, studentWeight, classroomWeight, teacherWeight)
     if(fitnessScore > 0): return 0 - fitnessScore
-    return 0 # No weak fitness for now
-    # return weakFitness(chromosome)  
+    return weakFitness(chromosome) 
 
 def strongFitness(chromosome, studentWeight = 1, classroomWeight = 1, teacherWeight = 1):
     fitnessScore = studentWeight * studentStrongFitness(chromosome)
@@ -66,13 +65,15 @@ def studentWeakFitness(chromosome):
     fitness = 0
     students = toolbox_student.promo_import().students_list
     for student in students:
+        score = 120 #A student with all 6 UVs in conflict would lose 120 fitness points, bringing its score to 0
         heat = 1
         i = 1
         for uv in student.uvs:
             for j in range(i+1,len(student.uvs)):
                 if UVScheduleConflict(chromosome, uv, student.uvs[j]):
-                    fitness += heat
+                    score -= heat
                     heat += 1
+        fitness += score
     return fitness
 
 def UVScheduleConflict(chromosome, UV1, UV2):
