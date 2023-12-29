@@ -1,5 +1,6 @@
 import toolbox as tb
 import random as rd
+import variables as var
 
 CHROMOSOME_1 = tb.import_population("./datas/chromosome_1.json")[0]
 
@@ -39,8 +40,8 @@ def change_timeslot(chr):
 
     # Change the value of "Start_Time" and "Start_day " of a random gene
     chr[indice].start_time = rd.randrange(
-        (tb.END_TIME - tb.START_TIME + 1) // 30 + 1) * tb.MINUTES_PER_CELL + tb.START_TIME
-    chr[indice].start_day = rd.randint(0, tb.DAYS)
+        (var.END_TIME - var.START_TIME + 1) // 30 + 1) * var.MINUTES_PER_CELL + var.START_TIME
+    chr[indice].start_day = rd.randint(0, var.DAYS)
 
     return chr
 

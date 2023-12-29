@@ -1,12 +1,7 @@
 import numpy as np
 import json
 import random as rd
-
-WEEKS = 15  # Number of weeks in a semester
-DAYS = 5  # Number of days there is class in a week
-MINUTES_PER_CELL = 30  # one cell of the matrix equals 30 minutes
-START_TIME = 8 * 60  # Start of the day at 8am
-END_TIME = 20 * 60  # End of the day at 8pm
+import variables as var
 
 
 class Room:
@@ -18,11 +13,10 @@ class Room:
         self.site = site
 
     def codeToRoom(roomCode):
-        
         with open('datas/salles.json') as f_in:
             rooms = json.load(f_in)
         if roomCode not in rooms:
-            print("Non existing room "+roomCode)
+            print("Non existing room " + roomCode)
             return None
         targetRoom = rooms[roomCode]
         newRoom = Room(
@@ -56,7 +50,7 @@ class UV:
         with open('datas/uvs.json') as f_in:
             uvs = json.load(f_in)
         targetUV = next((item for item in uvs if item["code"] == UVCode), None)
-        if targetUV == None : return None
+        if targetUV == None: return None
         newUV = UV(
             UVCode,
             targetUV["name"],
@@ -116,61 +110,77 @@ class Gene:
 
 def planning_teacher(chr, teacher=None):
     """
-    Returns a planning for a given teacher in form of a binary matrix.
+    Returns a planning for a given teacher in form of a sparse matrix, if all numbers are 0 or 1  it's good, else a
+    teacher has two simultaneous courses.
     If None is given, returns the planning for all teachers.
     """
-    step = MINUTES_PER_CELL
-    mat = np.zeros((int((END_TIME - START_TIME) / step), DAYS))
+    step = var.MINUTES_PER_CELL
+    mat = np.zeros((int((var.END_TIME - var.START_TIME) / step), var.DAYS))
     if teacher is not None:
         for gene in chr:
             if teacher == gene.teacher:
-                start = gene.start_time // step - START_TIME // step  # 480 means the start of the matrix is at 8AM
+                start = gene.start_time // step - var.START_TIME // step  # 480 means the start of the matrix is at 8AM
                 mat[start:start + gene.duration // step, gene.start_day] += 1
         return mat
     else:
         mats = []
         for teacher in set([i.teacher for i in chr]):
-            mats.append(planning_teacher([i for i in chr if i.teacher == teacher], teacher))
+            mats.append([planning_teacher([i for i in chr if i.teacher == teacher], teacher), teacher])
         return mats
+
+
+def find_conflicts(planning):
+    """
+    Returns a list of conflicts in a given planning.
+    indices = np.argwhere((matrice != 0) & (matrice != 1))
+    """
+    conflicts = []
+    for i in range(len(planning)):
+        for j in range(len(planning[i])):
+            if planning[i][j] > 1:
+                conflicts.append((i, j))
+    return conflicts
 
 
 def planning_room(chr, room=None):
     """
-    Returns a planning for a given room in form of a binary matrix.
+    Returns a planning for a given room in form of a sparse matrix, if all numbers are 0 or 1  it's good, else a room
+    has two simultaneous courses.
     If None is given, returns the planning for all rooms.
     """
-    step = MINUTES_PER_CELL
-    mat = np.zeros((int((END_TIME - START_TIME) / step), DAYS))
+    step = var.MINUTES_PER_CELL
+    mat = np.zeros((int((var.END_TIME - var.START_TIME) / step), var.DAYS))
     if room is not None:
         for gene in chr:
             if room == gene.room:
-                start = gene.start_time // step - START_TIME // step  # 480 means the start of the matrix is at 8AM
+                start = gene.start_time // step - var.START_TIME // step  # 480 means the start of the matrix is at 8AM
                 mat[start:start + gene.duration // step, gene.start_day] += 1
         return mat
-    else:
+    else:  # If no room is given, we return a list of matrices for each room => [[matrice, room], ...]
         mats = []
         for room in set([i.room for i in chr]):
-            mats.append(planning_room([i for i in chr if i.room == room], room))
+            mats.append([planning_room([i for i in chr if i.room == room], room), room])
         return mats
 
 
 def planning_uv(chr, uv=None):
     """
-    Returns a planning for a given UV in form of a binary matrix.
+    Returns a planning for a given UV in form of a sparse matrix, if all numbers are 0 or 1  it's good, else a UV
+    has two simultaneous sessions.
     If None is given, returns the planning for all UVs.
     """
-    step = MINUTES_PER_CELL
-    mat = np.zeros((int((END_TIME - START_TIME) / step), DAYS))
+    step = var.MINUTES_PER_CELL
+    mat = np.zeros((int((var.END_TIME - var.START_TIME) / step), var.DAYS))
     if uv is not None:
         for gene in chr:
             if uv == gene.code:
-                start = gene.start_time // step - START_TIME // step  # 480 means the start of the matrix is at 8AM
+                start = gene.start_time // step - var.START_TIME // step  # 480 means the start of the matrix is at 8AM
                 mat[start:start + gene.duration // step, gene.start_day] += 1
         return mat
     else:
         mats = []
         for uv in set([i.code for i in chr]):
-            mats.append(planning_uv([i for i in chr if i.code == uv], uv))
+            mats.append([planning_uv([i for i in chr if i.code == uv], uv), uv])
         return mats
 
 
@@ -183,7 +193,7 @@ def calc_uv_time(chr, uv=None):
         for gene in chr:
             if uv == gene.code:
                 total += gene.duration
-        return total * WEEKS
+        return total * var.WEEKS
     else:
         totals = {}
         for uv in set([i.code for i in chr]):
@@ -269,12 +279,11 @@ def import_uvs(filename="./datas/uvs.json"):
     return uvs_fct
 
 
-def generate_uv_capacities(mean,spread,input_file="./datas/uvs.json",output_file="./datas/uvs.json"):
+def generate_uv_capacities(mean, spread, input_file="./datas/uvs.json", output_file="./datas/uvs.json"):
     uv_list = import_uvs(filename=input_file)
     for uv in uv_list:
-        uv.capacity = round(np.random.normal(mean,spread))
-    export_uvs(uv_list,filename=output_file)
-
+        uv.capacity = round(np.random.normal(mean, spread))
+    export_uvs(uv_list, filename=output_file)
 
 
 def export_population(population, filename="./datas/chromosome.json"):
