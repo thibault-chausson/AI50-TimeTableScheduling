@@ -7,7 +7,7 @@ CHROMOSOME_1 = tb.import_population("datas\chromosome_1.json")[0]
 
 def swap_timeslot(chr):
     """
-    Returns a chromosome with two mutated genes
+    Returns a chromosome with two mutated genes (timeslot)
     """
     # Select two random rows
     indices = rd.sample(range(len(chr)), 2)
@@ -21,6 +21,14 @@ def swap_timeslot(chr):
     chr[indices[0]].start_day = chr[indices[1]].start_day
     chr[indices[1]].start_day = temp_start_day
     
+    # Check if start_time after swap is valid for both indices
+    if (chr[indices[0]].start_time > tb.END_TIME - chr[indices[0]].duration):
+        chr[indices[0]].start_time = tb.END_TIME - chr[indices[0]].duration
+    
+    if (chr[indices[1]].start_time > tb.END_TIME - chr[indices[1]].duration):
+        chr[indices[1]].start_time = tb.END_TIME - chr[indices[1]].duration
+
+
     return chr
 
 
@@ -28,22 +36,22 @@ def swap_timeslot(chr):
 
 def change_timeslot(chr):
     """
-    Returns a chromosome with one mutated gene
+    Returns a chromosome with one mutated gene (timeslot)
     """
-    indice = rd.randint(0, len(chr))
+    indice = rd.randint(0, len(chr) - 1)
 
     # Change the value of "Start_Time" and "Start_day " of a random gene
-    chr[indice].start_time = rd.randrange((tb.END_TIME - tb.START_TIME + 1) // 30 + 1) * tb.MINUTES_PER_CELL + tb.START_TIME
-    chr[indice].start_day = rd.randint(0,tb.DAYS)
+    chr[indice].start_time= rd.randrange(tb.START_TIME, tb.END_TIME - chr[indice].duration + 1, tb.MINUTES_PER_CELL)
+    chr[indice].start_day = rd.randint(0 ,tb.DAYS - 1)
 
     return chr
 
 
-# Swap 2 random timeslot 
+# Swap 2 random room
 
 def swap_room(chr):
     """
-    Returns a chromosome with two mutated genes
+    Returns a chromosome with two mutated genes (room)
     """
     # Select two random rows
     indices = rd.sample(range(len(chr)), 2)
@@ -60,12 +68,12 @@ def swap_room(chr):
 
 def change_room(chr):
     """
-    Returns a chromosome with one mutated gene
+    Returns a chromosome with one mutated gene (room)
     """
-    indice = rd.randint(0, len(chr))
-    indice_room = rd.randint(0, len(tb.get_rooms()))
+    indice = rd.randint(0, len(chr) - 1)
+    indice_room = rd.randint(0, len(tb.get_rooms()) - 1)
 
-    # Change the value of "Start_Time" and "Start_day " of a random gene
+    # Change the value of "room" of a random gene
     chr[indice].room = tb.get_rooms()[indice_room].room
 
     return chr
@@ -89,16 +97,15 @@ def random_mutation(chr):
 if __name__ == '__main__':
     print("Mutation...")
     print(CHROMOSOME_1)
-    """
+    
     print("Swap_room:")
     print(swap_room(CHROMOSOME_1))
     print("Change_room")
     print(change_room(CHROMOSOME_1))
     print("Swap_timeslot")
-    print(swap_room(CHROMOSOME_1))
+    print(swap_timeslot(CHROMOSOME_1))
     print("Change_timeslot")
     print(change_timeslot(CHROMOSOME_1))
-    """
     print("Random_mutation")
     print(random_mutation(CHROMOSOME_1))
     
