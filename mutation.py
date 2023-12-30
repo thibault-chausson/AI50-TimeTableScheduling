@@ -7,7 +7,7 @@ CHROMOSOME_1 = tb.import_population("./datas/chromosome_1.json")[0]
 
 # Swap 2 random timeslot
 
-def swap_timeslot(chr):  # TODO : faire attention en changeant le timeslot de ne pas dépacer la fin de la journée à 20h
+def swap_timeslot(chr):
     """
     Returns a chromosome with two mutated genes
     """
