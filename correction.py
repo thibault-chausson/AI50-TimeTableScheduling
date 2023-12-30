@@ -16,41 +16,28 @@ if __name__ == '__main__':
     PROMO = tb_s.import_promo()
     plannings = tb.planning_room(CHROMOSOME_1)
     occupee = tb_c.occupied(plannings)
-
-    print(occupee)
-
-    print(PROMO)
-
     capacity_dict = tb_c.calculate_nb_students_by_uv(PROMO)
 
-    print(capacity_dict)
-    print(LIST_UVS)
-    print(LIST_ROOM)
+    print("chr", CHROMOSOME_1)
+    print("list_room", LIST_ROOM)
+    print("capacity_dict", capacity_dict)
 
-    room_too_small = tb_c.check_room_capacity(CHROMOSOME_1, LIST_ROOM, capacity_dict)
+    # Convert room_list to a dictionary for faster access
+    room_capacity_dict = {room.room: room.capacity for room in LIST_ROOM}
 
-    print(room_too_small)
+    room_too_small = tb_c.check_room_capacity(CHROMOSOME_1, room_capacity_dict, capacity_dict)
 
-    correc, _ = tb_c.change_room_if_overcrowded_and_free(CHROMOSOME_1, room_too_small, LIST_ROOM, occupee,
-                                                         capacity_dict)
+    print("room_too_small", room_too_small)
 
-    print(correc)
 
-    check_new_chr = tb_c.check_room_capacity(correc, LIST_ROOM, capacity_dict)
 
-    print(check_new_chr)
-
-    # print(CHROMOSOME_1)
-
-    # print(tb_c.check_room_capacity(CHROMOSOME_1, LIST_ROOM, LIST_UVS))
-
-    # print(tb.planning_room(CHROMOSOME_1, 'B412'))
-    # plannings = tb.planning_room(CHROMOSOME_1)
-    # print(plannings)
-    # occupee = tb_c.occupied(plannings)
-    # print(occupee)
-
-    # ubi = tb_c.check_not_ubiquity(plannings)
-    # print(ubi)
-
-    # print(tb.planning_teacher(CHROMOSOME_1, 'Nicolas SIMONCINI'))
+    # print("room_too_small", room_too_small)
+    #
+    # correc, _ = tb_c.change_room_if_overcrowded_and_free(CHROMOSOME_1, room_too_small, LIST_ROOM, occupee,
+    #                                                      capacity_dict)
+    #
+    # print("correc", correc)
+    #
+    # check_new_chr = tb_c.check_room_capacity(correc, LIST_ROOM, capacity_dict)
+    #
+    # print("check_new_chr", check_new_chr)

@@ -1,4 +1,5 @@
 import variables as var
+import numpy as np
 
 
 def occupied(plannings):
@@ -7,14 +8,22 @@ def occupied(plannings):
     :param plannings: list of schedules for rooms, courses or professors...
     :return mat: a matrix of arrays of occupied rooms, or professors, or courses...
     """
+    # Calculate the number of time slots based on the defined constants
     step = var.MINUTES_PER_CELL
-    mat = [[[] for _ in range(var.DAYS)] for _ in range(int((var.END_TIME - var.START_TIME) / step))]
+    time_slots = int((var.END_TIME - var.START_TIME) / step)
+    # Create a matrix with empty lists for each time slot and day
+    mat = [[[] for _ in range(var.DAYS)] for _ in range(time_slots)]
+
+    # Iterate over each planning in the list of plannings
     for planning in plannings:
-        room = planning[1]
-        for i in range(len(planning[0])):
-            for j in range(len(planning[0][i])):
-                if planning[0][i][j] > 0:
-                    mat[i][j].append(room)
+        room = planning[1]  # Get the room or resource identifier
+        # Find indices of non-zero elements in the planning matrix
+        non_zero_indices = np.argwhere(planning[0] > 0)
+
+        # For each pair of indices, add the room to the corresponding slot in mat
+        for i, j in non_zero_indices:
+            mat[i][j].append(room)
+
     return mat
 
 
@@ -24,11 +33,7 @@ def check_only_0_1(planning):
     :param planning: a planning
     :return: True or False
     """
-    for i in range(len(planning)):
-        for j in range(len(planning[i])):
-            if planning[i][j] != 0 and planning[i][j] != 1:
-                return False
-    return True
+    return planning[(planning != 0) & (planning != 1)].shape[0] == 0
 
 
 def check_not_ubiquity(occupied_list):
@@ -63,24 +68,27 @@ def calculate_nb_students_by_uv(promo):
     return res
 
 
-def check_room_capacity(chr, room_list, capacity_dict):
+def check_room_capacity(chr, room_capacity_dict, capacity_dict):
     """
     Returns True if the number of students in a room is less than the capacity of the room
+    :param room_capacity_dict: a dictionary with the capacity of each room
     :param chr: a chromosome
-    :param room_list: a list of rooms
     :param capacity_dict: a dictionary with the capacity of each room
     :return: list of timeslots where the number of students is greater than the capacity of the room, and UVs concerned
     """
+
     res = []
     for gene in chr:
-        if gene.room is not None:
-            for room in room_list:
-                if gene.room == room.room:
-                    if gene.code in capacity_dict:
-                        if capacity_dict[gene.code] > room.capacity:
-                            res.append(
-                                {'start_time': gene.start_time, 'duration': gene.duration, 'start_day': gene.start_day,
-                                 'code': gene.code, 'room': gene.room})
+        # Skip genes without a room or not in capacity_dict
+        if gene.room is None or gene.code not in capacity_dict:
+            continue
+
+        # Check if the number of students exceeds the room capacity
+        if capacity_dict[gene.code] > room_capacity_dict.get(gene.room, 0):
+            res.append(
+                {'start_time': gene.start_time, 'duration': gene.duration, 'start_day': gene.start_day,
+                 'code': gene.code, 'room': gene.room})
+
     return res
 
 
@@ -94,28 +102,43 @@ def change_room_if_overcrowded_and_free(chr, room_too_small, room_list, room_occ
     :param capacity_dict: a dictionary with the capacity of each room
     :return: a chromosome with a new room for a given timeslot if the room is overcrowded and if there is a free room and the new planning of rooms
     """
+    # Set the time step based on a constant variable
+    step = var.MINUTES_PER_CELL
+
+    # Iterate over each gene in the chromosome
     for gene in chr:
-        if gene.room is not None:
-            for one_small_room in room_too_small:
-                if gene.start_time == one_small_room['start_time'] and gene.start_day == one_small_room[
-                    'start_day'] and gene.code == one_small_room['code'] and gene.room == one_small_room['room']:
-                    for room in room_list:
-                        step = var.MINUTES_PER_CELL
-                        index_start_time = gene.start_time // step - var.START_TIME // step
-                        print(index_start_time)
-                        print(gene.start_time)
-                        print(gene.duration)
-                        index_end_time = index_start_time + gene.duration // step
-                        if room.capacity > capacity_dict[gene.code] and all(
-                                [room.room not in room_occupied[i][gene.start_day] for i in
-                                 range(index_start_time, index_end_time)]):
-                            gene.room = room.room
-                            for j in range(index_start_time, index_end_time):
-                                # Add room to schedule of occupied rooms
-                                room_occupied[j][gene.start_day].append(room.room)
-                                # Removal of the old room from the schedule of occupied rooms
-                                print(room_occupied[j][gene.start_day])
-                                room_occupied[j][gene.start_day].remove(one_small_room['room'])
-                            break
-                    break
+        # Skip if there's no room assigned to the gene
+        if gene.room is None:
+            continue
+
+        # Check if the current gene matches any of the overcrowded rooms
+        for one_small_room in room_too_small:
+            # Skip if the gene's details do not match the details of the overcrowded room
+            if (gene.start_time, gene.start_day, gene.code, gene.room) != (
+                    one_small_room['start_time'], one_small_room['start_day'], one_small_room['code'],
+                    one_small_room['room']):
+                continue
+
+            # Calculate the start and end indices based on the gene's start time and duration
+            index_start_time = gene.start_time // step - var.START_TIME // step
+            index_end_time = index_start_time + gene.duration // step
+
+            # Filter potential rooms that are free and have enough capacity
+            potential_rooms = [room for room in room_list if room.capacity > capacity_dict[gene.code] and all(
+                room.room not in room_occupied[i][gene.start_day] for i in range(index_start_time, index_end_time))]
+
+            # Continue to the next gene if no potential room is found
+            if not potential_rooms:
+                continue
+
+            # Assign the first potential room to the gene
+            new_room = potential_rooms[0].room
+            gene.room = new_room
+
+            # Update the room_occupied matrix for the new room and remove the old room
+            for j in range(index_start_time, index_end_time):
+                room_occupied[j][gene.start_day].append(new_room)
+                room_occupied[j][gene.start_day].remove(one_small_room['room'])
+            break
+
     return chr, room_occupied
