@@ -3,10 +3,13 @@ import toolbox_correction as tb_c
 import toolbox_student as tb_s
 
 
-def correction_room(chr, room_list):
-    # TODO: implement this function, it should return a corrected chromosome, and select the best arguments for
-    #  the function
-    pass
+def correction_room(arg_chr, arg_room_capacity_dict, room_list, capacity_uv_promo_dict):
+    fct_plannings = tb.planning_room(arg_chr)
+    fct_occupee = tb_c.occupied(fct_plannings)
+    fct_room_too_small = tb_c.check_room_capacity(arg_chr, arg_room_capacity_dict, capacity_uv_promo_dict)
+    correc, _ = tb_c.change_room_if_overcrowded_and_free(arg_chr, fct_room_too_small, room_list, fct_occupee,
+                                                         capacity_uv_promo_dict)
+    return correc
 
 
 if __name__ == '__main__':
@@ -29,15 +32,8 @@ if __name__ == '__main__':
 
     print("room_too_small", room_too_small)
 
+    corrige = correction_room(CHROMOSOME_1, room_capacity_dict, LIST_ROOM, capacity_dict)
 
+    print("corrige", corrige)
 
-    # print("room_too_small", room_too_small)
-    #
-    # correc, _ = tb_c.change_room_if_overcrowded_and_free(CHROMOSOME_1, room_too_small, LIST_ROOM, occupee,
-    #                                                      capacity_dict)
-    #
-    # print("correc", correc)
-    #
-    # check_new_chr = tb_c.check_room_capacity(correc, LIST_ROOM, capacity_dict)
-    #
-    # print("check_new_chr", check_new_chr)
+    print("check", tb_c.check_room_capacity(corrige, room_capacity_dict, capacity_dict))
