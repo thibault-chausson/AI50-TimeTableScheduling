@@ -1,5 +1,6 @@
 import random
 from toolbox import *  # The global variables in tooblox.py will also be imported.
+import variables as var
 
 
 def get_individual(uv_info, rooms, search_cap=100, room_usage=0.4):
@@ -22,7 +23,7 @@ def get_individual(uv_info, rooms, search_cap=100, room_usage=0.4):
 
             done = False
             while not done:
-                steps = int(np.ceil(time / WEEKS / MINUTES_PER_CELL))
+                steps = int(np.ceil(time / var.WEEKS / var.MINUTES_PER_CELL))
                 teacher = random.choice(uv.teachers)
                 print(f"uv: {idx}/{len(uvs)},\t salle: {room_index}/{len(rooms)}", end="\r")
                 room = rooms[room_index]
@@ -54,7 +55,7 @@ def get_individual(uv_info, rooms, search_cap=100, room_usage=0.4):
                 if counter < search_cap:
                     done = True
 
-            gene = Gene(room.room, START_TIME + start_time * MINUTES_PER_CELL, start_day, steps * MINUTES_PER_CELL,
+            gene = Gene(room.room, var.START_TIME + start_time * var.MINUTES_PER_CELL, start_day, steps * var.MINUTES_PER_CELL,
                         teacher, uv.code, course_type)
             chromosome.append(gene)
 

@@ -105,7 +105,7 @@ class Gene:
         }
 
     def __repr__(self):
-        return f"Gene({self.room}, {self.start_time}, {self.duration}, {self.teacher}, {self.code}, {self.type})"
+        return f"Gene({self.room}, {self.start_time}, {self.start_day}, {self.duration}, {self.teacher}, {self.code}, {self.type})"
 
 
 def planning_teacher(chr, teacher=None):

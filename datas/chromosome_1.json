@@ -2,15 +2,15 @@
     [
         {
             "room": "B412",
-            "start_time": 1050,
-            "start_day": 3,
+            "start_time": 480,
+            "start_day": 2,
             "duration": 120,
             "teacher": "Sid Ahmed LAMROUS",
             "code": "DS53",
             "type": "cm"
         },
         {
-            "room": "B412",
+            "room": "B413",
             "start_time": 480,
             "start_day": 2,
             "duration": 150,
