@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 import variables as var
 import numpy as np
 
@@ -212,7 +214,8 @@ def change_timeslot_teacher_occupied(chr, teacher_name, planning_teacher):
 
     # Find the indices of timeslots where the teacher is occupied (values > 1 in planning_teacher indicate occupation)
     indices = np.argwhere(planning_teacher > 1)
-
+    # trier les indices par jour donc suivant l'indice 1
+    indices = sorted(indices, key=lambda x: x[1])
 
     # Convert these indices to actual timeslots considering the start time of the day and the step
     timeslots = []
@@ -267,3 +270,73 @@ def change_timeslot_teacher_occupied(chr, teacher_name, planning_teacher):
                     planning_teacher[i][old_start_day] -= 1
 
     return chr
+
+
+def change_timeslot_room_occupied(chr, room_name, planning_room, planning_all_rooms):
+    """
+    Returns a chromosome with a new room for a given course if the room is occupied by two courses and if there is a free timeslot.
+    :param planning_all_rooms: [[planning_room1, room_name1], [planning_room2, room_name2], ...]
+    :param arg_chr: Chromosome representing the current schedule.
+    :param room_name: Name of the room.
+    :param planning_room: Current planning of the room.
+    :return: Updated chromosome with changed timeslot.
+    """
+
+    arg_chr = deepcopy(chr)
+
+    # Define the time step (duration of each cell in the timetable)
+    step = var.MINUTES_PER_CELL
+
+    # Find the indices of timeslots where the teacher is occupied (values > 1 in planning_teacher indicate occupation)
+    indices = np.argwhere(planning_room > 1)
+    # trier les indices par jour donc suivant l'indice 1
+    indices = sorted(indices, key=lambda x: x[1])
+
+    # Convert these indices to actual timeslots considering the start time of the day and the step
+    timeslots = []
+    for indice in indices:
+        timeslots.append([indice[0] * step + var.START_TIME, indice[1]])
+
+    # Group the timeslots by day
+    creneau = regrouper_creneaux(indices, timeslots)
+
+    break_all = False
+
+    for day_old in creneau:
+        if break_all:
+            break
+        for cre_old in creneau[day_old]:
+            for planning_one_room in planning_all_rooms:
+                if break_all:
+                    break
+                if planning_one_room[1] != room_name:
+                    indices_libre = np.argwhere(planning_one_room[0] == 0)
+                    indices_libre = sorted(indices_libre, key=lambda x: x[1])
+                    timeslots_libre = [[indice[0] * step + var.START_TIME, indice[1]] for indice in indices_libre]
+                    creneau_libre = regrouper_creneaux(indices_libre, timeslots_libre)
+
+
+                    for day in creneau_libre:
+                        if break_all:
+                            break
+                        for cre in creneau_libre[day]:
+                            if cre[0] <= cre_old[0] and cre[1] >= cre_old[1] and day == day_old:
+                                if cre[1] - cre[0] >= cre_old[1] - cre_old[0]:
+                                    for gene in arg_chr:
+                                        if gene.room == room_name and gene.start_time == cre_old[0] and gene.duration == cre_old[1]-cre_old[0] and gene.start_day == day_old:
+                                            gene.room = planning_one_room[1]
+                                            break_all = True  # Mise à jour de la variable pour sortir des boucles
+                                            # Todo: mettre à jour le planning de la salle old et new
+                                            break
+                                    if break_all:
+                                        break
+                            if break_all:
+                                break
+                        if break_all:
+                            break
+                    if break_all:
+                        break
+            if break_all:
+                break
+
+    return arg_chr
