@@ -269,6 +269,14 @@ def import_uvs(filename="./datas/uvs.json"):
     return uvs_fct
 
 
+def generate_uv_capacities(mean,spread,input_file="./datas/uvs.json",output_file="./datas/uvs.json"):
+    uv_list = import_uvs(filename=input_file)
+    for uv in uv_list:
+        uv.capacity = round(np.random.normal(mean,spread))
+    export_uvs(uv_list,filename=output_file)
+
+
+
 def export_population(population, filename="./datas/chromosome.json"):
     """
     Exports a population into a json file.
