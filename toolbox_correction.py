@@ -1,5 +1,3 @@
-from copy import deepcopy
-
 import variables as var
 import numpy as np
 
@@ -272,7 +270,7 @@ def change_timeslot_teacher_occupied(chr, teacher_name, planning_teacher):
     return chr
 
 
-def change_timeslot_room_occupied(chr, room_name, planning_room, planning_all_rooms):
+def change_timeslot_room_occupied(arg_chr, room_name, planning_room, planning_all_rooms):
     """
     Returns a chromosome with a new room for a given course if the room is occupied by two courses and if there is a free timeslot.
     :param planning_all_rooms: [[planning_room1, room_name1], [planning_room2, room_name2], ...]
@@ -282,7 +280,7 @@ def change_timeslot_room_occupied(chr, room_name, planning_room, planning_all_ro
     :return: Updated chromosome with changed timeslot.
     """
 
-    arg_chr = deepcopy(chr)
+
 
     # Define the time step (duration of each cell in the timetable)
     step = var.MINUTES_PER_CELL
