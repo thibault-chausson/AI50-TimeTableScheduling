@@ -315,7 +315,6 @@ def change_timeslot_room_occupied(chr, room_name, planning_room, planning_all_ro
                     timeslots_libre = [[indice[0] * step + var.START_TIME, indice[1]] for indice in indices_libre]
                     creneau_libre = regrouper_creneaux(indices_libre, timeslots_libre)
 
-
                     for day in creneau_libre:
                         if break_all:
                             break
@@ -323,10 +322,19 @@ def change_timeslot_room_occupied(chr, room_name, planning_room, planning_all_ro
                             if cre[0] <= cre_old[0] and cre[1] >= cre_old[1] and day == day_old:
                                 if cre[1] - cre[0] >= cre_old[1] - cre_old[0]:
                                     for gene in arg_chr:
-                                        if gene.room == room_name and gene.start_time == cre_old[0] and gene.duration == cre_old[1]-cre_old[0] and gene.start_day == day_old:
+                                        if gene.room == room_name and gene.start_time == cre_old[0] and gene.duration == \
+                                                cre_old[1] - cre_old[0] and gene.start_day == day_old:
                                             gene.room = planning_one_room[1]
-                                            break_all = True  # Mise à jour de la variable pour sortir des boucles
                                             # Todo: mettre à jour le planning de la salle old et new
+                                            # Faire un +1 sur le créneau de la nouvelle salle
+                                            for i in range((cre_old[0] - var.START_TIME) // step,
+                                                           (cre_old[1] - var.START_TIME) // step):
+                                                planning_one_room[0][i][day_old] += 1
+                                            # Faire un -1 sur le créneau de la salle old
+                                            for i in range((cre_old[0] - var.START_TIME) // step,
+                                                           (cre_old[1] - var.START_TIME) // step):
+                                                planning_room[i][day_old] -= 1
+                                            break_all = True  # Mise à jour de la variable pour sortir des boucles
                                             break
                                     if break_all:
                                         break

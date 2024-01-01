@@ -7,7 +7,7 @@ def correction_room(arg_chr, arg_room_capacity_dict, room_list, capacity_uv_prom
     fct_plannings = tb.planning_room(arg_chr)
     fct_occupied = tb_c.occupied(fct_plannings)
     fct_ubiquity = tb_c.check_not_ubiquity(fct_plannings)
-    # Todo: check ubiquity
+    # Check ubiquity
     if not fct_ubiquity[1]:
         for ubi in fct_ubiquity[0]:
             if not ubi[0]:
@@ -15,7 +15,7 @@ def correction_room(arg_chr, arg_room_capacity_dict, room_list, capacity_uv_prom
                 for planning in fct_plannings:
                     if planning[1] == room_name:
                         planning_room = planning[0]
-                        arg_chr = tb_c.change_timeslot_room_occupied(arg_chr, room_name, planning_room)
+                        arg_chr = tb_c.change_timeslot_room_occupied(arg_chr, room_name, planning_room, fct_plannings)
                         break
     fct_room_too_small = tb_c.check_room_capacity(arg_chr, arg_room_capacity_dict, capacity_uv_promo_dict)
     correc, _ = tb_c.change_room_if_overcrowded_and_free(arg_chr, fct_room_too_small, room_list, fct_occupied,
@@ -51,8 +51,8 @@ if __name__ == '__main__':
     print(occupee)
     print(ubiquity)
 
-
-    new_chr = tb_c.change_timeslot_room_occupied(CHROMOSOME_1, 'B412', tb.planning_room(CHROMOSOME_1, 'B412'), plannings)
+    new_chr = tb_c.change_timeslot_room_occupied(CHROMOSOME_1, 'B412', tb.planning_room(CHROMOSOME_1, 'B412'),
+                                                 plannings)
 
     #
     #
@@ -62,5 +62,3 @@ if __name__ == '__main__':
 
     print(new_ubiquity)
     print(new_ubiquity[1])
-
-
