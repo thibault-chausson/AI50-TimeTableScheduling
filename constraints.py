@@ -1,5 +1,6 @@
 from toolbox import *
 import itertools
+import variables as var
 
 def no_overlaps(chr):
     """
@@ -30,15 +31,15 @@ def lunch_break(chr, minimum_time=45):
     teachers = planning_teacher(chr)
     for teacher in teachers:
         total_checked += 1
-        res = np.zeros(DAYS)
-        for i, col in enumerate(teacher[(12 * 60 - START_TIME)//MINUTES_PER_CELL:(14 * 60 - START_TIME)//MINUTES_PER_CELL,].T):
+        res = np.zeros(var.DAYS)
+        for i, col in enumerate(teacher[(12 * 60 - var.START_TIME)//var.MINUTES_PER_CELL:(14 * 60 - var.START_TIME)//var.MINUTES_PER_CELL,].T):
             temp = []
             for number, elem in itertools.groupby(col):
                 if number == 1:
                     temp.append(len(list(elem)))
             res[i] = max(temp)
         
-        if res[res >= minimum_time / MINUTES_PER_CELL].size != DAYS:
+        if res[res >= minimum_time / var.MINUTES_PER_CELL].size != var.DAYS:
             no_lunch_for_you += 1
         
     return no_lunch_for_you, total_checked
