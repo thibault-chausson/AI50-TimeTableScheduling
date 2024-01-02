@@ -335,7 +335,5 @@ def change_room_ubiquity(arg_chr, room_name, planning_room, planning_all_rooms):
                             break
                     if break_all:
                         break
-            if break_all:
-                break
 
     return arg_chr
