@@ -51,7 +51,7 @@ if __name__ == '__main__':
     print(occupee)
     print(ubiquity)
 
-    new_chr = tb_c.change_timeslot_room_occupied(CHROMOSOME_1, 'B412', tb.planning_room(CHROMOSOME_1, 'B412'),
+    new_chr = tb_c.change_room_ubiquity(CHROMOSOME_1, 'B412', tb.planning_room(CHROMOSOME_1, 'B412'),
                                                  plannings)
 
     #
