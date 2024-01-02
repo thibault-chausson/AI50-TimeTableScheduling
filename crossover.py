@@ -60,6 +60,27 @@ def ordered_crossover(chr1, chr2):
     return child_chr
 
 
+def crossover_choice(chr1, chr2, choice):
+    """
+    Returns a new chromosome created by crossing over two chromosomes, with the choice of the crossover function.
+    :param chr1:
+    :param chr2:
+    :param choice:
+    :return:
+    """
+    # dictionary of crossover functions
+    crossover_functions = {
+        'single_point': single_point_crossover,
+        'tow_points': two_points_crossover,
+        'uniform': uniform_crossover,
+        'order': ordered_crossover
+    }
+    if choice in crossover_functions:
+        return crossover_functions[choice](chr1, chr2)
+    else:
+        raise ValueError("Invalid choice of crossover function.")
+
+
 if __name__ == '__main__':
     print("Crossing over...")
     print(CHROMOSOME_1)
