@@ -270,7 +270,7 @@ def change_timeslot_teacher_occupied(chr, teacher_name, planning_teacher):
     return chr
 
 
-def change_timeslot_room_occupied(arg_chr, room_name, planning_room, planning_all_rooms):
+def change_room_ubiquity(arg_chr, room_name, planning_room, planning_all_rooms):
     """
     Returns a chromosome with a new room for a given course if the room is occupied by two courses and if there is a free timeslot.
     :param planning_all_rooms: [[planning_room1, room_name1], [planning_room2, room_name2], ...]
@@ -279,9 +279,6 @@ def change_timeslot_room_occupied(arg_chr, room_name, planning_room, planning_al
     :param planning_room: Current planning of the room.
     :return: Updated chromosome with changed timeslot.
     """
-
-
-
     # Define the time step (duration of each cell in the timetable)
     step = var.MINUTES_PER_CELL
 
@@ -323,7 +320,6 @@ def change_timeslot_room_occupied(arg_chr, room_name, planning_room, planning_al
                                         if gene.room == room_name and gene.start_time == cre_old[0] and gene.duration == \
                                                 cre_old[1] - cre_old[0] and gene.start_day == day_old:
                                             gene.room = planning_one_room[1]
-                                            # Todo: mettre à jour le planning de la salle old et new
                                             # Faire un +1 sur le créneau de la nouvelle salle
                                             for i in range((cre_old[0] - var.START_TIME) // step,
                                                            (cre_old[1] - var.START_TIME) // step):

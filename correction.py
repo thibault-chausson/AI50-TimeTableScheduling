@@ -15,7 +15,7 @@ def correction_room(arg_chr, arg_room_capacity_dict, room_list, capacity_uv_prom
                 for planning in fct_plannings:
                     if planning[1] == room_name:
                         planning_room = planning[0]
-                        arg_chr = tb_c.change_timeslot_room_occupied(arg_chr, room_name, planning_room, fct_plannings)
+                        arg_chr = tb_c.change_room_ubiquity(arg_chr, room_name, planning_room, fct_plannings)
                         break
     fct_room_too_small = tb_c.check_room_capacity(arg_chr, arg_room_capacity_dict, capacity_uv_promo_dict)
     correc, _ = tb_c.change_room_if_overcrowded_and_free(arg_chr, fct_room_too_small, room_list, fct_occupied,
