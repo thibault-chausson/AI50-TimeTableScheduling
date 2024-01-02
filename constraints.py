@@ -7,13 +7,13 @@ def no_overlaps(chr):
     Hard Constraint.
     Check whether or not they are overlapping types of UVs between rooms, teachers and uvs.
     """
-    for schedule in planning_teacher(chr):
+    for schedule, _ in planning_teacher(chr):
         if len(schedule[schedule > 1]) > 0:
             return False
-    for schedule in planning_room(chr):
+    for schedule, _ in planning_room(chr):
         if len(schedule[schedule > 1]) > 0:
             return False
-    for schedule in planning_uv(chr):
+    for schedule, _ in planning_uv(chr):
         if len(schedule[schedule > 1]) > 0:
             return False
     return True
@@ -29,7 +29,7 @@ def lunch_break(chr, minimum_time=45):
     no_lunch_for_you, total_checked = 0, 0
     
     teachers = planning_teacher(chr)
-    for teacher in teachers:
+    for teacher, _ in teachers:
         total_checked += 1
         res = np.zeros(var.DAYS)
         for i, col in enumerate(teacher[(12 * 60 - var.START_TIME)//var.MINUTES_PER_CELL:(14 * 60 - var.START_TIME)//var.MINUTES_PER_CELL,].T):
@@ -56,7 +56,7 @@ def statistics(chr):
     teachers = planning_teacher(chr)
     ranges = []
     gaps = []
-    for teacher in teachers:
+    for teacher, _ in teachers:
         means = teacher.sum(axis=0)/teacher.shape[0]
         ranges.append(means.max() - means.min())
 

@@ -104,9 +104,9 @@ def import_promo(filename="./datas/promo.json"):
 
 
 if __name__ == '__main__':
-    chromosome_1 = tb.import_population("datas/chromosome_1.json")[0]
+    chromosome_1 = tb.import_population("datas/population.json")[0]
     les_uvs = get_all_uvs_chromosome(chromosome_1)
-    promo = create_promo(les_uvs, 100)
+    promo = create_promo(les_uvs, 300)
     print(promo)
     export_promo(promo, "datas/promo.json")
     promo_import = import_promo("datas/promo.json")
