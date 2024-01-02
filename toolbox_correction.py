@@ -10,7 +10,7 @@ def occupied(plannings):
     """
     # Calculate the number of time slots based on the defined constants
     step = var.MINUTES_PER_CELL
-    time_slots = int((var.END_TIME - var.START_TIME) / step)
+    time_slots = (var.END_TIME - var.START_TIME) // step
     # Create a matrix with empty lists for each time slot and day
     mat = [[[] for _ in range(var.DAYS)] for _ in range(time_slots)]
 
@@ -335,5 +335,4 @@ def change_room_ubiquity(arg_chr, room_name, planning_room, planning_all_rooms):
                             break
                     if break_all:
                         break
-
     return arg_chr

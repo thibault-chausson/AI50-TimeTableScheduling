@@ -17,6 +17,8 @@ def correction_room(arg_chr, arg_room_capacity_dict, room_list, capacity_uv_prom
                         planning_room = planning[0]
                         arg_chr = tb_c.change_room_ubiquity(arg_chr, room_name, planning_room, fct_plannings)
                         break
+    fct_plannings = tb.planning_room(arg_chr)
+    fct_occupied = tb_c.occupied(fct_plannings)
     fct_room_too_small = tb_c.check_room_capacity(arg_chr, arg_room_capacity_dict, capacity_uv_promo_dict)
     correc, _ = tb_c.change_room_if_overcrowded_and_free(arg_chr, fct_room_too_small, room_list, fct_occupied,
                                                          capacity_uv_promo_dict)
@@ -47,18 +49,3 @@ if __name__ == '__main__':
     plannings = tb.planning_room(CHROMOSOME_1)
     occupee = tb_c.occupied(plannings)
     ubiquity = tb_c.check_not_ubiquity(plannings)
-
-    print(occupee)
-    print(ubiquity)
-
-    new_chr = tb_c.change_room_ubiquity(CHROMOSOME_1, 'B412', tb.planning_room(CHROMOSOME_1, 'B412'),
-                                                 plannings)
-
-    #
-    #
-    new_plannings = tb.planning_room(new_chr)
-    new_occupee = tb_c.occupied(new_plannings)
-    new_ubiquity = tb_c.check_not_ubiquity(new_plannings)
-
-    print(new_ubiquity)
-    print(new_ubiquity[1])
