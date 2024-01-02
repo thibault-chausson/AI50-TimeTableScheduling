@@ -295,11 +295,8 @@ def change_room_ubiquity(arg_chr, room_name, planning_room, planning_all_rooms):
     # Group the timeslots by day
     creneau = regrouper_creneaux(indices, timeslots)
 
-    break_all = False
-
     for day_old in creneau:
-        if break_all:
-            break
+        break_all = False
         for cre_old in creneau[day_old]:
             for planning_one_room in planning_all_rooms:
                 if break_all:
