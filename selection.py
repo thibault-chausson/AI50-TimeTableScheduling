@@ -88,6 +88,27 @@ def selection_probabiliste(arg_list_fitness, nb_couple):
     return create_couples(index_parents, nb_couple)
 
 
+def selection_choice(arg_sorted_list_fitness, arg_selection_choice, arg_nb_couple=1, arg_tournament_size=5):
+    """
+    Choose the selection method
+    :param arg_sorted_list_fitness:
+    :param arg_selection_choice:
+    :param arg_nb_couple:
+    :param arg_tournament_size:
+    :return:
+    """
+    if arg_selection_choice == "elitiste":
+        return selection_elitiste(arg_nb_couple)
+    elif arg_selection_choice == "tournoi" and arg_tournament_size >= arg_nb_couple * 2:
+        return tournament_selection(arg_sorted_list_fitness, arg_tournament_size, arg_nb_couple)
+    elif arg_selection_choice == "roulette":
+        return roulette_wheel_selection(arg_sorted_list_fitness, arg_nb_couple)
+    elif arg_selection_choice == "proba":
+        return selection_probabiliste(arg_sorted_list_fitness, arg_nb_couple)
+    else:
+        print("Error: selection_choice()")
+
+
 if __name__ == "__main__":
     initial_population = tb.import_population("datas/population.json")
     list_fitness = [fitness(chromosome) for chromosome in initial_population]
