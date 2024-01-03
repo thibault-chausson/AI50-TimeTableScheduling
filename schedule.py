@@ -6,15 +6,15 @@ import matplotlib.ticker as mticker
 
 from toolbox import *
 from variables import *
-
+from toolbox_student import *
 
 def get_genes_from(chr, kind, key):
     """
     Returns all the genes from a given chromosome that match the given key, based on the given kind.
     Example: get_genes_from(chromosome, "teacher", "M. Dupont") will return all the genes from the chromosome that have "M. Dupont" as a teacher.
     chr: list of Gene objects
-    kind: str, either "teacher", "room" or "uv"
-    key: str, the teacher, room or uv code to look for
+    kind: str, either "teacher", "room", "uv" or "student".
+    key: str or Student object, the teacher, room, uv or student to look for
     """
     if kind == "teacher":
         return [i for i in chr if i.teacher == key]
@@ -22,6 +22,15 @@ def get_genes_from(chr, kind, key):
         return [i for i in chr if i.room == key]
     elif kind == "uv":
         return [i for i in chr if i.code == key]
+    elif kind == "student":
+        classes = []
+        for uv in key.uvs:
+            for gene in chr:
+                if gene.code == uv:
+                    classes.append(gene)
+        return classes
+
+        
 
 
 def get_classes_mat(chr):
@@ -33,8 +42,7 @@ def get_classes_mat(chr):
     mat = np.array(mat)
     for gene in chr:
         start = gene.start_time // MINUTES_PER_CELL - START_TIME // MINUTES_PER_CELL
-        mat[start:start + gene.duration // MINUTES_PER_CELL, gene.start_day] = ", ".join(
-            (gene.code, gene.room, gene.type))
+        mat[start:start + gene.duration // MINUTES_PER_CELL, gene.start_day] = ", ".join((gene.code, gene.room, gene.type))
     mat[mat == None] = ""
 
     return mat
@@ -50,7 +58,7 @@ def make_schedule(mat, chr, kind, key, save_path="./images/schedule.png"):
     save_path: str, path where to save the schedule. If None is given, the schedule will be displayed instead of saved.
     """
     plt.figure(figsize=(8, 8), dpi=100)
-    index = [f'{minute // 60}:{minute % 60:02d}' for minute in range(START_TIME, END_TIME, MINUTES_PER_CELL)]
+    index = [f'{minute//60}:{minute%60:02d}' for minute in range(START_TIME, END_TIME, MINUTES_PER_CELL)]
     days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
     df_schedule = pd.DataFrame(mat, index=index, columns=days_of_week)
 
@@ -68,9 +76,10 @@ def make_schedule(mat, chr, kind, key, save_path="./images/schedule.png"):
     colors = ['lightgray'] + sns.color_palette('tab20', len(set(mat.flatten())) - 1).as_hex()
     colormap = ListedColormap(colors)
 
+
     ax = sns.heatmap(df_schedule_numeric, cmap=colormap, cbar=False, annot=df_schedule, fmt='s')
     ticks_loc = ax.get_yticks().tolist()
-    ax.yaxis.set_major_locator(mticker.FixedLocator([t - 0.5 for t in ticks_loc]))
+    ax.yaxis.set_major_locator(mticker.FixedLocator([t-0.5 for t in ticks_loc]))
     ax.set_yticklabels(index)  # replace with your labels
     plt.tick_params(axis='x', bottom=False, top=True, labelbottom=False, labeltop=True)
 
@@ -83,20 +92,15 @@ def make_schedule(mat, chr, kind, key, save_path="./images/schedule.png"):
 
 
 if __name__ == '__main__':
-    """
-    chr: list of Gene objects
-    kind: str, either "teacher", "room" or "uv"
-    key: str, the teacher, room or uv code to look for
-    """
-
     print("Importing population...")
     pop = import_population("./datas/population.json")
+    students = import_promo("./datas/promo.json").students_list
 
     print("Building schedule...")
-    kind = "room"
-    key = "B418"
+    kind = "student"
+    key = students[0]
     chr = get_genes_from(pop[0], kind, key)
 
     mat = get_classes_mat(chr)
 
-    make_schedule(mat, chr, kind, key)
+    make_schedule(mat, chr, kind, key.name)
