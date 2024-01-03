@@ -294,6 +294,17 @@ def export_population(population, filename="./datas/chromosome.json"):
         json.dump([[gene.export() for gene in chr] for chr in population], f, indent=4)
 
 
+def export_chr(chr, filename="./datas/chromosome_only.json"):
+    """
+    Exports a chromosome into a json file.
+    :param chr:
+    :param filename:
+    :return:
+    """
+    with open(filename, "w") as f:
+        json.dump([gene.export() for gene in chr], f, indent=4)
+
+
 def import_population(filename):
     """
     Returns a population of chromosomes from a solution file.

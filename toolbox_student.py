@@ -64,6 +64,30 @@ def get_all_uvs_chromosome(chromosome):
     return uvs
 
 
+def get_all_teacher_chromosome(chromosome):
+    teachers = []
+    for gene in chromosome:
+        if gene.teacher not in teachers:
+            teachers.append(gene.teacher)
+    return teachers
+
+
+def get_all_room_chromosome(chromosome):
+    rooms = []
+    for gene in chromosome:
+        if gene.room not in rooms:
+            rooms.append(gene.room)
+    return rooms
+
+
+def get_all_student_promo(arg_promo):
+    students = []
+    for student in arg_promo.students_list:
+        if student not in students:
+            students.append(student)
+    return students
+
+
 def create_student(list_uv, nb_uv=6):
     # ID is UUID, name is random, uvs is list of six UV form list_us
     ID = uuid.uuid4()
