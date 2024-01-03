@@ -72,7 +72,16 @@ def make_schedule(mat, chr, kind, key, save_path="./images/schedule.png"):
                 value_map[k] = i
 
     df_schedule_numeric = df_schedule.replace(value_map)
+    seen = []
+    for i in range(mat.shape[0]):
+        for j in range(mat.shape[1]):
+            if mat[i, j] not in seen:
+                seen.append(mat[i, j])
+            else:
+                mat[i, j] = ""
+    df_schedule = pd.DataFrame(mat, index=index, columns=days_of_week)
 
+    
     colors = ['lightgray'] + sns.color_palette('tab20', len(set(mat.flatten())) - 1).as_hex()
     colormap = ListedColormap(colors)
 
@@ -97,10 +106,10 @@ if __name__ == '__main__':
     students = import_promo("./datas/promo.json").students_list
 
     print("Building schedule...")
-    kind = "student"
-    key = students[0]
+    kind = "room"
+    key = "B102"
     chr = get_genes_from(pop[0], kind, key)
 
     mat = get_classes_mat(chr)
 
-    make_schedule(mat, chr, kind, key.name)
+    make_schedule(mat, chr, kind, key)
