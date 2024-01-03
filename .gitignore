@@ -6,3 +6,5 @@
 __pycache__/*
 *.pyc
 datas/test_chrom.json
+
+datas/population_new.json
