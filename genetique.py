@@ -50,6 +50,9 @@ def genetic_algorithm(arg_promo, arg_room_list, arg_population, arg_fitness, gen
     :return:
     """
 
+    # History
+    history = []
+
     # La correction de la population initiale
     arg_population, room_capacity_dict, capacity_uv_promo_dict = correction_all(arg_promo, arg_room_list,
                                                                                 arg_population)
@@ -85,10 +88,13 @@ def genetic_algorithm(arg_promo, arg_room_list, arg_population, arg_fitness, gen
             arg_fitness, arg_population = rp.replace(arg_fitness, arg_population,
                                                      sl.fitness(tableau_enfants[i]), tableau_enfants[i])
 
+        # History
+        history.append(arg_fitness[0])
+
     # Selection du meilleur chromosome
     best_chromosome = arg_population[0]
     best_fitness = arg_fitness[0]
 
     print(arg_fitness)
 
-    return best_chromosome, best_fitness
+    return best_chromosome, best_fitness, history
