@@ -10,3 +10,5 @@ datas/test_chrom.json
 datas/population_new.json
 
 /results
+
+images/*
