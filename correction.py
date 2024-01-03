@@ -5,7 +5,6 @@ import toolbox_student as tb_s
 
 def correction_room(arg_chr, arg_room_capacity_dict, room_list, capacity_uv_promo_dict):
     fct_plannings = tb.planning_room(arg_chr)
-    fct_occupied = tb_c.occupied(fct_plannings)
     fct_ubiquity = tb_c.check_not_ubiquity(fct_plannings)
     # Check ubiquity
     if not fct_ubiquity[1]:
@@ -15,7 +14,7 @@ def correction_room(arg_chr, arg_room_capacity_dict, room_list, capacity_uv_prom
                 for planning in fct_plannings:
                     if planning[1] == room_name:
                         planning_room = planning[0]
-                        arg_chr = tb_c.change_room_ubiquity(arg_chr, room_name, planning_room, fct_plannings)
+                        arg_chr, _ = tb_c.change_room_ubiquity(arg_chr, room_name, planning_room, fct_plannings)
                         break
     fct_plannings = tb.planning_room(arg_chr)
     fct_occupied = tb_c.occupied(fct_plannings)

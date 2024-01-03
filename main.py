@@ -29,7 +29,7 @@ if __name__ == "__main__":
     print("Data loading time: ", end_data - start_data)
     start_algo = t.time()
     chromosome, fitness = gen.genetic_algorithm(promo, room_list, population, sorted_fitness, 100,
-                                                0.2, 1, 'elitiste',
+                                                0.2, 1, 'roulette',
                                                 'single_point', 5, True)
     end_algo = t.time()
     print("Algorithm execution time: ", end_algo - start_algo)
