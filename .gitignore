@@ -8,3 +8,5 @@ __pycache__/*
 datas/test_chrom.json
 
 datas/population_new.json
+
+images/*
