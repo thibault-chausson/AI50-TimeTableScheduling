@@ -23,7 +23,7 @@ if __name__ == "__main__":
     uvs = tb.import_uvs("datas/uvs.json")
     promo = tbs.import_promo("datas/promo.json")
     population = tb.import_population("datas/population.json")
-    sorted_fitness, sorted_population = gen.set_dataset(population)
+    sorted_fitness, sorted_population = gen.sort_dataset(population)
     room_list = tb.get_rooms()
     end_data = t.time()
     print("Data loading time: ", end_data - start_data)
