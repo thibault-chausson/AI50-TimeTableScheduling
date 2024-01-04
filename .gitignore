@@ -12,3 +12,5 @@ datas/population_new.json
 /results
 
 images/*
+
+/datas/instances/*
