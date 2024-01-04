@@ -226,7 +226,7 @@ def get_uvs(category=None):
 
     uv_info = []
     for uv in desc_uv:
-        if category in str(uv) or category is None:
+        if category is None or category in str(uv):
             o = ""
             teachers = []
             if uv["automne"] is not None:
@@ -323,7 +323,7 @@ def import_population(filename):
 
 
 if __name__ == "__main__":
-    uvs = get_uvs("FISE-INFO")
+    uvs = get_uvs(category=None)
     export_uvs(uvs, "datas/uvs.json")
     uvs = import_uvs("datas/uvs.json")
     print(uvs)
