@@ -1,6 +1,6 @@
 from toolbox import UV, Room
 import toolbox_student
-
+import toolbox
 
 def fitness(chromosome, studentWeight=1, classroomWeight=1, teacherWeight=1):
     fitnessScore = strongFitness(chromosome, studentWeight, classroomWeight, teacherWeight)
@@ -16,7 +16,8 @@ def strongFitness(chromosome, studentWeight=1, classroomWeight=1, teacherWeight=
 
 
 def weakFitness(chromosome, studentWeight=1, classroomWeight=1, teacherWeight=1):
-    fitnessScore = studentWeight * studentWeakFitness(chromosome)
+    conflictDict = generateUVConflictDictionnary(chromosome)
+    fitnessScore = studentWeight * studentWeakFitness(conflictDict)
     fitnessScore += teacherWeight * teacherWeakFitness(chromosome)
     fitnessScore += classroomWeight * classroomWeakFitness(chromosome)
     return fitnessScore
@@ -68,9 +69,21 @@ def timeslotOverlap(gene1, gene2):
     if gene1.start_day != gene2.start_day: return False
     return gene1.start_time < gene2.start_time + gene2.duration and gene2.start_time < gene1.start_time + gene1.duration
 
+def generateUVConflictDictionnary(chromosome):
+    conflictDict = {}
+    uvs = toolbox.get_uvs()
+    i = 0
+    for uv in uvs:
+        conflictDict[uv.code] = []
+        for j in range(i):
+            if UVScheduleConflict(chromosome,uv,uvs[j]):
+                conflictDict[uv.code].append(uvs[j].code)
+                conflictDict[uvs[j].code].append(uv.code)
+    return conflictDict
+
 
 # Can be re-written by building a list of conflicting UVs
-def studentWeakFitness(chromosome):
+def studentWeakFitness(conflictDict):
     fitness = 0
     students = toolbox_student.promo_import().students_list
     for student in students:
@@ -79,7 +92,7 @@ def studentWeakFitness(chromosome):
         i = 1
         for uv in student.uvs:
             for j in range(i + 1, len(student.uvs)):
-                if UVScheduleConflict(chromosome, uv, student.uvs[j]):
+                if uv.code in conflictDict[student.uvs[j].code]:
                     score -= heat
                     heat += 1
         fitness += score
