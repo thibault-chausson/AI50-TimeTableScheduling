@@ -49,13 +49,18 @@ def get_instance(sites, formations, pop_size, promo_size, export_path='./datas/i
             json.dump(room_capacity_dict, file)
 
         # Save the capacity of the uvs
-        with open(export_path + '/capacity_of_the_uvs.json', 'w') as file:
+        with open(export_path + '/capacity_of_the_uvs_promo.json', 'w') as file:
             json.dump(capacity_uv_promo_dict, file)
 
-    return population, promo, room_capacity_dict, capacity_uv_promo_dict
+        # Save the fitness of the population
+        with open(export_path + '/fitness_of_the_population.txt', 'w') as file:
+            for item in fitness_sorted:
+                file.write(f"{item}\n")
+
+    return population, fitness_sorted, promo, room_capacity_dict, capacity_uv_promo_dict
 
 
 if __name__ == '__main__':
-    pop, promo, room_capa, uv_capa = get_instance(["Belfort", "Sevenans"], ["FISE-INFO", "FISA-INFO"], 10, 20,
-                                                  export_path='./datas/instances/coucou',
-                                                  export=True)
+    pop, fit, promo, room_capa, uv_capa = get_instance(["Belfort", "Sevenans"], ["FISE-INFO", "FISA-INFO"], 10, 20,
+                                                       export_path='./datas/instances/coucou',
+                                                       export=True)

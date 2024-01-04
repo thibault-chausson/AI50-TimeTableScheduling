@@ -13,15 +13,17 @@ def create_directory(path):
         os.makedirs(path)
 
 
-def benchmark(arg_promo, arg_room_list, arg_population, arg_fitness, generation,
+def benchmark(arg_promo, arg_room_list, arg_population, arg_fitness, arg_room_capacity_dict, arg_capacity_uv_promo_dict,
+              generation,
               mutation_rate, nb_couple_elite, selection_choice, crossover_choice,
-              arg_tournament_size, correction, sorted_fitness, sorted_population,
+              arg_tournament_size, correction,
               title="Evolution of the fitness", filename="schedule", schedule=False):
-    print("Best fitness before: ", sorted_fitness)
-    print("Best chromosome before: ", sorted_population[0])
+    print("Best fitness before: ", arg_fitness)
+    print("Best chromosome before: ", arg_population[0])
     start_algo = t.time()
 
-    chromosome, fitness, history = gen.genetic_algorithm(arg_promo, arg_room_list, arg_population, arg_fitness,
+    chromosome, fitness, history = gen.genetic_algorithm(arg_room_list, arg_population, arg_fitness,
+                                                         arg_room_capacity_dict, arg_capacity_uv_promo_dict,
                                                          generation, mutation_rate, nb_couple_elite, selection_choice,
                                                          crossover_choice, arg_tournament_size, correction)
     end_algo = t.time()
@@ -48,11 +50,13 @@ def benchmark(arg_promo, arg_room_list, arg_population, arg_fitness, generation,
     plt.show()
 
     if schedule:
+        print("Creating schedules...")
         # Création des emplois du temps
         for schedule_type in ['uv', 'teacher', 'room', 'student']:
             schedule_folder = f'{results_path}/schedule_all_{schedule_type}'
             create_directory(schedule_folder)
             create_schedule_all(chromosome, arg_promo, schedule_type, filename)
+        print("Schedules created.")
 
 
 def create_schedule_all(chr, promo, type_schedule, filename):
