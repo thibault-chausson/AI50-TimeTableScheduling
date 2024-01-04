@@ -7,7 +7,7 @@ import correction as co
 import toolbox_correction as tb_c
 
 
-def set_dataset(arg_population):
+def sort_dataset(arg_population):
     # Sort the population by fitness
     list_fitness = [sl.fitness(chromosome) for chromosome in arg_population]
     sorted_list_fitness, sorted_index_population = sl.sorting_fitness(list_fitness, arg_population)
