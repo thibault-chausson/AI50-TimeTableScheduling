@@ -65,12 +65,20 @@ if __name__ == "__main__":
 
     """
     Create a population and school year
+    SITE = ["Belfort", "Sevenans", ...]
+    FORMATION = ["FISE-INFO", "FISA-INFO", ...]
     """
+    SITE = ["Belfort", "Sevenans"]
+    FORMATION = ["FISE-INFO", "FISA-INFO"]
+    POPULATION_SIZE = 10
+    PROMO_SIZE = 20
+    EXPORT_PATH_INSTANCES = PATH_DATA
+    EXPORT_INSTANCES = True
+
     """
-    pop, fit, promo, room_capa, uv_promo_capa = gi.get_instance(["Belfort", "Sevenans"], ["FISE-INFO", "FISA-INFO"], 10,
-                                                                20,
-                                                                export_path='./datas/instances/coucou',
-                                                                export=True)
+    pop, fit, promo, room_capa, uv_promo_capa = gi.get_instance(SITE, FORMATION, POPULATION_SIZE,
+                                                                PROMO_SIZE, EXPORT_PATH_INSTANCES,
+                                                                EXPORT_INSTANCES)
     """
 
     """
