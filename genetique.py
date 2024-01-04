@@ -30,7 +30,8 @@ def correction_all(arg_promo, arg_room_list, arg_population):
     return arg_population, room_capacity_dict, capacity_uv_promo_dict
 
 
-def genetic_algorithm(arg_room_list, arg_population, arg_fitness, room_capacity_dict, capacity_uv_promo_dict, generation=100,
+def genetic_algorithm(arg_room_list, arg_population, arg_fitness, room_capacity_dict, capacity_uv_promo_dict,
+                      generation=100,
                       mutation_rate=0.01, nb_couple_elite=1, selection_choice='elitiste',
                       crossover_choice='single_point',
                       arg_tournament_size=5, correction=True):

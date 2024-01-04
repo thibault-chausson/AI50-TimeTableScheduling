@@ -2,6 +2,7 @@ from toolbox import *
 import itertools
 import variables as var
 
+
 def no_overlaps(chr):
     """
     Hard Constraint.
@@ -27,21 +28,22 @@ def lunch_break(chr, minimum_time=45):
     returns: (number of people who won't have lunch time, total number of people checked)
     """
     no_lunch_for_you, total_checked = 0, 0
-    
+
     teachers = planning_teacher(chr)
     for teacher, _ in teachers:
         total_checked += 1
         res = np.zeros(var.DAYS)
-        for i, col in enumerate(teacher[(12 * 60 - var.START_TIME)//var.MINUTES_PER_CELL:(14 * 60 - var.START_TIME)//var.MINUTES_PER_CELL,].T):
+        for i, col in enumerate(teacher[(12 * 60 - var.START_TIME) // var.MINUTES_PER_CELL:(
+                                                                                                   14 * 60 - var.START_TIME) // var.MINUTES_PER_CELL, ].T):
             temp = []
             for number, elem in itertools.groupby(col):
                 if number == 1:
                     temp.append(len(list(elem)))
             res[i] = max(temp)
-        
+
         if res[res >= minimum_time / var.MINUTES_PER_CELL].size != var.DAYS:
             no_lunch_for_you += 1
-        
+
     return no_lunch_for_you, total_checked
 
 
@@ -57,7 +59,7 @@ def statistics(chr):
     ranges = []
     gaps = []
     for teacher, _ in teachers:
-        means = teacher.sum(axis=0)/teacher.shape[0]
+        means = teacher.sum(axis=0) / teacher.shape[0]
         ranges.append(means.max() - means.min())
 
         res = []
@@ -75,4 +77,3 @@ def rooms_capacity():
     Will be done later as I do not know yet how to give a student a schedule based on his choices.
     """
     pass
-    

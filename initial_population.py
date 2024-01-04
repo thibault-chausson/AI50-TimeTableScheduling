@@ -55,7 +55,8 @@ def get_individual(uv_info, rooms, search_cap=100, room_usage=0.4):
                 if counter < search_cap:
                     done = True
 
-            gene = Gene(room.room, var.START_TIME + start_time * var.MINUTES_PER_CELL, start_day, steps * var.MINUTES_PER_CELL,
+            gene = Gene(room.room, var.START_TIME + start_time * var.MINUTES_PER_CELL, start_day,
+                        steps * var.MINUTES_PER_CELL,
                         teacher, uv.code, course_type)
             chromosome.append(gene)
 
