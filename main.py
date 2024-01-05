@@ -2,6 +2,7 @@ import toolbox as tb
 import benchmark as bm
 import toolbox_student as tbs
 import json
+import generate_instances as gi
 
 def import_json(path):
     """
