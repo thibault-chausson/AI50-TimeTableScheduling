@@ -34,7 +34,7 @@ if __name__ == "__main__":
     """
     PATH_DATA = "./datas/instances/coucou"
 
-    GENERATION_NUMBER = 10
+    GENERATION_NUMBER = 50
     MUTATION_PROBABILITY = 0.2
     NUMBER_OF_COUPLES = 1
     CORRECTION = True
