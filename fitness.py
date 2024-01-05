@@ -1,6 +1,7 @@
 from toolbox import UV, Room
 import toolbox_student
 import toolbox
+import time
 
 def fitness(chromosome, studentWeight=1, classroomWeight=1, teacherWeight=1):
     fitnessScore = strongFitness(chromosome, studentWeight, classroomWeight, teacherWeight)
@@ -9,9 +10,17 @@ def fitness(chromosome, studentWeight=1, classroomWeight=1, teacherWeight=1):
 
 
 def strongFitness(chromosome, studentWeight=1, classroomWeight=1, teacherWeight=1):
+    start = time.time()
     fitnessScore = studentWeight * studentStrongFitness(chromosome)
+    student = time.time()
     fitnessScore += teacherWeight * teacherStrongFitness(chromosome)
+    teacher = time.time()
     fitnessScore += classroomWeight * classroomStrongFitness(chromosome)
+    classroom = time.time()
+    print("Temps fitness : ",classroom-start)
+    print("Temps student : ",student-start)
+    print("Temps teacher : ",teacher-student)
+    print("Temps classroom : ",classroom-teacher)
     return fitnessScore
 
 
@@ -45,10 +54,12 @@ def teacherStrongFitness(chromosome):
 def classroomStrongFitness(chromosome):
     fitness = 0
     index = 0
+    uvs = toolbox.get_uvs()
+    rooms = toolbox.get_rooms()
     for gene1 in chromosome:
         index += 1
         # Evaluate student capacity
-        if (studentCapacityOverload(gene1)): fitness += 1
+        if (studentCapacityOverload(gene1,uvs,rooms)): fitness += 1
 
         # Evaluate schedule conflicts with other timeslots
         fitnessImpact = 0
@@ -60,8 +71,10 @@ def classroomStrongFitness(chromosome):
     return fitness
 
 
-def studentCapacityOverload(gene):
-    if Room.codeToRoom(gene.room).capacity < UV.codeToUV(gene.code).capacity: return True
+def studentCapacityOverload(gene,uvs,rooms):
+    gene_uv = next((uv for uv in uvs if uv.code == gene.code), None)
+    gene_room = next((room for room in rooms if room.room == gene.room), None)
+    if gene_room.capacity < gene_uv.capacity: return True
     return False
 
 
@@ -82,7 +95,6 @@ def generateUVConflictDictionnary(chromosome):
     return conflictDict
 
 
-# Can be re-written by building a list of conflicting UVs
 def studentWeakFitness(conflictDict):
     fitness = 0
     students = toolbox_student.promo_import().students_list

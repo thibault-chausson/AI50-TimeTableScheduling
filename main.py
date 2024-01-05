@@ -3,7 +3,6 @@ import benchmark as bm
 import toolbox_student as tbs
 import json
 
-
 def import_json(path):
     """
     Import a json file
