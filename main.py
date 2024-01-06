@@ -35,9 +35,9 @@ if __name__ == "__main__":
     """
     PATH_DATA = "./datas/instances/coucou"
 
-    GENERATION_NUMBER = 50
-    MUTATION_PROBABILITY = 0.2
-    NUMBER_OF_COUPLES = 1
+    GENERATION_NUMBER = 1000
+    MUTATION_PROBABILITY = 1
+    NUMBER_OF_COUPLES = 3
     CORRECTION = True
 
     """
@@ -71,8 +71,8 @@ if __name__ == "__main__":
     """
     SITE = ["Belfort"]
     FORMATION = ["FISE-INFO"]
-    POPULATION_SIZE = 10
-    PROMO_SIZE = 300
+    POPULATION_SIZE = 6
+    PROMO_SIZE = 100
     EXPORT_PATH_INSTANCES = PATH_DATA
     EXPORT_INSTANCES = True
 
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     """
     To limit the number of uvs
     """
-    uvs_list = uvs_list[:200]
+    uvs_list = uvs_list[:20]
 
     
     pop, fit, promo, room_capa, uv_promo_capa = gi.get_instance(SITE, FORMATION, POPULATION_SIZE,
