@@ -33,7 +33,8 @@ if __name__ == "__main__":
     """
     Parameters
     """
-    PATH_DATA = "./datas/instances/coucou"
+    NAME_TEST = "coucou"
+    PATH_DATA = "./datas/instances/" + NAME_TEST
 
     GENERATION_NUMBER = 1000
     MUTATION_PROBABILITY = 1
@@ -60,7 +61,7 @@ if __name__ == "__main__":
     """
     Results
     """
-    FILE_NAME_RESULTS = "schedule1"
+    FILE_NAME_RESULTS = NAME_TEST
     TITLE_GRAPH = "Evolution of the fitness with \n correction and wheel selection,\n single point crossover"
     CREATE_SCHEDULE = False
 
@@ -88,16 +89,15 @@ if __name__ == "__main__":
     """
     uvs_list = uvs_list[:20]
 
-    
+    """
     pop, fit, promo, room_capa, uv_promo_capa = gi.get_instance(SITE, FORMATION, POPULATION_SIZE,
                                                                 PROMO_SIZE, room_list, uvs_list, EXPORT_PATH_INSTANCES,
                                                                 EXPORT_INSTANCES)
-    
+    """
     """
     Import data
     """
 
-    print(len(uvs_list))
     promo = tbs.import_promo(PATH_DATA + "/promo.json")  # Own data
     pop = tb.import_population(PATH_DATA + "/population.json")  # Own data
     fit = read_fitness(PATH_DATA + "/fitness_of_the_population.txt")  # Own data
