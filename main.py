@@ -72,7 +72,7 @@ if __name__ == "__main__":
     SITE = ["Belfort"]
     FORMATION = ["FISE-INFO"]
     POPULATION_SIZE = 10
-    PROMO_SIZE = 70
+    PROMO_SIZE = 300
     EXPORT_PATH_INSTANCES = PATH_DATA
     EXPORT_INSTANCES = True
 
@@ -83,10 +83,16 @@ if __name__ == "__main__":
     for formation in FORMATION:
         uvs_list = uvs_list + tb.get_uvs(formation)  # UTBM data
 
+    """
+    To limit the number of uvs
+    """
+    uvs_list = uvs_list[:10]
+
+    """
     pop, fit, promo, room_capa, uv_promo_capa = gi.get_instance(SITE, FORMATION, POPULATION_SIZE,
                                                                 PROMO_SIZE, room_list, uvs_list, EXPORT_PATH_INSTANCES,
                                                                 EXPORT_INSTANCES)
-
+    """
     """
     Import data
     """
