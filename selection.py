@@ -43,6 +43,9 @@ def roulette_wheel_selection(arg_list_fitness, nb_couple):
     Spin the wheel by selecting a random point on the wheel and then moving through the individuals in the population, accumulating fitness until the selected point is reached or exceeded. 
     The corresponding individual is then chosen as parent.
     """
+    min_fit = arg_list_fitness[-1]
+    if min_fit < 0:
+        arg_list_fitness = [fitness_chr + abs(min_fit) for fitness_chr in arg_list_fitness]
     total_fitness = sum(arg_list_fitness)
 
     proba_list = [fitness_chr / total_fitness for fitness_chr in arg_list_fitness]
@@ -71,6 +74,16 @@ def selection_elitiste(nb_couple):
 
 
 def selection_probabiliste(arg_list_fitness, nb_couple):
+    """
+    Returns the best individuals
+    :param arg_list_fitness:
+    :param nb_couple:
+    :return:
+    """
+    min_fit = arg_list_fitness[-1]
+    if min_fit < 0:
+        arg_list_fitness = [fitness_chr + abs(min_fit) for fitness_chr in arg_list_fitness]
+
     inverted_fitness = [1 / value for value in arg_list_fitness]
     total_inverted_fitness = np.sum(inverted_fitness)
 

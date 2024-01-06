@@ -79,6 +79,8 @@ def benchmark(arg_promo, arg_room_list, arg_population, arg_fitness, arg_room_ca
             create_schedule_all(chromosome, arg_promo, schedule_type, filename)
         print("Schedules created.")
 
+    return fitness, round(end_algo - start_algo, 5)
+
 
 def create_schedule_all(chr, promo, type_schedule, filename):
     """
@@ -97,7 +99,7 @@ def create_schedule_all(chr, promo, type_schedule, filename):
         kind = "room"
         folder = "schedule_all_room"
     elif type_schedule == 'student':
-        data_chr = tb_s.get_all_student_promo(promo)
+        data_chr = promo.students_list
         kind = "student"
         folder = "schedule_all_student"
     else:
