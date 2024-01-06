@@ -75,20 +75,22 @@ if __name__ == "__main__":
     PROMO_SIZE = 70
     EXPORT_PATH_INSTANCES = PATH_DATA
     EXPORT_INSTANCES = True
-    """
-    pop, fit, promo, room_capa, uv_promo_capa = gi.get_instance(SITE, FORMATION, POPULATION_SIZE,
-                                                                PROMO_SIZE, EXPORT_PATH_INSTANCES,
-                                                                EXPORT_INSTANCES)
-    """
-    """
-    Import data
-    """
+
     room_list = []
     for ville in SITE:
         room_list = room_list + tb.get_rooms(ville)  # UTBM data
     uvs_list = []
     for formation in FORMATION:
         uvs_list = uvs_list + tb.get_uvs(formation)  # UTBM data
+
+    pop, fit, promo, room_capa, uv_promo_capa = gi.get_instance(SITE, FORMATION, POPULATION_SIZE,
+                                                                PROMO_SIZE, room_list, uvs_list, EXPORT_PATH_INSTANCES,
+                                                                EXPORT_INSTANCES)
+
+    """
+    Import data
+    """
+
     print(len(uvs_list))
     promo = tbs.import_promo(PATH_DATA + "/promo.json")  # Own data
     pop = tb.import_population(PATH_DATA + "/population.json")  # Own data
