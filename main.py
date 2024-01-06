@@ -86,13 +86,13 @@ if __name__ == "__main__":
     """
     To limit the number of uvs
     """
-    uvs_list = uvs_list[:10]
+    uvs_list = uvs_list[:200]
 
-    """
+    
     pop, fit, promo, room_capa, uv_promo_capa = gi.get_instance(SITE, FORMATION, POPULATION_SIZE,
                                                                 PROMO_SIZE, room_list, uvs_list, EXPORT_PATH_INSTANCES,
                                                                 EXPORT_INSTANCES)
-    """
+    
     """
     Import data
     """

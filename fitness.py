@@ -64,7 +64,6 @@ def classroomStrongFitness(chromosome, arg_capacity_uv_promo_dict, arg_rooms_lis
 
 def studentCapacityOverload(gene, uv_capacity, rooms):
     gene_room = next((room for room in rooms if room.room == gene.room), None)
-    # PLACEHOLDER
     if gene.code not in uv_capacity: return False
     if gene_room.capacity < uv_capacity[gene.code]: return True
     return False
@@ -86,6 +85,7 @@ def generateUVConflictDictionnary(chromosome, arg_uvs_list):
             if UVScheduleConflict(chromosome, uv, uvs[j]):
                 conflictDict[uv.code].append(uvs[j].code)
                 conflictDict[uvs[j].code].append(uv.code)
+        i +=1
     return conflictDict
 
 
@@ -96,20 +96,29 @@ def studentWeakFitness(conflictDict, arg_promo):
     for student in students:
         score = 120  # A student with all 6 UVs in conflict would lose 120 fitness points, bringing its score to 0
         heat = 1
-        i = 1
+        i = 0
         for uv in student.uvs:
             for j in range(i + 1, len(student.uvs)):
                 if uv in conflictDict[student.uvs[j]]:
                     score -= heat
                     heat += 1
+            i+=1
         fitness += score
+    fitness /= 1.2 # We reduce the fitness to 100 points max per student
+    fitness /= len(students) # We divide it by the numbre of students so that 100 is the max for the entire population
     return fitness
 
 
+def getUVGenes(chromosome,UV):
+    genes = [gene for gene in chromosome if gene.code == UV.code]
+    return genes
+
 def UVScheduleConflict(chromosome, UV1, UV2):
-    for cours1 in UV1.cours:
-        for cours2 in UV2.cours:
-            if cours1.start < cours2.end and cours2.start < cours1.end: return True
+    genes1 = getUVGenes(chromosome,UV1)
+    genes2 = getUVGenes(chromosome,UV2)
+    for gene1 in genes1:
+        for gene2 in genes2:
+            if timeslotOverlap(gene1,gene2): return True
     return False
 
 
