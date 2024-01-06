@@ -13,7 +13,7 @@ def create_directory(path):
         os.makedirs(path)
 
 
-def benchmark(arg_promo, arg_room_list, arg_population, arg_fitness, arg_room_capacity_dict, arg_capacity_uv_promo_dict,
+def benchmark(arg_promo, arg_room_list, arg_population, arg_fitness, arg_room_capacity_dict, arg_capacity_uv_promo_dict, uvs_list,
               generation,
               mutation_rate, nb_couple_elite, selection_choice, crossover_choice,
               arg_tournament_size, correction,
@@ -23,7 +23,7 @@ def benchmark(arg_promo, arg_room_list, arg_population, arg_fitness, arg_room_ca
     start_algo = t.time()
 
     chromosome, fitness, history = gen.genetic_algorithm(arg_room_list, arg_population, arg_fitness,
-                                                         arg_room_capacity_dict, arg_capacity_uv_promo_dict,
+                                                         arg_room_capacity_dict, arg_capacity_uv_promo_dict, uvs_list, arg_promo,
                                                          generation, mutation_rate, nb_couple_elite, selection_choice,
                                                          crossover_choice, arg_tournament_size, correction)
     end_algo = t.time()

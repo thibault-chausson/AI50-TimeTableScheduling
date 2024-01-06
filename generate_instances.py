@@ -29,15 +29,20 @@ def get_instance(sites, formations, pop_size, promo_size, export_path='./datas/i
     for uv in uvs:
         list_uv.append(uv.code)
 
+    # Create the population
     population = generate_population(pop_size, uvs, rooms)
-    # Sort the population and the fitness
-    fitness_sorted, population = gen.sort_dataset(population)
 
     promo = create_promo(list_uv, promo_size)
 
     # Correct the population
-    room_list = tb.get_rooms()
+    room_list = []
+    for ville in sites:
+        room_list = room_list + get_rooms(ville)
+
     population, room_capacity_dict, capacity_uv_promo_dict = gen.correction_all(promo, room_list, population)
+
+    # Sort the population and the fitness
+    fitness_sorted, population = gen.sort_dataset(population, capacity_uv_promo_dict, uvs, promo, room_list)
 
     if export:
         if not os.path.exists(export_path):
