@@ -1,5 +1,6 @@
 import variables as var
 import numpy as np
+import toolbox as tb
 
 
 def occupied(plannings):
@@ -136,9 +137,12 @@ def change_room_if_overcrowded_and_free(chr, room_too_small, room_list, room_occ
             gene.room = new_room
 
             # Update the room_occupied matrix for the new room and remove the old room
-            for j in range(index_start_time, index_end_time):
-                room_occupied[j][gene.start_day].append(new_room)
-                room_occupied[j][gene.start_day].remove(one_small_room['room'])
+            # for j in range(index_start_time, index_end_time):
+            #     room_occupied[j][gene.start_day].append(new_room)
+            #     room_occupied[j][gene.start_day].remove(one_small_room['room'])
+            # TODO non optimal
+            pla_room = tb.planning_room(chr)
+            room_occupied = occupied(pla_room)
             break
 
     return chr, room_occupied

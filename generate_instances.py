@@ -6,7 +6,7 @@ import genetique as gen
 import json
 
 
-def get_instance(sites, formations, pop_size, promo_size, export_path='./datas/instances/coucou', export=False):
+def get_instance(sites, formations, pop_size, promo_size, rooms, uvs, export_path='./datas/instances/coucou', export=False):
     """
     Generates the population and the promo from the given sites and formations
     :param export_path:
@@ -17,27 +17,22 @@ def get_instance(sites, formations, pop_size, promo_size, export_path='./datas/i
     :param export: if True, exports the population and the promo in json files, to ./datas/population.json and ./datas/promo.json
     :return: (population, promo)
     """
-    rooms = []
-    for site in sites:
-        rooms.extend(get_rooms(site))
-    uvs = []
-    for formation in formations:
-        uvs.extend(get_uvs(formation))
+
     uvs = [i for i in uvs if i.teachers != [None]]
 
     list_uv = []
     for uv in uvs:
         list_uv.append(uv.code)
 
+    # Create the population
     population = generate_population(pop_size, uvs, rooms)
-    # Sort the population and the fitness
-    fitness_sorted, population = gen.sort_dataset(population)
 
     promo = create_promo(list_uv, promo_size)
 
-    # Correct the population
-    room_list = tb.get_rooms()
-    population, room_capacity_dict, capacity_uv_promo_dict = gen.correction_all(promo, room_list, population)
+    population, room_capacity_dict, capacity_uv_promo_dict = gen.correction_all(promo, rooms, population)
+
+    # Sort the population and the fitness
+    fitness_sorted, population = gen.sort_dataset(population, capacity_uv_promo_dict, uvs, promo, rooms)
 
     if export:
         if not os.path.exists(export_path):

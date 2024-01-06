@@ -7,9 +7,10 @@ import correction as co
 import toolbox_correction as tb_c
 
 
-def sort_dataset(arg_population):
+def sort_dataset(arg_population, arg_capacity_uv_promo_dict, arg_uvs_list, arg_promo, arg_rooms_list):
     # Sort the population by fitness
-    list_fitness = [sl.fitness(chromosome) for chromosome in arg_population]
+    list_fitness = [sl.fitness(chromosome, arg_capacity_uv_promo_dict, arg_uvs_list, arg_promo, arg_rooms_list) for
+                    chromosome in arg_population]
     sorted_list_fitness, sorted_index_population = sl.sorting_fitness(list_fitness, arg_population)
     sorted_population = [arg_population[i] for i in sorted_index_population]
     return sorted_list_fitness, sorted_population
@@ -30,7 +31,8 @@ def correction_all(arg_promo, arg_room_list, arg_population):
     return arg_population, room_capacity_dict, capacity_uv_promo_dict
 
 
-def genetic_algorithm(arg_room_list, arg_population, arg_fitness, room_capacity_dict, capacity_uv_promo_dict,
+def genetic_algorithm(arg_room_list, arg_population, arg_fitness, room_capacity_dict, capacity_uv_promo_dict, uvs_list,
+                      arg_promo,
                       generation=100,
                       mutation_rate=0.01, nb_couple_elite=1, selection_choice='elitiste',
                       crossover_choice='single_point',
@@ -84,7 +86,9 @@ def genetic_algorithm(arg_room_list, arg_population, arg_fitness, room_capacity_
         # Remplacement des pires chromosomes par les meilleurs enfants
         for i in range(len(tableau_enfants)):
             arg_fitness, arg_population = rp.replace(arg_fitness, arg_population,
-                                                     sl.fitness(tableau_enfants[i]), tableau_enfants[i])
+                                                     sl.fitness(tableau_enfants[i], capacity_uv_promo_dict, uvs_list,
+                                                                arg_promo, arg_room_list),
+                                                     tableau_enfants[i])
 
         # History
         history.append(arg_fitness[0])
