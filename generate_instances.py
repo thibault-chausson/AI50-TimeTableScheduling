@@ -1,6 +1,5 @@
 from toolbox_student import *
 from initial_population import *
-import toolbox as tb
 import os
 import genetique as gen
 import json
@@ -10,6 +9,8 @@ def get_instance(sites, formations, pop_size, promo_size, rooms, uvs, export_pat
                  export=False):
     """
     Generates the population and the promo from the given sites and formations
+    :param uvs:
+    :param rooms:
     :param export_path:
     :param sites: list of sites
     :param formations: list of formations

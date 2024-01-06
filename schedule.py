@@ -6,7 +6,6 @@ import matplotlib.ticker as mticker
 
 from toolbox import *
 from variables import *
-from toolbox_student import *
 
 
 def get_genes_from(chr, kind, key):
@@ -92,7 +91,7 @@ def make_schedule(mat, chr, kind, key, save_path="./images/schedule.png"):
 
     plt.title("Schedule for {} {}".format(kind, key))
 
-    if save_path != None:
+    if save_path is not None:
         plt.savefig(save_path, bbox_inches='tight')
     else:
         plt.show()

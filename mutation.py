@@ -2,8 +2,6 @@ import toolbox as tb
 import random as rd
 import variables as var
 
-CHROMOSOME_1 = tb.import_population("./datas/chromosome_1.json")[0]
-
 
 # Swap 2 random timeslot
 

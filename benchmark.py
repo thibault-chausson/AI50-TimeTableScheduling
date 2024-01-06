@@ -13,19 +13,40 @@ def create_directory(path):
         os.makedirs(path)
 
 
-def benchmark(arg_promo, arg_room_list, arg_population, arg_fitness, arg_room_capacity_dict, arg_capacity_uv_promo_dict, uvs_list,
-              generation,
-              mutation_rate, nb_couple_elite, selection_choice, crossover_choice,
-              arg_tournament_size, correction,
-              title="Evolution of the fitness", filename="schedule", schedule=False):
+def benchmark(arg_promo, arg_room_list, arg_population, arg_fitness, arg_room_capacity_dict, arg_capacity_uv_promo_dict,
+              uvs_list, generation, mutation_rate, nb_couple_elite, selection_choice, crossover_choice,
+              arg_tournament_size, correction, title="Evolution of the fitness", filename="schedule", schedule=False):
+    """
+    Run the benchmark.
+    :param arg_promo:
+    :param arg_room_list:
+    :param arg_population:
+    :param arg_fitness:
+    :param arg_room_capacity_dict:
+    :param arg_capacity_uv_promo_dict:
+    :param uvs_list:
+    :param generation:
+    :param mutation_rate:
+    :param nb_couple_elite:
+    :param selection_choice:
+    :param crossover_choice:
+    :param arg_tournament_size:
+    :param correction:
+    :param title:
+    :param filename:
+    :param schedule:
+    :return:
+    """
+
     print("Best fitness before: ", arg_fitness)
     print("Best chromosome before: ", arg_population[0])
     start_algo = t.time()
 
     chromosome, fitness, history = gen.genetic_algorithm(arg_room_list, arg_population, arg_fitness,
-                                                         arg_room_capacity_dict, arg_capacity_uv_promo_dict, uvs_list, arg_promo,
-                                                         generation, mutation_rate, nb_couple_elite, selection_choice,
-                                                         crossover_choice, arg_tournament_size, correction)
+                                                         arg_room_capacity_dict, arg_capacity_uv_promo_dict, uvs_list,
+                                                         arg_promo, generation, mutation_rate, nb_couple_elite,
+                                                         selection_choice, crossover_choice, arg_tournament_size,
+                                                         correction)
     end_algo = t.time()
 
     # Représentation graphique

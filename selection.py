@@ -1,7 +1,5 @@
 import random as rd
 import numpy as np
-import toolbox as tb
-from fitness import fitness
 
 
 def create_couples(liste, n):

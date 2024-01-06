@@ -1,4 +1,3 @@
-# toolbox_student.py
 import uuid as uuid
 import random as rd
 import toolbox as tb

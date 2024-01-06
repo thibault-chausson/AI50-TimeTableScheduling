@@ -1,8 +1,3 @@
-import toolbox as tb
-from fitness import fitness
-import selection as sl
-
-
 def normalize(arg_list_fitness, arg_fitness_child):
     # Normalize the fitness list
     max_fitness = max(max(arg_list_fitness), arg_fitness_child)

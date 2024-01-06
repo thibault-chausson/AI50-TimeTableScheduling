@@ -1,6 +1,5 @@
 import toolbox as tb
 import toolbox_correction as tb_c
-import toolbox_student as tb_s
 
 
 def correction_room(arg_chr, arg_room_capacity_dict, room_list, capacity_uv_promo_dict):
