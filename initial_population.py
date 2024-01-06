@@ -69,17 +69,3 @@ def generate_population(nb_individu, uvs_fct, rooms_fct):
     for _ in range(nb_individu):
         population_fct.append(get_individual(uvs_fct, rooms_fct))
     return population_fct
-
-
-if __name__ == '__main__':
-    rooms = get_rooms("Belfort")
-    uvs = get_uvs("FISE-INFO")
-    uvs = [i for i in uvs if
-           i.teachers != [None]]  # Pas de profs pour une UV crée un bug dans la fonction planning_teacher
-
-    # chromosome = get_individual(uvs, rooms)
-
-    # export_population([chromosome], "chromosome.json")
-
-    population = generate_population(10, uvs, rooms)
-    export_population(population, "datas/population_new.json")

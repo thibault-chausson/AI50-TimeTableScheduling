@@ -32,13 +32,12 @@ def correction_all(arg_promo, arg_room_list, arg_population):
 
 
 def genetic_algorithm(arg_room_list, arg_population, arg_fitness, room_capacity_dict, capacity_uv_promo_dict, uvs_list,
-                      arg_promo,
-                      generation=100,
-                      mutation_rate=0.01, nb_couple_elite=1, selection_choice='elitiste',
-                      crossover_choice='single_point',
-                      arg_tournament_size=5, correction=True):
+                      arg_promo, generation=100, mutation_rate=0.01, nb_couple_elite=1, selection_choice='elitiste',
+                      crossover_choice='single_point', arg_tournament_size=5, correction=True):
     """
     Returns the best chromosome and its fitness after a genetic algorithm.
+    :param arg_promo:
+    :param uvs_list:
     :param capacity_uv_promo_dict:
     :param room_capacity_dict:
     :param correction:

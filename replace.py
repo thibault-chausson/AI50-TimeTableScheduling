@@ -1,8 +1,3 @@
-import toolbox as tb
-from fitness import fitness
-import selection as sl
-
-
 def normalize(arg_list_fitness, arg_fitness_child):
     # Normalize the fitness list
     max_fitness = max(max(arg_list_fitness), arg_fitness_child)
@@ -44,23 +39,3 @@ def replace(arg_list_fitness, population, arg_fitness_child, arg_child):
             # Insert the new chromosome
             population.insert(index, arg_child)
     return arg_list_fitness, population
-
-
-if __name__ == "__main__":
-    initial_population = tb.import_population("datas/population.json")
-    list_fitness = [fitness(chromosome) for chromosome in initial_population]
-    print(f"Fitness : {list_fitness} \n")
-
-    # import chromosome_1
-    child = tb.import_population("datas/chromosome_1.json")[0]
-    fitness_child = -300
-    print(f"Fitness child : {fitness_child} \n")
-
-    sorted_list_fitness, sorted_index_population = sl.sorting_fitness(list_fitness, initial_population)
-    print(f"Sorted fitness : {sorted_list_fitness} \n")
-    print(f"Sorted index population : {sorted_index_population} \n")
-    sorted_initial_population = [initial_population[i] for i in sorted_index_population]
-
-    list_fitness_replace, population_replace = replace(sorted_list_fitness, sorted_initial_population, fitness_child,
-                                                       child)
-    print(f"Replace : {list_fitness_replace} \n")

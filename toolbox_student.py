@@ -1,4 +1,3 @@
-# toolbox_student.py
 import uuid as uuid
 import random as rd
 import toolbox as tb
@@ -125,14 +124,3 @@ def import_promo(filename="./datas/promo.json"):
     for student in students_list:
         promo_fct.add_student(Student(student["student_id"], student["name"], student["uvs"]))
     return promo_fct
-
-
-if __name__ == '__main__':
-    chromosome_1 = tb.import_population("datas/population.json")[0]
-    les_uvs = get_all_uvs_chromosome(chromosome_1)
-    promo = create_promo(les_uvs, 300)
-    print(promo)
-    export_promo(promo, "datas/promo.json")
-    promo_import = import_promo("datas/promo.json")
-    print(promo_import)
-    print("Done.")
