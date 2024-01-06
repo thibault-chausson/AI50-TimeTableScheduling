@@ -75,7 +75,7 @@ if __name__ == "__main__":
     PROMO_SIZE = 100
     NUMBERS_UV = 20
     EXPORT_PATH_INSTANCES = PATH_DATA
-    EXPORT_INSTANCES = False
+    EXPORT_INSTANCES = True
 
     room_list = []
     for ville in SITE:
