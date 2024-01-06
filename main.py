@@ -2,7 +2,6 @@ import toolbox as tb
 import benchmark as bm
 import toolbox_student as tbs
 import json
-import generate_instances as gi
 
 
 def import_json(path):
@@ -33,12 +32,12 @@ if __name__ == "__main__":
     """
     Parameters
     """
-    NAME_TEST = "coucou"
+    NAME_TEST = "visuels_rapport"
     PATH_DATA = "./datas/instances/" + NAME_TEST
 
     GENERATION_NUMBER = 1000
-    MUTATION_PROBABILITY = 1
-    NUMBER_OF_COUPLES = 3
+    MUTATION_PROBABILITY = 0.08
+    NUMBER_OF_COUPLES = 2
     CORRECTION = True
 
     """
@@ -56,14 +55,14 @@ if __name__ == "__main__":
     """
     SELECT = 'roulette'
     CROSS = 'single_point'
-    TOURNOI_SIZE = 5
+    TOURNOI_SIZE = 3
 
     """
     Results
     """
     FILE_NAME_RESULTS = NAME_TEST
     TITLE_GRAPH = "Evolution of the fitness with \n correction and wheel selection,\n single point crossover"
-    CREATE_SCHEDULE = False
+    CREATE_SCHEDULE = True
 
     """
     Create a population and school year
@@ -72,10 +71,11 @@ if __name__ == "__main__":
     """
     SITE = ["Belfort"]
     FORMATION = ["FISE-INFO"]
-    POPULATION_SIZE = 6
+    POPULATION_SIZE = 100
     PROMO_SIZE = 100
+    NUMBERS_UV = 20
     EXPORT_PATH_INSTANCES = PATH_DATA
-    EXPORT_INSTANCES = True
+    EXPORT_INSTANCES = False
 
     room_list = []
     for ville in SITE:
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     """
     To limit the number of uvs
     """
-    uvs_list = uvs_list[:20]
+    uvs_list = uvs_list[:NUMBERS_UV]
 
     """
     pop, fit, promo, room_capa, uv_promo_capa = gi.get_instance(SITE, FORMATION, POPULATION_SIZE,
@@ -98,16 +98,27 @@ if __name__ == "__main__":
     Import data
     """
 
-    promo = tbs.import_promo(PATH_DATA + "/promo.json")  # Own data
-    pop = tb.import_population(PATH_DATA + "/population.json")  # Own data
-    fit = read_fitness(PATH_DATA + "/fitness_of_the_population.txt")  # Own data
-    room_capa = import_json(PATH_DATA + "/capacity_of_the_rooms.json")  # UTBM data reworked
-    uv_promo_capa = import_json(PATH_DATA + "/capacity_of_the_uvs_promo.json")  # Own data estimated
-
     """
     Run the benchmark
     """
-    bm.benchmark(promo, room_list, pop, fit, room_capa, uv_promo_capa, uvs_list, GENERATION_NUMBER,
-                 MUTATION_PROBABILITY,
-                 NUMBER_OF_COUPLES, SELECT, CROSS, TOURNOI_SIZE, CORRECTION, TITLE_GRAPH, FILE_NAME_RESULTS,
-                 CREATE_SCHEDULE)
+    history_fitness = []
+    history_time = []
+
+    for i in range(1):
+        print("Test n°", i + 1)
+        promo = tbs.import_promo(PATH_DATA + "/promo.json")  # Own data
+        pop = tb.import_population(PATH_DATA + "/population.json")  # Own data
+        fit = read_fitness(PATH_DATA + "/fitness_of_the_population.txt")  # Own data
+        room_capa = import_json(PATH_DATA + "/capacity_of_the_rooms.json")  # UTBM data reworked
+        uv_promo_capa = import_json(PATH_DATA + "/capacity_of_the_uvs_promo.json")  # Own data estimated
+
+        best_fitness, time = bm.benchmark(promo, room_list, pop, fit, room_capa, uv_promo_capa, uvs_list,
+                                          GENERATION_NUMBER, MUTATION_PROBABILITY, NUMBER_OF_COUPLES, SELECT,
+                                          CROSS, TOURNOI_SIZE, CORRECTION, TITLE_GRAPH, FILE_NAME_RESULTS,
+                                          CREATE_SCHEDULE)
+        history_fitness.append(best_fitness)
+        history_time.append(time)
+
+    # Print the average fitness
+    print("Average fitness: ", round(sum(history_fitness) / len(history_fitness), 2))
+    print("Average time: ", round(sum(history_time) / len(history_time), 2))
