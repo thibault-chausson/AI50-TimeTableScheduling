@@ -107,21 +107,3 @@ def selection_choice(arg_sorted_list_fitness, arg_selection_choice, arg_nb_coupl
         return selection_probabiliste(arg_sorted_list_fitness, arg_nb_couple)
     else:
         print("Error: selection_choice()")
-
-
-if __name__ == "__main__":
-    initial_population = tb.import_population("datas/population.json")
-    list_fitness = [fitness(chromosome) for chromosome in initial_population]
-    print(f"Fitness : {list_fitness} \n")
-
-    sorted_list_fitness, sorted_index_population = sorting_fitness(list_fitness, initial_population)
-    print(f"Sorted fitness : {sorted_list_fitness} \n")
-    print(f"Sorted index population : {sorted_index_population} \n")
-    sorted_initial_population = [initial_population[i] for i in sorted_index_population]
-
-    print(f"Elites : {selection_elitiste(2)} \n")
-    print(f"Tournoi : {tournament_selection(sorted_list_fitness, 5, 2)} \n")
-    print(f"Roulette wheel : {roulette_wheel_selection(sorted_list_fitness, 3)} \n")
-    print(f"Selection proba : {selection_probabiliste(sorted_list_fitness, 2)} \n")
-
-    print("Done.")

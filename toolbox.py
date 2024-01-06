@@ -320,11 +320,3 @@ def import_population(filename):
         population.append(chr)
 
     return population
-
-
-if __name__ == "__main__":
-    uvs = get_uvs(category=None)
-    export_uvs(uvs, "datas/uvs.json")
-    uvs = import_uvs("datas/uvs.json")
-    print(uvs)
-    print("Done.")

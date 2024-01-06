@@ -38,13 +38,3 @@ def correction_teacher(arg_chr):
                         arg_chr = tb_c.change_timeslot_teacher_occupied(arg_chr, teacher_name, planning_teacher)
                         break
     return arg_chr
-
-
-if __name__ == '__main__':
-    CHROMOSOME_1 = tb.import_population("datas/chromosome_1.json")[0]
-    LIST_ROOM = tb.get_rooms()
-    LIST_UVS = tb.import_uvs()
-    PROMO = tb_s.import_promo()
-    plannings = tb.planning_room(CHROMOSOME_1)
-    occupee = tb_c.occupied(plannings)
-    ubiquity = tb_c.check_not_ubiquity(plannings)

@@ -79,18 +79,3 @@ def crossover_choice(chr1, chr2, choice):
         return crossover_functions[choice](chr1, chr2)
     else:
         raise ValueError("Invalid choice of crossover function.")
-
-
-if __name__ == '__main__':
-    print("Crossing over...")
-    print(CHROMOSOME_1)
-    print(CHROMOSOME_2)
-    print("Midpoint crossover:")
-    print(single_point_crossover(CHROMOSOME_1, CHROMOSOME_2))
-    print("Two points crossover:")
-    print(two_points_crossover(CHROMOSOME_1, CHROMOSOME_2))
-    print("Uniform crossover:")
-    print(uniform_crossover(CHROMOSOME_1, CHROMOSOME_2))
-    print("Ordered crossover:")
-    print(ordered_crossover(CHROMOSOME_1, CHROMOSOME_2))
-    print("Done.")

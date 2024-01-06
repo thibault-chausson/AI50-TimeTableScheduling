@@ -100,20 +100,3 @@ def random_mutation(chr):
     # Choose one randomly
     mutation_aleatoire = rd.choice(mutations)
     return mutation_aleatoire(chr)
-
-
-if __name__ == '__main__':
-    print("Mutation...")
-    print(CHROMOSOME_1)
-
-    print("Swap_room:")
-    print(swap_room(CHROMOSOME_1))
-    print("Change_room")
-    print(change_room(CHROMOSOME_1))
-    print("Swap_timeslot")
-    print(swap_room(CHROMOSOME_1))
-    print("Change_timeslot")
-    print(change_timeslot(CHROMOSOME_1))
-
-    print("Random_mutation")
-    print(random_mutation(CHROMOSOME_1))

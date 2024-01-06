@@ -6,7 +6,8 @@ import genetique as gen
 import json
 
 
-def get_instance(sites, formations, pop_size, promo_size, rooms, uvs, export_path='./datas/instances/coucou', export=False):
+def get_instance(sites, formations, pop_size, promo_size, rooms, uvs, export_path='./datas/instances/coucou',
+                 export=False):
     """
     Generates the population and the promo from the given sites and formations
     :param export_path:
@@ -53,9 +54,3 @@ def get_instance(sites, formations, pop_size, promo_size, rooms, uvs, export_pat
                 file.write(f"{item}\n")
 
     return population, fitness_sorted, promo, room_capacity_dict, capacity_uv_promo_dict
-
-
-if __name__ == '__main__':
-    pop, fit, promo, room_capa, uv_capa = get_instance(["Belfort", "Sevenans"], ["FISE-INFO", "FISA-INFO"], 10, 20,
-                                                       export_path='./datas/instances/coucou',
-                                                       export=True)

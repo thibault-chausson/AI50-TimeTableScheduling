@@ -96,18 +96,3 @@ def make_schedule(mat, chr, kind, key, save_path="./images/schedule.png"):
         plt.savefig(save_path, bbox_inches='tight')
     else:
         plt.show()
-
-
-if __name__ == '__main__':
-    print("Importing population...")
-    pop = import_population("./datas/population.json")
-    students = import_promo("./datas/promo.json").students_list
-
-    print("Building schedule...")
-    kind = "room"
-    key = "B102"
-    chr = get_genes_from(pop[0], kind, key)
-
-    mat = get_classes_mat(chr)
-
-    make_schedule(mat, chr, kind, key)
