@@ -35,7 +35,7 @@ if __name__ == "__main__":
     NAME_TEST = "visuels_rapport"
     PATH_DATA = "./datas/instances/" + NAME_TEST
 
-    GENERATION_NUMBER = 1000
+    GENERATION_NUMBER = 10000
     MUTATION_PROBABILITY = 0.08
     NUMBER_OF_COUPLES = 2
     CORRECTION = True
@@ -62,7 +62,7 @@ if __name__ == "__main__":
     """
     FILE_NAME_RESULTS = NAME_TEST
     TITLE_GRAPH = "Evolution of the fitness with \n correction and wheel selection,\n single point crossover"
-    CREATE_SCHEDULE = True
+    CREATE_SCHEDULE = False
 
     """
     Create a population and school year
