@@ -1,1 +1,15 @@
 /.idea
+/exemplesEDT
+
+#datas/*
+/testScript.py
+__pycache__/*
+*.pyc
+datas/test_chrom.json
+
+datas/population_new.json
+
+/results
+
+/datas/instances/*
+/images/schedule*
