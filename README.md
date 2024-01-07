@@ -2,7 +2,7 @@
 
 This project is a UE AI50 project at UTBM. Its aim is to create a timetable for UTBM.
 
-![Rapport](./rapport.pdf)
+[Rapport](./rapport.pdf)
 
 ## Table of Contents
 
