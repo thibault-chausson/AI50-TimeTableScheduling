@@ -91,7 +91,7 @@ def make_schedule(mat, chr, kind, key, save_path="./images/schedule.png"):
 
     plt.title("Schedule for {} {}".format(kind, key))
 
-    if save_path is not None:
+    if save_path != None:
         plt.savefig(save_path, bbox_inches='tight')
     else:
         plt.show()

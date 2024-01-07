@@ -67,7 +67,7 @@ def crossover_choice(chr1, chr2, choice):
     # dictionary of crossover functions
     crossover_functions = {
         'single_point': single_point_crossover,
-        'tow_points': two_points_crossover,
+        'two_points': two_points_crossover,
         'uniform': uniform_crossover,
         'order': ordered_crossover
     }
